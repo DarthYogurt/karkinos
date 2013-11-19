@@ -1,0 +1,8 @@
+<Alloy>
+	<Window class="container">
+		<ImageView id="imageView" onClick="clickImage"/>
+		<Label id="label" onClick="doClick">Tron, Tron</Label>
+		
+	</Window>
+
+</Alloy>
