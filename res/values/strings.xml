@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Croupon</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Tab Names-->
+    <string name="myFriendsTab">My Friends</string>
+    <string name="myDealsTab">My Deals</string>
+	<string name="featuredDealsTab">Featured Deals</string>
+	<string name="browseCategoriesTab">Browse Categories</string>
+	<string name="localDealsTab">Local Deals</string>
+    
+</resources>
