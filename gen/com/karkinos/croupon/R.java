@@ -24,14 +24,20 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f080003;
+        public static final int action_settings=0x7f080008;
+        public static final int addRow=0x7f080003;
+        public static final int dealHeader=0x7f080004;
+        public static final int dealPrice=0x7f080006;
+        public static final int dealSupporters=0x7f080005;
+        public static final int deals=0x7f080002;
         public static final int pager=0x7f080000;
         public static final int pager_title_strip=0x7f080001;
-        public static final int section_label=0x7f080002;
+        public static final int section_label=0x7f080007;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int fragment_main_dummy=0x7f030001;
+        public static final int fragment_featured_deals=0x7f030001;
+        public static final int fragment_main_dummy=0x7f030002;
     }
     public static final class menu {
         public static final int main=0x7f070000;
@@ -39,13 +45,11 @@ public final class R {
     public static final class string {
         public static final int action_settings=0x7f050001;
         public static final int app_name=0x7f050000;
-        public static final int browseCategoriesTab=0x7f050005;
-        public static final int featuredDealsTab=0x7f050004;
-        public static final int localDealsTab=0x7f050006;
-        public static final int myDealsTab=0x7f050003;
-        /**  Tab Names
-         */
-        public static final int myFriendsTab=0x7f050002;
+        public static final int browseCategories=0x7f050005;
+        public static final int featuredDeals=0x7f050004;
+        public static final int localDeals=0x7f050006;
+        public static final int myDeals=0x7f050003;
+        public static final int myFriends=0x7f050002;
     }
     public static final class style {
         /** 
@@ -74,5 +78,6 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f060001;
+        public static final int fragment_main_heading=0x7f060002;
     }
 }
