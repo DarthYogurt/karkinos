@@ -9,5 +9,7 @@
 	<string name="featuredDeals">Featured Deals</string>
 	<string name="browseCategories">Browse Categories</string>
 	<string name="localDeals">Local Deals</string>
+	
+	<string name="dealImage">Deal Image</string>
     
 </resources>

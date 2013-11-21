@@ -11,7 +11,7 @@
         android:gravity="center"
         android:background="#ffffff"
 		style="@style/fragment_main_heading"
-        android:textColor="#000000"
+        android:textColor="#66ccff"
         android:text="@string/featuredDeals" />
 
 </LinearLayout>

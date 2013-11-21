@@ -4,7 +4,7 @@
     android:orientation="vertical" 
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:padding="10dp">
+    android:padding="10dp" >
     
     <TextView 
         android:id="@+id/txtDeal"
@@ -12,15 +12,19 @@
         android:layout_height="wrap_content"
         android:gravity="left"
         android:textStyle="bold"
-        android:textSize="22sp"
+        android:textSize="24sp"
         android:textColor="#000000"
-        android:background="#ffffff" />
+        android:background="@drawable/rounded_corners_top"
+        android:paddingLeft="8dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp" />
     
     <ImageView 
         android:id="@+id/imgDealImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="left" />
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/dealImage" />"
 				       
     <TextView 
         android:id="@+id/txtSupporters"
@@ -28,7 +32,9 @@
         android:layout_height="wrap_content"
         android:gravity="left"
         android:textSize="18sp"
-        android:textColor="#000000" />
+        android:textColor="#c0362c"
+        android:background="#ffffff"
+        android:paddingLeft="8dp" />
     
     <TextView 
         android:id="@+id/txtPrice"
@@ -36,6 +42,8 @@
         android:layout_height="wrap_content"
         android:gravity="left"
         android:textSize="18sp"
-        android:textColor="#000000" />
+        android:textColor="#01a05f"
+        android:background="@drawable/rounded_corners_bottom"
+        android:paddingLeft="8dp" />
         
 </LinearLayout>

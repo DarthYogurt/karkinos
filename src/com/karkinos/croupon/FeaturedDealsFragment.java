@@ -17,11 +17,11 @@ public class FeaturedDealsFragment extends Fragment {
 
         Deal deal_data[] = new Deal[]
 		        {
-		            new Deal("Deal 1", R.drawable.scenery, "500/100 Supporters", "$500"),
-		            new Deal("Deal 2", R.drawable.scenery, "500/100 Supporters", "$500"),
-		            new Deal("Deal 3", R.drawable.scenery, "500/100 Supporters", "$500"),
-		            new Deal("Deal 4", R.drawable.scenery, "500/100 Supporters", "$500"),
-		            new Deal("Deal 5", R.drawable.scenery, "500/100 Supporters", "$500")
+		            new Deal("Deal 1", R.drawable.test_image, "500/100 Supporters", "$500"),
+		            new Deal("Deal 2", R.drawable.test_image, "500/100 Supporters", "$500"),
+		            new Deal("Deal 3", R.drawable.test_image, "500/100 Supporters", "$500"),
+		            new Deal("Deal 4", R.drawable.test_image, "500/100 Supporters", "$500"),
+		            new Deal("Deal 5", R.drawable.test_image, "500/100 Supporters", "$500")
 		        };
         
         DealAdapter adapter = new DealAdapter(getActivity(), R.layout.listview_item_row, deal_data);
@@ -32,7 +32,6 @@ public class FeaturedDealsFragment extends Fragment {
         LV.setAdapter(adapter);
 
         return V;
-	    
 	}
 	
 }
