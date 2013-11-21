@@ -49,7 +49,7 @@ public class DealAdapter extends ArrayAdapter<Deal>{
         holder.txtDeal.setText(deal.deal);
         holder.imgDealImage.setImageResource(deal.image);
         holder.txtSupporters.setText(deal.supporters);
-        holder.txtPrice.setText(deal.price);
+        holder.txtPrice.setText(String.valueOf("$" + deal.price));
         
         return row;
     }

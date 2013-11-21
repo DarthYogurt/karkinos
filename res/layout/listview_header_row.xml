@@ -9,9 +9,12 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:background="#ffffff"
-		style="@style/fragment_main_heading"
+        android:background="#fff"
+        android:text="@string/featuredDeals"
+        android:textSize="30sp"
+        android:textStyle="bold"
         android:textColor="#66ccff"
-        android:text="@string/featuredDeals" />
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp" />
 
 </LinearLayout>

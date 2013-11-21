@@ -17,11 +17,11 @@ public class FeaturedDealsFragment extends Fragment {
 
         Deal deal_data[] = new Deal[]
 		        {
-		            new Deal("Deal 1", R.drawable.test_image, "500/100 Supporters", "$500"),
-		            new Deal("Deal 2", R.drawable.test_image, "500/100 Supporters", "$500"),
-		            new Deal("Deal 3", R.drawable.test_image, "500/100 Supporters", "$500"),
-		            new Deal("Deal 4", R.drawable.test_image, "500/100 Supporters", "$500"),
-		            new Deal("Deal 5", R.drawable.test_image, "500/100 Supporters", "$500")
+		            new Deal("Deal 1", R.drawable.test_image, "500/100 Supporters", 500),
+		            new Deal("Deal 2", R.drawable.test_image, "500/100 Supporters", 1500),
+		            new Deal("Deal 3", R.drawable.test_image, "500/100 Supporters", 60),
+		            new Deal("Deal 4", R.drawable.test_image, "500/100 Supporters", 350),
+		            new Deal("Deal 5", R.drawable.test_image, "500/100 Supporters", 1100)
 		        };
         
         DealAdapter adapter = new DealAdapter(getActivity(), R.layout.listview_item_row, deal_data);
