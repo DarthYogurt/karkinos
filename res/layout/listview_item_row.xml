@@ -3,17 +3,20 @@
     android:orientation="vertical" 
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:padding="10dp" >
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="14dp"
+    android:paddingBottom="14dp" >
     
     <TextView 
-        android:id="@+id/txtDeal"
+        android:id="@+id/txtDealDesc"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="left"
-        android:background="@drawable/rounded_corners_top"
+		android:background="@drawable/rounded_corners_top"
         android:textStyle="bold"
         android:textSize="24sp"
-        android:textColor="#000000"
+        android:textColor="#0066ff"
         android:paddingLeft="8dp"
         android:paddingTop="4dp"
         android:paddingBottom="4dp" />
@@ -31,20 +34,31 @@
         android:layout_height="wrap_content"
         android:gravity="left"
         android:textStyle="bold"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:textColor="#c0362c"
-        android:background="#ffffff"
+        android:background="#fff"
         android:paddingLeft="8dp" />
     
     <TextView 
-        android:id="@+id/txtPrice"
+        android:id="@+id/txtRegularPrice"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="left"
-        android:background="@drawable/rounded_corners_bottom"
+        android:background="#fff"
         android:textStyle="bold"
-        android:textSize="18sp"
+        android:textSize="20sp"
+        android:textColor="#888"
+        android:paddingLeft="8dp" />
+    
+    <TextView 
+        android:id="@+id/txtDealPrice"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+		android:background="@drawable/rounded_corners_bottom"
+        android:textStyle="bold"
+        android:textSize="20sp"
         android:textColor="#01a05f"
         android:paddingLeft="8dp" />
-        
+
 </LinearLayout>

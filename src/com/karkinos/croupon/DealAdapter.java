@@ -2,6 +2,7 @@ package com.karkinos.croupon;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Paint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,10 +34,11 @@ public class DealAdapter extends ArrayAdapter<Deal>{
             row = inflater.inflate(layoutResourceId, parent, false);
             
             holder = new DealHolder();
-            holder.txtDeal = (TextView)row.findViewById(R.id.txtDeal);
+            holder.txtDealDesc = (TextView)row.findViewById(R.id.txtDealDesc);
             holder.imgDealImage = (ImageView)row.findViewById(R.id.imgDealImage);
             holder.txtSupporters = (TextView)row.findViewById(R.id.txtSupporters);
-            holder.txtPrice = (TextView)row.findViewById(R.id.txtPrice);
+            holder.txtRegularPrice = (TextView)row.findViewById(R.id.txtRegularPrice);
+            holder.txtDealPrice = (TextView)row.findViewById(R.id.txtDealPrice);
             
             row.setTag(holder);
         }
@@ -46,19 +48,24 @@ public class DealAdapter extends ArrayAdapter<Deal>{
         }
         
         Deal deal = data[position];
-        holder.txtDeal.setText(deal.deal);
-        holder.imgDealImage.setImageResource(deal.image);
+
+        holder.txtDealDesc.setText(deal.dealDesc);
+        holder.imgDealImage.setImageResource(deal.dealImage);
         holder.txtSupporters.setText(String.valueOf(deal.currentSupporters + " / " + deal.maxSupporters + " Supporters"));
-        holder.txtPrice.setText(String.valueOf("$" + deal.price));
+        holder.txtRegularPrice.setText(String.valueOf("$" + deal.regularPrice));
+    	holder.txtRegularPrice.setPaintFlags(holder.txtRegularPrice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+        holder.txtDealPrice.setText(String.valueOf("$" + deal.dealPrice));
         
         return row;
     }
     
     static class DealHolder
     {
-    	TextView txtDeal;
+    	TextView txtDealDesc;
         ImageView imgDealImage;
         TextView txtSupporters;
-        TextView txtPrice;
+        TextView txtRegularPrice;
+        TextView txtDealPrice;
     }
+    
 }

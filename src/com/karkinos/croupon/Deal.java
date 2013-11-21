@@ -1,22 +1,25 @@
 package com.karkinos.croupon;
 
 public class Deal {
-	public String deal;
-	public int image;
+	public String dealDesc;
+	public int dealImage;
     public int currentSupporters;
     public int maxSupporters;
-    public int price;
+    public int regularPrice;
+    public int dealPrice;
     
     public Deal() {
         super();
     }
     
-    public Deal(String deal, int image, int currentSupporters, int maxSupporters, int price) {
+    public Deal (String dealDesc, int dealImage, int currentSupporters, 
+    			 int maxSupporters, int regularPrice, int dealPrice) {
         super();
-        this.deal = deal;
-        this.image = image;
+        this.dealDesc = dealDesc;
+        this.dealImage = dealImage;
         this.currentSupporters = currentSupporters;
         this.maxSupporters = maxSupporters;
-        this.price = price;
+        this.regularPrice = regularPrice;
+        this.dealPrice = dealPrice;
     }
 }
