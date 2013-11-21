@@ -48,7 +48,7 @@ public class DealAdapter extends ArrayAdapter<Deal>{
         Deal deal = data[position];
         holder.txtDeal.setText(deal.deal);
         holder.imgDealImage.setImageResource(deal.image);
-        holder.txtSupporters.setText(deal.supporters);
+        holder.txtSupporters.setText(String.valueOf(deal.currentSupporters + " / " + deal.maxSupporters + " Supporters"));
         holder.txtPrice.setText(String.valueOf("$" + deal.price));
         
         return row;
