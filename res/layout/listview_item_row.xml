@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="10dp">
+    
+    <TextView 
+        android:id="@+id/txtDeal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textColor="#000000"
+        android:background="#ffffff" />
+    
+    <ImageView 
+        android:id="@+id/imgDealImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left" />
+				       
+    <TextView 
+        android:id="@+id/txtSupporters"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:textSize="18sp"
+        android:textColor="#000000" />
+    
+    <TextView 
+        android:id="@+id/txtPrice"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:textSize="18sp"
+        android:textColor="#000000" />
+        
+</LinearLayout>
