@@ -27,9 +27,9 @@ public class FeaturedDealsFragment extends Fragment {
         // Sets up adapter to pass data into ListView XML
         DealAdapter adapter = new DealAdapter(getActivity(), R.layout.listview_item_row, deal_data);
         
-        View header = (View)inflater.inflate(R.layout.listview_header_row, null);
-        
-        LV.addHeaderView(header);
+//        View header = (View)inflater.inflate(R.layout.listview_header_row, null);
+//        
+//        LV.addHeaderView(header);
         LV.setAdapter(adapter);
 
         return V;
