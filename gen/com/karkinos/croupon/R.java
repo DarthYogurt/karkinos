@@ -41,7 +41,7 @@ public final class R {
     public static final class layout {
         public static final int activity_deal_screen=0x7f030000;
         public static final int activity_main=0x7f030001;
-        public static final int fragment_featured_deals=0x7f030002;
+        public static final int fragment_show_deals=0x7f030002;
         public static final int listview_header_row=0x7f030003;
         public static final int listview_item_row=0x7f030004;
     }

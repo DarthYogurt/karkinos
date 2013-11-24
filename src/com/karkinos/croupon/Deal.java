@@ -5,7 +5,7 @@ public class Deal {
 	public int dealImage;
     public int currentSupporters = 0;
     public int maxSupporters = 0;
-    public int regularPrice = 0;
+    public int regPrice = 0;
     public int dealPrice = 0;
     
     public Deal() {
@@ -13,13 +13,13 @@ public class Deal {
     }
     
     public Deal(String dealDesc, int dealImage, int currentSupporters, 
-    			 int maxSupporters, int regularPrice, int dealPrice) {
+    			 int maxSupporters, int regPrice, int dealPrice) {
         super();
         this.dealDesc = dealDesc;
         this.dealImage = dealImage;
         this.currentSupporters = currentSupporters;
         this.maxSupporters = maxSupporters;
-        this.regularPrice = regularPrice;
+        this.regPrice = regPrice;
         this.dealPrice = dealPrice;
     }
     
@@ -47,12 +47,12 @@ public class Deal {
     	this.maxSupporters = i;
     }
     
-    private int getRegularPrice() {
-    	return this.regularPrice;
+    private int getRegPrice() {
+    	return this.regPrice;
     }
     
-    private void setRegularPrice(int i) {
-    	this.regularPrice = i;
+    private void setRegPrice(int i) {
+    	this.regPrice = i;
     }
     
     private int getDealPrice() {

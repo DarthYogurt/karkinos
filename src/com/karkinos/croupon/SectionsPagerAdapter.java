@@ -21,15 +21,15 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         Fragment fragment = new Fragment();
         switch (position) {
         case 0:
-        	return fragment = new FeaturedDealsFragment();
+        	return fragment = new DealsFragment();
         case 1:
-        	return fragment = new FeaturedDealsFragment();
+        	return fragment = new DealsFragment();
         case 2:
-        	return fragment = new FeaturedDealsFragment();
+        	return fragment = new DealsFragment();
         case 3:
-        	return fragment = new FeaturedDealsFragment();
+        	return fragment = new DealsFragment();
         case 4:
-        	return fragment = new FeaturedDealsFragment();
+        	return fragment = new DealsFragment();
         }
         return fragment;
 	}
