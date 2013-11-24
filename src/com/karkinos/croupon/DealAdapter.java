@@ -28,8 +28,8 @@ public class DealAdapter extends ArrayAdapter<Deal>{
     	ImageView imgDealImage;
     	TextView txtDealDesc;
         TextView txtSupporters;
-        TextView txtDealPrice;
         TextView txtRegularPrice;
+        TextView txtDealPrice;
     }
     
     @Override
@@ -46,8 +46,9 @@ public class DealAdapter extends ArrayAdapter<Deal>{
             holder.txtDealDesc = (TextView)row.findViewById(R.id.txtDealDesc);
             holder.imgDealImage = (ImageView)row.findViewById(R.id.imgDealImage);
             holder.txtSupporters = (TextView)row.findViewById(R.id.txtSupporters);
-            holder.txtDealPrice = (TextView)row.findViewById(R.id.txtDealPrice);
             holder.txtRegularPrice = (TextView)row.findViewById(R.id.txtRegularPrice);
+            holder.txtDealPrice = (TextView)row.findViewById(R.id.txtDealPrice);
+            
             
             row.setTag(holder);
         }
@@ -61,10 +62,9 @@ public class DealAdapter extends ArrayAdapter<Deal>{
         holder.txtDealDesc.setText(dealEntry.dealDesc);
         holder.imgDealImage.setImageResource(dealEntry.dealImage);
         holder.txtSupporters.setText(String.valueOf(dealEntry.currentSupporters + " / " + dealEntry.maxSupporters + " Supporters"));
-        holder.txtDealPrice.setText(String.valueOf("$" + dealEntry.dealPrice));
         holder.txtRegularPrice.setText(String.valueOf("$" + dealEntry.regularPrice));
         holder.txtRegularPrice.setPaintFlags(holder.txtRegularPrice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
-        
+        holder.txtDealPrice.setText(String.valueOf("$" + dealEntry.dealPrice));
         
         return row;
     }
