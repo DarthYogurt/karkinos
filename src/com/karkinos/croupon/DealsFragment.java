@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
 public class DealsFragment extends Fragment {
@@ -33,7 +34,8 @@ public class DealsFragment extends Fragment {
         // LV.addHeaderView(header);
         
         LV.setAdapter(adapter);
-
+    
+        
         return V;
 	}
 	
