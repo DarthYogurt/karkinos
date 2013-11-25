@@ -26,7 +26,8 @@ public class DealsFragment extends Fragment {
 		            new Deal("Deal 5", R.drawable.test_image, 60, 70, 1500, 1100)
 		        };
         
-        Database db = new Database();
+        Database db = new Database(this.getActivity());
+        
         db.getCurrentDeals();
         
         //Toast.makeText(this, cur, Toast.LENGTH_LONG).show();
