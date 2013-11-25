@@ -5,8 +5,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class DealsFragment extends Fragment {
 		
@@ -25,6 +25,12 @@ public class DealsFragment extends Fragment {
 		            new Deal("Deal 4", R.drawable.test_image, 198, 450, 450, 350),
 		            new Deal("Deal 5", R.drawable.test_image, 60, 70, 1500, 1100)
 		        };
+        
+        Database db = new Database();
+        db.getCurrentDeals();
+        
+        //Toast.makeText(this, cur, Toast.LENGTH_LONG).show();
+        
         
         // Sets up adapter to pass data into ListView XML
         DealAdapter adapter = new DealAdapter(getActivity(), R.layout.listview_item_row, all_deal_data);
