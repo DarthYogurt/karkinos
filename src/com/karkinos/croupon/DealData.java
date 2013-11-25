@@ -6,12 +6,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v4.app.NavUtils;
 
-public class DealScreen extends Activity {
+public class DealData extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_deal_screen);
+		setContentView(R.layout.activity_deal_data);
 		// Show the Up button in the action bar.
 		setupActionBar();
 	}
@@ -28,7 +28,7 @@ public class DealScreen extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.deal_screen, menu);
+		getMenuInflater().inflate(R.menu.deal_data, menu);
 		return true;
 	}
 
