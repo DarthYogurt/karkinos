@@ -15,6 +15,7 @@ public class DealsFragment extends Fragment {
 	    View V = inflater.inflate(R.layout.fragment_show_deals, container, false);
 	    ListView LV = (ListView)V.findViewById(R.id.dealsListView);
 
+	    // Sample set of data passed to adapter for testing purposes
         Deal all_deal_data[] = new Deal[]
 		        {
 		            new Deal("Deal 1", R.drawable.test_image, 389, 700, 750, 500),
