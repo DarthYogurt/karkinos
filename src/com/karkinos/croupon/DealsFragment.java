@@ -1,10 +1,12 @@
 package com.karkinos.croupon;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
@@ -33,7 +35,15 @@ public class DealsFragment extends Fragment {
         // View header = (View)inflater.inflate(R.layout.listview_header_row, null);
         // LV.addHeaderView(header);
         
-        listView.setAdapter(adapter);        
+        listView.setAdapter(adapter);       
+        
+        listView.setOnItemClickListener(new OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+				Intent intent = new Intent(getActivity(), DealPage.class);	
+				startActivity(intent);
+			}
+        });
         
         return view;
 	}
