@@ -13,8 +13,8 @@ public class DealsFragment extends Fragment {
 	@Override  
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {  
 	    
-	    View V = inflater.inflate(R.layout.fragment_show_deals, container, false);
-	    ListView LV = (ListView)V.findViewById(R.id.dealsListView);
+	    View view = inflater.inflate(R.layout.fragment_show_deals, container, false);
+	    ListView listView = (ListView)view.findViewById(R.id.dealsListView);
 
 	    // Sample set of data passed to adapter for testing purposes
         Deal all_deal_data[] = new Deal[]
@@ -33,10 +33,9 @@ public class DealsFragment extends Fragment {
         // View header = (View)inflater.inflate(R.layout.listview_header_row, null);
         // LV.addHeaderView(header);
         
-        LV.setAdapter(adapter);
-    
+        listView.setAdapter(adapter);        
         
-        return V;
+        return view;
 	}
 	
 }

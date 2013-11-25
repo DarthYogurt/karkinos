@@ -10,7 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class DealAdapter extends ArrayAdapter<Deal>{
+public class DealAdapter extends ArrayAdapter<Deal> {
 
     Context context; 
     int layoutResourceId;    
