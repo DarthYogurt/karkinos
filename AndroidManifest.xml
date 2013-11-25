@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.karkinos.croupon.DealScreen"
+            android:name="com.karkinos.croupon.DealData"
             android:label="@string/title_activity_deal_screen"
             android:parentActivityName="com.karkinos.croupon.MainActivity" >
             <meta-data
