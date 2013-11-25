@@ -1,5 +1,6 @@
 package com.karkinos.croupon;
 
+// Object class for each individual deal
 public class Deal {
 	public String dealDesc = "";
 	public int dealImage;
