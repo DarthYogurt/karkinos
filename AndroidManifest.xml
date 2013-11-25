@@ -15,11 +15,11 @@
         <activity
             android:name="com.karkinos.croupon.MainActivity"
             android:label="@string/app_name" >
-            <intent-filter>
+<!--             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter> -->
         </activity>
         <activity
             android:name="com.karkinos.croupon.DealScreen"
@@ -28,6 +28,15 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.karkinos.croupon.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.karkinos.croupon.ChampionBoard"
+            android:label="@string/title_activity_champion_board" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

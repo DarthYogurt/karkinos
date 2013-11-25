@@ -11,5 +11,6 @@
     <string name="dealImage">Deal Image</string>
     <string name="title_activity_deal_screen">Croupon Deal</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_champion_board">ChampionBoard</string>
 
 </resources>
