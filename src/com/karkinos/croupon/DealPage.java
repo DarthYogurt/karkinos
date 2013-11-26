@@ -8,10 +8,15 @@ import android.os.CountDownTimer;
 import android.app.Activity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.support.v4.app.NavUtils;
 
 public class DealPage extends Activity {
+	Button btnJoinCause;
 	
 	long mMilliseconds = 60000;
 	SimpleDateFormat mSimpleDateFormat = new SimpleDateFormat("HH:mm:ss");
@@ -39,6 +44,16 @@ public class DealPage extends Activity {
 		mTimerTextView = (TextView) findViewById(R.id.txtCountDownTimer);
 		
 		mCountDownTimer.start();
+		
+		btnJoinCause = (Button)findViewById(R.id.btnJoinCause);
+		btnJoinCause.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				Toast test;
+				test = Toast.makeText(getApplicationContext(), "Join Cause Button Works!", Toast.LENGTH_SHORT);
+				test.show();
+			}
+		});
 	}
 
 	/**

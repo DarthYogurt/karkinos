@@ -61,6 +61,7 @@ public final class R {
         public static final int action_settings=0x7f050001;
         public static final int app_name=0x7f050000;
         public static final int browseCategories=0x7f050006;
+        public static final int dummyText=0x7f05000c;
         public static final int featuredDeals=0x7f050005;
         public static final int localDeals=0x7f050007;
         public static final int myDeals=0x7f050004;
@@ -101,5 +102,8 @@ public final class R {
         /**  Button Styling 
          */
         public static final int ButtonText=0x7f060002;
+        /**  Deal Page All Headings 
+         */
+        public static final int DealPageHeading=0x7f060003;
     }
 }
