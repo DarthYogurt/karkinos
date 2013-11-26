@@ -1,10 +1,16 @@
 package com.karkinos.croupon;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+<<<<<<< HEAD
+=======
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+>>>>>>> master
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -13,8 +19,8 @@ public class DealsFragment extends Fragment {
 	@Override  
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {  
 	    
-	    View V = inflater.inflate(R.layout.fragment_show_deals, container, false);
-	    ListView LV = (ListView)V.findViewById(R.id.dealsListView);
+	    View view = inflater.inflate(R.layout.fragment_show_deals, container, false);
+	    ListView listView = (ListView)view.findViewById(R.id.dealsListView);
 
 	    // Sample set of data passed to adapter for testing purposes
         Deal all_deal_data[] = new Deal[]
@@ -40,10 +46,17 @@ public class DealsFragment extends Fragment {
         // View header = (View)inflater.inflate(R.layout.listview_header_row, null);
         // LV.addHeaderView(header);
         
-        LV.setAdapter(adapter);
-    
+        listView.setAdapter(adapter);       
         
-        return V;
+        listView.setOnItemClickListener(new OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+				Intent intent = new Intent(getActivity(), DealPage.class);	
+				startActivity(intent);
+			}
+        });
+        
+        return view;
 	}
 	
 }

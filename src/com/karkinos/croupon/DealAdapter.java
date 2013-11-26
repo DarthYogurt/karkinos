@@ -10,7 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class DealAdapter extends ArrayAdapter<Deal>{
+public class DealAdapter extends ArrayAdapter<Deal> {
 
     Context context; 
     int layoutResourceId;    
@@ -58,12 +58,12 @@ public class DealAdapter extends ArrayAdapter<Deal>{
         
         Deal dealEntry = data[position];
 
-        holder.imgDealImage.setImageResource(dealEntry.dealImage);
-        holder.txtDealDesc.setText(dealEntry.dealDesc);
+        holder.imgDealImage.setImageResource(dealEntry.image);
+        holder.txtDealDesc.setText(dealEntry.description);
         holder.txtSupporters.setText(String.valueOf(dealEntry.currentSupporters + " / " + dealEntry.maxSupporters + " Supporters"));
-        holder.txtRegularPrice.setText(String.valueOf("$" + dealEntry.regPrice));
+        holder.txtRegularPrice.setText(String.valueOf("$" + dealEntry.regularPrice));
         holder.txtRegularPrice.setPaintFlags(holder.txtRegularPrice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
-        holder.txtDealPrice.setText(String.valueOf("$" + dealEntry.dealPrice));
+        holder.txtDealPrice.setText(String.valueOf("$" + dealEntry.discountPrice));
         
         return row;
     }
