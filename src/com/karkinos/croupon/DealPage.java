@@ -36,7 +36,7 @@ public class DealPage extends Activity {
 		setupActionBar();
 		
 		mSimpleDateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
-		mTimerTextView = (TextView) findViewById(R.id.countDownTimerText);
+		mTimerTextView = (TextView) findViewById(R.id.txtCountDownTimer);
 		
 		mCountDownTimer.start();
 	}

@@ -11,7 +11,9 @@
     <string name="browseCategories">Browse Categories</string>
     <string name="localDeals">Local Deals</string>
     
-    <string name="dealImage">Deal Image</string>
-    <string name="progressBarText">Progress:</string>
+    <string name="txtDealImage">Deal Image</string>
+    <string name="txtProgressBar">Progress:</string>
+    <string name="txtTimeLeft">Time Left:</string>
+    <string name="txtJoinCause">Join Cause</string>
 
 </resources>
