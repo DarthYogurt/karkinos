@@ -27,7 +27,7 @@ public class DealsFragment extends Fragment {
 		        };
         
         Database db = new Database(this.getActivity());
-        
+        db.writeDataToFile();  //TEMPORARY TO SETUP JSON FLAT FILE
         db.getCurrentDeals();
         
         //Toast.makeText(this, cur, Toast.LENGTH_LONG).show();
