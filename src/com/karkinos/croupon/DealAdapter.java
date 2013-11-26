@@ -23,7 +23,7 @@ public class DealAdapter extends ArrayAdapter<Deal> {
         this.data = data;
     }
 
-    static class DealHolder
+    static class ViewHolder
     {
     	ImageView imgDealImage;
     	TextView txtDealDesc;
@@ -34,26 +34,25 @@ public class DealAdapter extends ArrayAdapter<Deal> {
     
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View row = convertView;
-        DealHolder holder = null;
+        ViewHolder holder = null;
         
-        if(row == null)
+        if(convertView == null)
         {
             LayoutInflater inflater = ((Activity)context).getLayoutInflater();
-            row = inflater.inflate(layoutResourceId, parent, false);
+            convertView = inflater.inflate(layoutResourceId, parent, false);
             
-            holder = new DealHolder();
-            holder.imgDealImage = (ImageView)row.findViewById(R.id.imgDealImage);
-            holder.txtDealDesc = (TextView)row.findViewById(R.id.txtDealDesc);
-            holder.txtSupporters = (TextView)row.findViewById(R.id.txtSupporters);
-            holder.txtRegularPrice = (TextView)row.findViewById(R.id.txtRegularPrice);
-            holder.txtDealPrice = (TextView)row.findViewById(R.id.txtDealPrice);
+            holder = new ViewHolder();
+            holder.imgDealImage = (ImageView)convertView.findViewById(R.id.imgDealImage);
+            holder.txtDealDesc = (TextView)convertView.findViewById(R.id.txtDealDesc);
+            holder.txtSupporters = (TextView)convertView.findViewById(R.id.txtSupporters);
+            holder.txtRegularPrice = (TextView)convertView.findViewById(R.id.txtRegularPrice);
+            holder.txtDealPrice = (TextView)convertView.findViewById(R.id.txtDealPrice);
             
-            row.setTag(holder);
+            convertView.setTag(holder);
         }
         else
         {
-            holder = (DealHolder)row.getTag();
+            holder = (ViewHolder)convertView.getTag();
         }
         
         Deal dealEntry = data[position];
@@ -65,7 +64,7 @@ public class DealAdapter extends ArrayAdapter<Deal> {
         holder.txtRegularPrice.setPaintFlags(holder.txtRegularPrice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
         holder.txtDealPrice.setText(String.valueOf("$" + dealEntry.discountPrice));
         
-        return row;
+        return convertView;
     }
    
 }
