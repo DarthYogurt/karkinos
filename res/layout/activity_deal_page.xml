@@ -3,30 +3,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context=".DealPage" >
 
    <RelativeLayout
-        android:id="@+id/bottomBarContainer"
+        android:id="@+id/topContainer"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_alignParentBottom="true"
-        android:background="#ccc" >
+        android:layout_alignParentTop="true"
+        android:background="#66ccff"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+       	android:paddingLeft="20dp"
+        android:paddingRight="20dp" >
         
         <TextView
             android:id="@+id/countDownTimerText"
-            android:layout_width="wrap_content" 
-            android:layout_height="wrap_content" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff" />
        
         <TextView
             android:id="@+id/progressBarText"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/progressBarText" />
+            android:layout_below="@id/countDownTimerText"
+            android:text="@string/progressBarText"
+            android:textColor="#fff" />
         
         <ProgressBar 
             android:layout_width="fill_parent"

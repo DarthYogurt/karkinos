@@ -5,10 +5,7 @@ import android.content.Context;
 import android.graphics.Paint;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -61,12 +58,12 @@ public class DealAdapter extends ArrayAdapter<Deal> {
         
         Deal dealEntry = data[position];
 
-        holder.imgDealImage.setImageResource(dealEntry.dealImage);
-        holder.txtDealDesc.setText(dealEntry.dealDesc);
+        holder.imgDealImage.setImageResource(dealEntry.image);
+        holder.txtDealDesc.setText(dealEntry.description);
         holder.txtSupporters.setText(String.valueOf(dealEntry.currentSupporters + " / " + dealEntry.maxSupporters + " Supporters"));
-        holder.txtRegularPrice.setText(String.valueOf("$" + dealEntry.regPrice));
+        holder.txtRegularPrice.setText(String.valueOf("$" + dealEntry.regularPrice));
         holder.txtRegularPrice.setPaintFlags(holder.txtRegularPrice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
-        holder.txtDealPrice.setText(String.valueOf("$" + dealEntry.dealPrice));
+        holder.txtDealPrice.setText(String.valueOf("$" + dealEntry.discountPrice));
         
         return row;
     }

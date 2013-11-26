@@ -2,34 +2,34 @@ package com.karkinos.croupon;
 
 // Object class for each individual deal
 public class Deal {
-	public String dealDesc = "";
-	public int dealImage;
+	public String description = "";
+	public int image;
     public int currentSupporters = 0;
     public int maxSupporters = 0;
-    public int regPrice = 0;
-    public int dealPrice = 0;
+    public int regularPrice = 0;
+    public int discountPrice = 0;
     
     public Deal() {
         super();
     }
     
-    public Deal(String dealDesc, int dealImage, int currentSupporters, 
-    			 int maxSupporters, int regPrice, int dealPrice) {
+    public Deal(String description, int image, int currentSupporters, 
+    			 int maxSupporters, int regularPrice, int discountPrice) {
         super();
-        this.dealDesc = dealDesc;
-        this.dealImage = dealImage;
+        this.description = description;
+        this.image = image;
         this.currentSupporters = currentSupporters;
         this.maxSupporters = maxSupporters;
-        this.regPrice = regPrice;
-        this.dealPrice = dealPrice;
+        this.regularPrice = regularPrice;
+        this.discountPrice = discountPrice;
     }
     
-    private String getDealDesc() {
-    	return this.dealDesc;
+    private String getDescription() {
+    	return this.description;
     }
     
-    private void setDealDesc(String s) {
-    	this.dealDesc = s;
+    private void setDescription(String s) {
+    	this.description = s;
     }
     
     private int getCurrentSupporters() {
@@ -48,20 +48,20 @@ public class Deal {
     	this.maxSupporters = i;
     }
     
-    private int getRegPrice() {
-    	return this.regPrice;
+    private int getRegularPrice() {
+    	return this.regularPrice;
     }
     
-    private void setRegPrice(int i) {
-    	this.regPrice = i;
+    private void setRegularPrice(int i) {
+    	this.regularPrice = i;
     }
     
-    private int getDealPrice() {
-    	return this.dealPrice;
+    private int getDiscountPrice() {
+    	return this.discountPrice;
     }
     
-    private void setDealPrice(int i) {
-    	this.dealPrice = i;
+    private void setDiscountPrice(int i) {
+    	this.discountPrice = i;
     }
     
 }
