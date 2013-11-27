@@ -1,8 +1,8 @@
-<RelativeLayout 
+<LinearLayout 
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:orientation="vertical"
     tools:context=".DealPage" >
 
@@ -10,34 +10,124 @@
         android:id="@+id/topContainer"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_alignParentTop="true"
         android:background="#66ccff"
-        android:paddingTop="20dp"
-        android:paddingBottom="20dp"
-       	android:paddingLeft="20dp"
-        android:paddingRight="20dp" >
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+       	android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
         
-        <TextView
-            android:id="@+id/countDownTimerText"
+      	<ProgressBar
+      	    android:id="@+id/progressBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+        	style="@android:style/Widget.ProgressBar.Horizontal" />
+      	
+      	<TextView
+            android:id="@+id/txtProgressBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#fff" />
-       
+            android:layout_below="@id/progressBar"
+            android:text="@string/txtProgressBar"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+      	
+      	<TextView 
+      	    android:id="@+id/txtSupporters"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@id/txtProgressBar"
+	        android:layout_toRightOf="@id/txtProgressBar"
+	        android:paddingLeft="5dp"
+	        android:text="300/500 Supporters"
+	        android:textColor="#fff"
+	        android:textStyle="bold" />
+        
+      	<TextView
+            android:id="@+id/txtTimeLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtProgressBar"
+            android:text="@string/txtTimeLeft"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+      	
         <TextView
-            android:id="@+id/progressBarText"
-            android:layout_width="fill_parent"
+            android:id="@+id/txtCountDownTimer"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/countDownTimerText"
-            android:text="@string/progressBarText"
-            android:textColor="#fff" />
-        
-        <ProgressBar 
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/progressBarText"
-        	style="@android:style/Widget.ProgressBar.Horizontal" />
-        
-    </RelativeLayout>
+            android:layout_alignBaseline="@id/txtTimeLeft"
+            android:layout_toRightOf="@id/txtTimeLeft"
+            android:paddingLeft="5dp"
+            android:textColor="#fff"
+            android:textStyle="bold" />
 
-</RelativeLayout>
+        <Button 
+            android:id="@+id/btnJoinCause"
+            android:layout_width="wrap_content"
+       		android:layout_height="wrap_content"
+       		android:layout_below="@id/progressBar"
+       		android:layout_alignParentRight="true"
+            android:text="@string/txtJoinCause"
+            android:background="@drawable/btn_join_cause"
+            style="@style/ButtonText" />
+
+    </RelativeLayout>
+    
+   	<View 
+		android:layout_width="fill_parent"
+		android:layout_height="1dp"
+		android:background="#fff" />
+    
+	<ScrollView
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:background="#fff" >
+	    
+	    <LinearLayout
+	    	android:layout_width="fill_parent"
+	    	android:layout_height="wrap_content"
+	    	android:orientation="vertical" >
+	        
+	        <ImageView 
+		        android:src="@drawable/test_image"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:adjustViewBounds="true"
+		        android:contentDescription="@string/txtDealImage" />
+	        
+	        <LinearLayout
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="vertical"
+	            android:padding="14dp" >
+	            
+	            <TextView 
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:text="Low Price of $200!" />
+	            
+	            <TextView 
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:text="Deal One"
+	                style="@style/DealPageHeading" />
+	            
+	            <View 
+					android:layout_width="fill_parent"
+					android:layout_height="2dp"
+					android:background="#66ccff" />
+	            
+	            <TextView 
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:text="@string/dummyText" />
+	            
+	            
+	        </LinearLayout>
+
+	    </LinearLayout>
+	    
+	</ScrollView>
+
+</LinearLayout>

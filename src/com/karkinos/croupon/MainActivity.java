@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.view.Menu;
 
+// TODO: FragmentActivity to Fragment
 public class MainActivity extends FragmentActivity {
 	// Fragment PagerAdapter keeps every loaded fragment in memory. 
 	// If too memory intensive, switch to FragmentStatePagerAdapter.
