@@ -102,8 +102,11 @@ public final class R {
         /**  Button Styling 
          */
         public static final int ButtonText=0x7f060002;
-        /**  Deal Page All Headings 
+        /**  Deal Page | All Headings 
          */
         public static final int DealPageHeading=0x7f060003;
+        /**  Deal Page | ViewGroup Section 
+         */
+        public static final int DealPageSection=0x7f060004;
     }
 }

@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.support.v4.app.NavUtils;
@@ -54,6 +55,18 @@ public class DealPage extends Activity {
 				test.show();
 			}
 		});
+		
+		// Sample set of data passed to adapter for testing purposes
+        Deal all_deal_data[] = new Deal[]
+		        {
+		            new Deal("Deal 1", R.drawable.test_image, 389, 700, 750, 500),
+		            new Deal("Deal 2", R.drawable.test_image, 20, 80, 1800, 1500),
+		            new Deal("Deal 3", R.drawable.test_image, 1932, 2000, 75, 60),
+		            new Deal("Deal 4", R.drawable.test_image, 198, 450, 450, 350),
+		            new Deal("Deal 5", R.drawable.test_image, 60, 70, 1500, 1100)
+		        };
+        
+		DealAdapter adapter = new DealAdapter(this, R.layout.activity_deal_page, all_deal_data);
 	}
 
 	/**

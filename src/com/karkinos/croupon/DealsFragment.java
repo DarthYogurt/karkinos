@@ -28,7 +28,7 @@ public class DealsFragment extends Fragment {
 		            new Deal("Deal 5", R.drawable.test_image, 60, 70, 1500, 1100)
 		        };
         
-        // Sets up adapter to pass data into ListView XML
+        // Sets up adapter to pass data into XML
         DealAdapter adapter = new DealAdapter(getActivity(), R.layout.listview_item_row, all_deal_data);
         
         // TO ADD HEADER ROW BACK IN

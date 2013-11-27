@@ -1,12 +1,14 @@
 <LinearLayout 
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".DealPage"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    tools:context=".DealPage" >
+    android:background="#fff" >
 
-   <RelativeLayout
+	<!-- TOP CONTAINER -->
+   	<RelativeLayout
         android:id="@+id/topContainer"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -73,16 +75,17 @@
             style="@style/ButtonText" />
 
     </RelativeLayout>
+	<!-- END TOP CONTAINER -->
     
    	<View 
 		android:layout_width="fill_parent"
 		android:layout_height="1dp"
 		android:background="#fff" />
     
+	<!-- BOTTOM CONTAINER -->
 	<ScrollView
 	    android:layout_width="fill_parent"
-	    android:layout_height="wrap_content"
-	    android:background="#fff" >
+	    android:layout_height="wrap_content" >
 	    
 	    <LinearLayout
 	    	android:layout_width="fill_parent"
@@ -102,15 +105,73 @@
 	            android:orientation="vertical"
 	            android:padding="14dp" >
 	            
-	            <TextView 
+				<!-- PRICES SECTION -->
+				<TextView 
 	                android:layout_width="fill_parent"
 	                android:layout_height="wrap_content"
-	                android:text="Low Price of $200!" />
+	                android:text="Price"
+	                style="@style/DealPageHeading" />
 	            
+	            <View 
+					android:layout_width="fill_parent"
+					android:layout_height="2dp"
+					android:background="#66ccff" />	  
+
+	            <TableLayout
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:paddingBottom="20dp" >
+	                <TableRow >
+	                    <TextView
+			                android:layout_width="0dp"
+			                android:layout_height="wrap_content"
+			                android:layout_weight="2"
+			                android:textStyle="bold"
+			                android:textColor="#009933"
+			                android:text="Our Price:" />
+	                
+		                <TextView
+			                android:layout_width="0dp"
+			                android:layout_height="wrap_content"
+			                android:layout_weight="1"
+			                android:textStyle="bold"
+			                android:textColor="#009933"
+			                android:text="$150" />
+	                </TableRow>
+	                <TableRow >
+	                    <TextView
+			                android:layout_width="0dp"
+			                android:layout_height="wrap_content"
+			                android:layout_weight="2"
+			                android:text="Amazon:" />
+	                
+		                <TextView
+			                android:layout_width="0dp"
+			                android:layout_height="wrap_content"
+			                android:layout_weight="1"
+			                android:text="$200" />
+	                </TableRow>
+	                <TableRow >
+	                    <TextView
+			                android:layout_width="0dp"
+			                android:layout_height="wrap_content"
+			                android:layout_weight="2"
+			                android:text="eBay:" />
+	                
+		                <TextView
+			                android:layout_width="0dp"
+			                android:layout_height="wrap_content"
+			                android:layout_weight="1"
+			                android:text="$180" />
+	                </TableRow>
+	            </TableLayout>
+				<!-- END PRICES SECTION -->
+	            
+	            <!-- DESCRIPTION SECTION -->
 	            <TextView 
 	                android:layout_width="fill_parent"
 	                android:layout_height="wrap_content"
-	                android:text="Deal One"
+	                android:text="Description"
 	                style="@style/DealPageHeading" />
 	            
 	            <View 
@@ -121,13 +182,53 @@
 	            <TextView 
 	                android:layout_width="fill_parent"
 	                android:layout_height="wrap_content"
-	                android:text="@string/dummyText" />
+	                android:text="@string/dummyText"
+	                android:paddingBottom="20dp" />
+	            <!-- END DESCRIPTION SECTION -->
 	            
+	            <!-- SPECIFICS SECTION -->
+	            <TextView 
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:text="Specifics"
+	                style="@style/DealPageHeading" />
+	            
+	            <View 
+					android:layout_width="fill_parent"
+					android:layout_height="2dp"
+					android:background="#66ccff" />
+	            
+	            <TextView 
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:text="@string/dummyText"
+	                android:paddingBottom="20dp" />
+	            <!-- END SPECIFICS SECTION -->
+	            
+	            <!-- Q&A SECTION -->
+	            <TextView 
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:text="Q &amp; A"
+	                style="@style/DealPageHeading" />
+	            
+	            <View 
+					android:layout_width="fill_parent"
+					android:layout_height="2dp"
+					android:background="#66ccff" />
+	            
+	            <TextView 
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:text="@string/dummyText"
+	                android:paddingBottom="20dp" />
+	            <!-- END Q&A SECTION -->
 	            
 	        </LinearLayout>
 
 	    </LinearLayout>
 	    
 	</ScrollView>
+	<!-- END BOTTOM CONTAINER -->
 
 </LinearLayout>
