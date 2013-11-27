@@ -6,11 +6,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-<<<<<<< HEAD
-=======
+
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
->>>>>>> master
+
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -32,9 +31,9 @@ public class DealsFragment extends Fragment {
 		            new Deal("Deal 5", R.drawable.test_image, 60, 70, 1500, 1100)
 		        };
         
-        Database db = new Database(this.getActivity());
+        Database db = new Database(getActivity());
         db.writeDataToFile();  //TEMPORARY TO SETUP JSON FLAT FILE
-        db.getCurrentDeals();
+        //db.getCurrentDeals();
         
         //Toast.makeText(this, cur, Toast.LENGTH_LONG).show();
         

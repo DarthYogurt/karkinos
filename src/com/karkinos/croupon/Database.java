@@ -7,11 +7,16 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import android.content.Context;
+import android.widget.Toast;
 
 
 public class Database{
 	private Context parentContext;
+	
 	
 	public Database(Context context){
 		this.parentContext = context;
@@ -61,6 +66,36 @@ public class Database{
 		System.out.println();
 	}
 
-	public void writeDataToFile()
+	public void writeDataToFile(){
+		//String jsonString = "{ deal:[ {id:1, description:'Samsung TV', image:'', currentSupporters:100, regularPrice:400.15, discountedPrice:300.50} ] } ";
+		String jsonString = "{ id:1, description:'Samsung TV', image:'', currentSupporters:100, regularPrice:400.15, discountedPrice:300.50}";
+		
+		//Toast.makeText(this.parentContext, jsonString, Toast.LENGTH_LONG).show();
+		
+		String error = null;
+		JSONObject mainObject = null;
+		try {
+			mainObject = new JSONObject(jsonString);
+			Toast.makeText(this.parentContext, mainObject.toString(), Toast.LENGTH_LONG).show();
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			Toast.makeText(this.parentContext, e.toString(), Toast.LENGTH_LONG).show();
+		}
+		System.out.println();
+		
+		try{
+			JSONObject description = mainObject.getJSONObject("description");
+
+			System.out.println();
+		}
+		catch (JSONException e){
+			Toast.makeText(this.parentContext, "FAIL TO READ", Toast.LENGTH_LONG).show();
+		}
+
+		
+
+		
+		
+	}
 	
 }
