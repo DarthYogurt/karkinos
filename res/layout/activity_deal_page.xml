@@ -6,86 +6,12 @@
     android:layout_height="fill_parent"
     android:orientation="vertical"
     android:background="#fff" >
-
+    
 	<!-- TOP CONTAINER -->
-   	<RelativeLayout
-        android:id="@+id/topContainer"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="#66ccff"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-       	android:paddingLeft="10dp"
-        android:paddingRight="10dp" >
-        
-      	<ProgressBar
-      	    android:id="@+id/progressBar"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="4dp"
-        	style="@android:style/Widget.ProgressBar.Horizontal" />
-      	
-      	<TextView
-            android:id="@+id/txtProgressBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/progressBar"
-            android:text="@string/txtProgressBar"
-            android:textColor="#fff"
-            android:textStyle="bold" />
-      	
-      	<TextView 
-      	    android:id="@+id/txtSupporters"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_alignBaseline="@id/txtProgressBar"
-	        android:layout_toRightOf="@id/txtProgressBar"
-	        android:paddingLeft="5dp"
-	        android:text="300/500 Supporters"
-	        android:textColor="#fff"
-	        android:textStyle="bold" />
-        
-      	<TextView
-            android:id="@+id/txtTimeLeft"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/txtProgressBar"
-            android:text="@string/txtTimeLeft"
-            android:textColor="#fff"
-            android:textStyle="bold" />
-      	
-        <TextView
-            android:id="@+id/txtCountDownTimer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@id/txtTimeLeft"
-            android:layout_toRightOf="@id/txtTimeLeft"
-            android:paddingLeft="5dp"
-            android:textColor="#fff"
-            android:textStyle="bold" />
-
-        <Button 
-            android:id="@+id/btnJoinCause"
-            android:layout_width="wrap_content"
-       		android:layout_height="wrap_content"
-       		android:layout_below="@id/progressBar"
-       		android:layout_alignParentRight="true"
-            android:text="@string/txtJoinCause"
-            android:background="@drawable/btn_join_cause"
-            style="@style/ButtonText" />
-
-    </RelativeLayout>
-	<!-- END TOP CONTAINER -->
-    
-   	<View 
-		android:layout_width="fill_parent"
-		android:layout_height="1dp"
-		android:background="#fff" />
-    
-	<!-- BOTTOM CONTAINER -->
 	<ScrollView
 	    android:layout_width="fill_parent"
-	    android:layout_height="wrap_content" >
+	    android:layout_height="0dp"
+	    android:layout_weight="1" >
 	    
 	    <LinearLayout
 	    	android:layout_width="fill_parent"
@@ -93,6 +19,7 @@
 	    	android:orientation="vertical" >
 	        
 	        <ImageView 
+	            android:id="@+id/imgDealImage"
 		        android:src="@drawable/test_image"
 		        android:layout_width="fill_parent"
 		        android:layout_height="wrap_content"
@@ -107,9 +34,9 @@
 	            
 				<!-- PRICES SECTION -->
 				<TextView 
-	                android:layout_width="fill_parent"
+				    android:layout_width="fill_parent"
 	                android:layout_height="wrap_content"
-	                android:text="Price"
+	                android:text="@string/txtPrices"
 	                style="@style/DealPageHeading" />
 	            
 	            <View 
@@ -128,9 +55,10 @@
 			                android:layout_weight="2"
 			                android:textStyle="bold"
 			                android:textColor="#009933"
-			                android:text="Our Price:" />
+			                android:text="@string/txtOurPrice" />
 	                
 		                <TextView
+		                    android:id="@+id/txtDealPrice"
 			                android:layout_width="0dp"
 			                android:layout_height="wrap_content"
 			                android:layout_weight="1"
@@ -171,7 +99,7 @@
 	            <TextView 
 	                android:layout_width="fill_parent"
 	                android:layout_height="wrap_content"
-	                android:text="Description"
+	                android:text="@string/txtDescription"
 	                style="@style/DealPageHeading" />
 	            
 	            <View 
@@ -190,7 +118,7 @@
 	            <TextView 
 	                android:layout_width="fill_parent"
 	                android:layout_height="wrap_content"
-	                android:text="Specifics"
+	                android:text="@string/txtSpecifics"
 	                style="@style/DealPageHeading" />
 	            
 	            <View 
@@ -209,7 +137,7 @@
 	            <TextView 
 	                android:layout_width="fill_parent"
 	                android:layout_height="wrap_content"
-	                android:text="Q &amp; A"
+	                android:text="@string/txtQA"
 	                style="@style/DealPageHeading" />
 	            
 	            <View 
@@ -229,6 +157,73 @@
 	    </LinearLayout>
 	    
 	</ScrollView>
+	<!-- END TOP CONTAINER -->
+	
+	<!-- BOTTOM CONTAINER -->
+   	<RelativeLayout
+        android:id="@+id/bottomContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#66ccff"
+        android:padding="10dp" >
+	    
+      	<TextView
+            android:id="@+id/txtTimeLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtTimeLeft"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+      	
+        <TextView
+            android:id="@+id/txtCountDownTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/txtTimeLeft"
+            android:layout_toRightOf="@id/txtTimeLeft"
+            android:paddingLeft="5dp"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+   	    
+        <TextView
+            android:id="@+id/txtProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtTimeLeft"
+            android:text="@string/txtProgress"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+      	
+      	<TextView 
+      	    android:id="@+id/txtSupporters"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@id/txtProgress"
+	        android:layout_toRightOf="@id/txtProgress"
+	        android:paddingLeft="5dp"
+	        android:text="300/500 Supporters"
+	        android:textColor="#fff"
+	        android:textStyle="bold" />
+      		
+      	<ProgressBar
+      	    android:id="@+id/progressBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtProgress"
+            android:paddingTop="4dp"
+        	style="@android:style/Widget.ProgressBar.Horizontal" />
+      	
+        <Button 
+            android:id="@+id/btnJoinCause"
+            android:layout_width="wrap_content"
+       		android:layout_height="wrap_content"
+       		android:layout_above="@id/progressBar"
+       		android:layout_alignParentRight="true"
+            android:text="@string/txtJoinCause"
+            android:background="@drawable/btn_join_cause"
+            style="@style/ButtonText" />
+
+    </RelativeLayout>
 	<!-- END BOTTOM CONTAINER -->
 
 </LinearLayout>
