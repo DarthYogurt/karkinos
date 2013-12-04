@@ -58,7 +58,7 @@ public class Database{
 			try {
 				sd = (JSONObject) dealArray.get(i);
 				String description = sd.getString("description");
-				int image = R.drawable.test_image;
+				int image = R.drawable.samsung_tv;
 				int currentSupporters = Integer.parseInt(sd.getString("currentSupporters"));
 				int maxSupporters = 50;    //NEEDS EDITING
 				float regularPrice = Float.parseFloat(sd.getString("regularPrice"));
