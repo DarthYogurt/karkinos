@@ -1,5 +1,8 @@
 package com.karkinos.croupon;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -19,17 +22,15 @@ public class DealsFragment extends Fragment {
 	    ListView listView = (ListView)view.findViewById(R.id.dealsListView);
 
 	    // Sample set of data passed to adapter for testing purposes
-        Deal all_deal_data[] = new Deal[]
-		        {
-		            new Deal("Deal 1", R.drawable.test_image, 389, 700, 750, 500),
-		            new Deal("Deal 2", R.drawable.test_image, 20, 80, 1800, 1500),
-		            new Deal("Deal 3", R.drawable.test_image, 1932, 2000, 75, 60),
-		            new Deal("Deal 4", R.drawable.test_image, 198, 450, 450, 350),
-		            new Deal("Deal 5", R.drawable.test_image, 60, 70, 1500, 1100)
-		        };
+        ArrayList<Deal> all_deals = new ArrayList<Deal>();
+        all_deals.add(new Deal("Deal 1", R.drawable.test_image, 389, 700, 750, 500));
+        all_deals.add(new Deal("Deal 2", R.drawable.test_image, 20, 80, 1800, 1500));
+        all_deals.add(new Deal("Deal 3", R.drawable.test_image, 1932, 2000, 75, 60));
+        all_deals.add(new Deal("Deal 4", R.drawable.test_image, 198, 450, 450, 350));
+        all_deals.add(new Deal("Deal 5", R.drawable.test_image, 60, 70, 1500, 1100));
         
         // Sets up adapter to pass data into XML
-        DealAdapter adapter = new DealAdapter(getActivity(), R.layout.listview_item_row, all_deal_data);
+        DealAdapter adapter = new DealAdapter(getActivity(), R.layout.listview_item_row, all_deals);
         
         // TO ADD HEADER ROW BACK IN
         // View header = (View)inflater.inflate(R.layout.listview_header_row, null);
@@ -40,7 +41,10 @@ public class DealsFragment extends Fragment {
         listView.setOnItemClickListener(new OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-				Intent intent = new Intent(getActivity(), DealPage.class);	
+				ArrayList<HashMap<String, String>> hashmap = (ArrayList<HashMap<String, String>>) listView.getItemAtPosition(position);
+				
+				Intent intent = new Intent(getActivity(), DealPage.class);
+				intent.putExtra("hashmap", hashmap);
 				startActivity(intent);
 			}
         });

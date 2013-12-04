@@ -1,5 +1,7 @@
 package com.karkinos.croupon;
 
+import java.util.ArrayList;
+
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Paint;
@@ -14,9 +16,9 @@ public class DealAdapter extends ArrayAdapter<Deal> {
 
     Context context; 
     int layoutResourceId;    
-    Deal data[] = null;
+    ArrayList<Deal> data = null;
     
-    public DealAdapter(Context context, int layoutResourceId, Deal[] data) {
+    public DealAdapter(Context context, int layoutResourceId, ArrayList<Deal> data) {
         super(context, layoutResourceId, data);
         this.layoutResourceId = layoutResourceId;
         this.context = context;
@@ -54,15 +56,29 @@ public class DealAdapter extends ArrayAdapter<Deal> {
         {
             holder = (ViewHolder)convertView.getTag();
         }
-        
-        Deal dealEntry = data[position];
 
-        holder.imgDealImage.setImageResource(dealEntry.image);
-        holder.txtDealDesc.setText(dealEntry.description);
-        holder.txtSupporters.setText(String.valueOf(dealEntry.currentSupporters + " / " + dealEntry.maxSupporters + " Supporters"));
-        holder.txtRegularPrice.setText(String.valueOf("$" + dealEntry.regularPrice));
+        int image = data.get(position).getImage();
+        String description = data.get(position).getDescription();
+        int currentSupporters = data.get(position).getCurrentSupporters();
+        int maxSupporters = data.get(position).getMaxSupporters();
+        int regularPrice = data.get(position).getRegularPrice();
+        int discountPrice = data.get(position).getDiscountPrice();
+        
+        holder.imgDealImage.setImageResource(image);
+        holder.txtDealDesc.setText(description);
+        holder.txtSupporters.setText(String.valueOf(currentSupporters + " / " + maxSupporters + " Supporters"));
+        holder.txtRegularPrice.setText(String.valueOf("$" + regularPrice));
         holder.txtRegularPrice.setPaintFlags(holder.txtRegularPrice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
-        holder.txtDealPrice.setText(String.valueOf("$" + dealEntry.discountPrice));
+        holder.txtDealPrice.setText(String.valueOf("$" + discountPrice));
+        
+//	OLD CODE USING REGULAR ARRAY VS ARRAYLIST        
+//        Deal dealEntry = data[position];
+//        holder.imgDealImage.setImageResource(dealEntry.image);
+//        holder.txtDealDesc.setText(dealEntry.description);
+//        holder.txtSupporters.setText(String.valueOf(dealEntry.currentSupporters + " / " + dealEntry.maxSupporters + " Supporters"));
+//        holder.txtRegularPrice.setText(String.valueOf("$" + dealEntry.regularPrice));
+//        holder.txtRegularPrice.setPaintFlags(holder.txtRegularPrice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+//        holder.txtDealPrice.setText(String.valueOf("$" + dealEntry.discountPrice));
         
         return convertView;
     }

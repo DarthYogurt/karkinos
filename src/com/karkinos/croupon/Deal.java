@@ -24,43 +24,51 @@ public class Deal {
         this.discountPrice = discountPrice;
     }
     
-    private String getDescription() {
+    int getImage() {
+    	return this.image;
+    }
+    
+    void setImage(int i) {
+    	this.image = i;
+    }
+    
+    String getDescription() {
     	return this.description;
     }
     
-    private void setDescription(String s) {
+    void setDescription(String s) {
     	this.description = s;
     }
     
-    private int getCurrentSupporters() {
+    int getCurrentSupporters() {
     	return this.currentSupporters;
     }
     
-    private void setCurrentSupporters(int i) {
+    void setCurrentSupporters(int i) {
     	this.currentSupporters = i;
     }
     
-    private int getMaxSupporters() {
+    int getMaxSupporters() {
     	return this.maxSupporters;
     }
     
-    private void setMaxSupporters(int i) {
+    void setMaxSupporters(int i) {
     	this.maxSupporters = i;
     }
     
-    private int getRegularPrice() {
+    int getRegularPrice() {
     	return this.regularPrice;
     }
     
-    private void setRegularPrice(int i) {
+    void setRegularPrice(int i) {
     	this.regularPrice = i;
     }
     
-    private int getDiscountPrice() {
+    int getDiscountPrice() {
     	return this.discountPrice;
     }
     
-    private void setDiscountPrice(int i) {
+    void setDiscountPrice(int i) {
     	this.discountPrice = i;
     }
     
