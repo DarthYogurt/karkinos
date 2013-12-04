@@ -1,103 +1,128 @@
 package com.karkinos.croupon;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.InputStream;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.content.Context;
-import android.widget.Toast;
+import android.os.Environment;
+import android.util.JsonWriter;
 
 
 public class Database{
 	private Context parentContext;
+	private JsonWriter writer;
+	private File STOREDIR = Environment.getExternalStorageDirectory();
+	private String JSONFILENAME = "TESTJSON.JSON";
 	
 	
 	public Database(Context context){
 		this.parentContext = context;
-		
 	}
 	
 	public void getCurrentDeals(){
-		
-		String filename = "deal.json";
-		File file = new File(this.parentContext.getFilesDir(), filename);
-		
 	
-		//String string = "hello world!";
+	}
 
-		//FileOutputStream fos = openFileOutput(filename, Context.MODE_PRIVATE);
-		//fos.write(string.getBytes());
-		//fos.close();
+	public void readDataFromFile(){
+		String displayText = "";
+		JSONObject jsonFromFile = null;
 		
-		//FileInputStream fis = openFileInput(filename,Context.MODE_PRIVATE);
-		FileInputStream fis;
-		//InputStreamReader isr = new InputStreamReader(fis);
+		try {
+			InputStream fileStream = new FileInputStream(STOREDIR + "/" + JSONFILENAME);
+			int fileLen = fileStream.available();
+			// Read the entire resource into a local byte buffer.
+			byte[] fileBuffer = new byte[fileLen];
+			fileStream.read(fileBuffer);
+			fileStream.close();
+			displayText = new String(fileBuffer);
+			
+			
 		
-
-		String a = new String("");
-		if (file.exists() && file.isFile()) {
-		   try {
-			   fis = new FileInputStream(file);
-			   InputStreamReader isr = new InputStreamReader(fis);
-			   BufferedReader buffered_reader = new BufferedReader(isr);
-			   a = buffered_reader.readLine();
-			   
-		   } catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+		} catch (IOException e) {
+		  // exception handling
+		}
 		
-				
-		   } catch (IOException e) {
+		try{
+			jsonFromFile = new JSONObject(displayText);
+		}
+		catch (JSONException e){
+			System.out.println();
+		}
+		
+		
+		try {
+			JSONArray jArray = jsonFromFile.getJSONArray("deals");
+			System.out.println();
+		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		}
-		else {
-
-		  // error
-		}
+		
+		
 		
 		System.out.println();
 	}
 
 	public void writeDataToFile(){
-		//String jsonString = "{ deal:[ {id:1, description:'Samsung TV', image:'', currentSupporters:100, regularPrice:400.15, discountedPrice:300.50} ] } ";
-		String jsonString = "{ 'id':1, 'description':'Samsung TV', image:'', 'currentSupporters':100, regularPrice:400.15, discountedPrice:300.50}";
+		
+		File sdDir = Environment.getExternalStorageDirectory();
+		
+		try {
+			writer = new JsonWriter(new FileWriter(STOREDIR + "/" + JSONFILENAME, false));;
+			writer.beginObject();
+			writer.name("deals");
+			writer.beginArray();
+			
+			String [][] deals = new String[][] {
+					{"412", "Samsung TV 1100Hz 10902p", "", "100", "400.15","300.50"},
+					{"12", "LGS TV, Larger than life 1231312", "" , "69696969", "800", "42.5"},
+					{"2", "PS8", "" , "214123", "10000", "600"},
+			};
+			        
+			for (int i=0; i<deals.length;i++){
+				writer.beginObject();
+				
+				writer.name("id").value(deals[i][0]);
+				writer.name("description").value(deals[i][1]);
+				writer.name("image").value(deals[i][2]);
+				writer.name("currentSupporters").value(deals[i][3]);
+				writer.name("regularPrice").value(deals[i][4]);
+				writer.name("discountPrice").value(deals[i][5]);
+
+				writer.endObject();
+			}
+			writer.endArray();
+			writer.endObject();
+			writer.close();
+			System.out.println();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+			System.out.println();
+		}
+
 		
 		//Toast.makeText(this.parentContext, jsonString, Toast.LENGTH_LONG).show();
 		
-		String error = null;
+/*		String error = null;
 		JSONObject mainObject = null;
-		try {
+		try{
 			mainObject = new JSONObject(jsonString);
-			
-			String toToast = (String) mainObject.get("description");
-			Toast.makeText(this.parentContext, toToast, Toast.LENGTH_LONG).show();
-			
-		} catch (JSONException e) {
-			// TODO Auto-generated catch block
-			Toast.makeText(this.parentContext, e.toString(), Toast.LENGTH_LONG).show();
-		}
-		
-		int i=0;
-		
-/*		try{
-			JSONObject description = mainObject.getJSONObject("description");
-
-			System.out.println();
 		}
 		catch (JSONException e){
-			Toast.makeText(this.parentContext, "FAIL TO READ", Toast.LENGTH_LONG).show();
-		}*/
+			Toast.makeText(this.parentContext, "JSON Could not write", Toast.LENGTH_SHORT).show();
+		}
+		*/
 
-		
 
+	
 		
 		
 	}

@@ -1,5 +1,7 @@
 package com.karkinos.croupon;
 
+import org.json.JSONException;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -18,6 +20,12 @@ public class DealsFragment extends Fragment {
 	    View view = inflater.inflate(R.layout.fragment_show_deals, container, false);
 	    ListView listView = (ListView)view.findViewById(R.id.dealsListView);
 
+	    Database d = new Database(this.getActivity());
+	    d.writeDataToFile();
+	    
+		d.readDataFromFile();
+		
+	    
 	    // Sample set of data passed to adapter for testing purposes
         Deal all_deal_data[] = new Deal[]
 		        {
