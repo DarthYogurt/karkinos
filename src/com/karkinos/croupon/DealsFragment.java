@@ -1,7 +1,6 @@
 package com.karkinos.croupon;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -41,10 +40,8 @@ public class DealsFragment extends Fragment {
         listView.setOnItemClickListener(new OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-				ArrayList<HashMap<String, String>> hashmap = (ArrayList<HashMap<String, String>>) listView.getItemAtPosition(position);
-				
+
 				Intent intent = new Intent(getActivity(), DealPage.class);
-				intent.putExtra("hashmap", hashmap);
 				startActivity(intent);
 			}
         });

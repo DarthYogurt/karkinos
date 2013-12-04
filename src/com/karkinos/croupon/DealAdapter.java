@@ -28,10 +28,10 @@ public class DealAdapter extends ArrayAdapter<Deal> {
     static class ViewHolder
     {
     	ImageView imgDealImage;
-    	TextView txtDealDesc;
+    	TextView txtDescription;
         TextView txtSupporters;
         TextView txtRegularPrice;
-        TextView txtDealPrice;
+        TextView txtDiscountPrice;
     }
     
     @Override
@@ -45,10 +45,10 @@ public class DealAdapter extends ArrayAdapter<Deal> {
             
             holder = new ViewHolder();
             holder.imgDealImage = (ImageView)convertView.findViewById(R.id.imgDealImage);
-            holder.txtDealDesc = (TextView)convertView.findViewById(R.id.txtDealDesc);
+            holder.txtDescription = (TextView)convertView.findViewById(R.id.txtDescription);
             holder.txtSupporters = (TextView)convertView.findViewById(R.id.txtSupporters);
             holder.txtRegularPrice = (TextView)convertView.findViewById(R.id.txtRegularPrice);
-            holder.txtDealPrice = (TextView)convertView.findViewById(R.id.txtDealPrice);
+            holder.txtDiscountPrice = (TextView)convertView.findViewById(R.id.txtDiscountPrice);
             
             convertView.setTag(holder);
         }
@@ -65,20 +65,20 @@ public class DealAdapter extends ArrayAdapter<Deal> {
         int discountPrice = data.get(position).getDiscountPrice();
         
         holder.imgDealImage.setImageResource(image);
-        holder.txtDealDesc.setText(description);
+        holder.txtDescription.setText(description);
         holder.txtSupporters.setText(String.valueOf(currentSupporters + " / " + maxSupporters + " Supporters"));
         holder.txtRegularPrice.setText(String.valueOf("$" + regularPrice));
         holder.txtRegularPrice.setPaintFlags(holder.txtRegularPrice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
-        holder.txtDealPrice.setText(String.valueOf("$" + discountPrice));
+        holder.txtDiscountPrice.setText(String.valueOf("$" + discountPrice));
         
 //	OLD CODE USING REGULAR ARRAY VS ARRAYLIST        
 //        Deal dealEntry = data[position];
 //        holder.imgDealImage.setImageResource(dealEntry.image);
-//        holder.txtDealDesc.setText(dealEntry.description);
+//        holder.txtDescription.setText(dealEntry.description);
 //        holder.txtSupporters.setText(String.valueOf(dealEntry.currentSupporters + " / " + dealEntry.maxSupporters + " Supporters"));
 //        holder.txtRegularPrice.setText(String.valueOf("$" + dealEntry.regularPrice));
 //        holder.txtRegularPrice.setPaintFlags(holder.txtRegularPrice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
-//        holder.txtDealPrice.setText(String.valueOf("$" + dealEntry.discountPrice));
+//        holder.txtDiscountPrice.setText(String.valueOf("$" + dealEntry.discountPrice));
         
         return convertView;
     }

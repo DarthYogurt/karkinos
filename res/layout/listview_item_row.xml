@@ -20,7 +20,7 @@
         android:layout_height="fill_parent" >
         
         <TextView 
-	        android:id="@+id/txtDealDesc"
+	        android:id="@+id/txtDescription"
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
 	        android:layout_alignParentTop="true"
@@ -44,7 +44,7 @@
 	        android:background="#66000000" />
     
 	    <TextView 
-	        android:id="@+id/txtDealPrice"
+	        android:id="@+id/txtDiscountPrice"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 			android:layout_alignParentBottom="true"
