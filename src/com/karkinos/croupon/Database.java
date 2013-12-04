@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -26,28 +27,12 @@ public class Database{
 		this.parentContext = context;
 	}
 	
-	public void getCurrentDeals(){
-	
-	}
-
-	public void readDataFromFile(){
-		String displayText = "";
+	public ArrayList<Deal> getCurrentDeals(){
 		JSONObject jsonFromFile = null;
+		JSONArray dealArray = null;
+		String displayText = readDataFromFile();
 		
-		try {
-			InputStream fileStream = new FileInputStream(STOREDIR + "/" + JSONFILENAME);
-			int fileLen = fileStream.available();
-			// Read the entire resource into a local byte buffer.
-			byte[] fileBuffer = new byte[fileLen];
-			fileStream.read(fileBuffer);
-			fileStream.close();
-			displayText = new String(fileBuffer);
-			
-			
-		
-		} catch (IOException e) {
-		  // exception handling
-		}
+		ArrayList<Deal> dealsToReturn;
 		
 		try{
 			jsonFromFile = new JSONObject(displayText);
@@ -58,17 +43,55 @@ public class Database{
 		
 		
 		try {
-			JSONArray jArray = jsonFromFile.getJSONArray("deals");
-			System.out.println();
+			dealArray= jsonFromFile.getJSONArray("deals");
+			
+			
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
+		dealsToReturn = new ArrayList<Deal>();
 		
+		for (int i=0; i < dealArray.length(); i++){
+			JSONObject sd = null;
+			try {
+				sd = (JSONObject) dealArray.get(i);
+				String description = sd.getString("description");
+				int image = R.drawable.test_image;
+				int currentSupporters = Integer.parseInt(sd.getString("currentSupporters"));
+				int maxSupporters = 50;    //NEEDS EDITING
+				float regularPrice = Float.parseFloat(sd.getString("regularPrice"));
+				float discountPrice = Float.parseFloat(sd.getString("discountPrice"));
+				Deal d = new Deal(description, image, currentSupporters, maxSupporters, regularPrice, discountPrice);
+				dealsToReturn.add(d);
+			} catch (JSONException e) {e.printStackTrace();}
+		}
 		
-		System.out.println();
+		return dealsToReturn;
+		//public Deal(String description, int image, int currentSupporters, 
+		 //int maxSupporters, int regularPrice, int discountPrice) {
+	
 	}
+
+	public String readDataFromFile(){
+		String displayText = "";
+		
+		
+		try {
+			InputStream fileStream = new FileInputStream(STOREDIR + "/" + JSONFILENAME);
+			int fileLen = fileStream.available();
+			// Read the entire resource into a local byte buffer.
+			byte[] fileBuffer = new byte[fileLen];
+			fileStream.read(fileBuffer);
+			fileStream.close();
+			displayText = new String(fileBuffer);
+		} catch (IOException e) {
+		  // exception handling
+		}
+
+		return displayText;
+}
 
 	public void writeDataToFile(){
 		
@@ -83,6 +106,8 @@ public class Database{
 			String [][] deals = new String[][] {
 					{"412", "Samsung TV 1100Hz 10902p", "", "100", "400.15","300.50"},
 					{"12", "LGS TV, Larger than life 1231312", "" , "69696969", "800", "42.5"},
+					{"2", "PS8", "" , "214123", "10000", "600"},
+					{"2", "PS8", "" , "214123", "10000", "600"},
 					{"2", "PS8", "" , "214123", "10000", "600"},
 			};
 			        

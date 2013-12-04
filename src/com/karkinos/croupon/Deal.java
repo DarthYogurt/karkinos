@@ -6,15 +6,15 @@ public class Deal {
 	public int image;
     public int currentSupporters = 0;
     public int maxSupporters = 0;
-    public int regularPrice = 0;
-    public int discountPrice = 0;
+    public float regularPrice = 0;
+    public float discountPrice = 0;
     
     public Deal() {
         super();
     }
     
     public Deal(String description, int image, int currentSupporters, 
-    			 int maxSupporters, int regularPrice, int discountPrice) {
+    			 int maxSupporters, float regularPrice, float discountPrice) {
         super();
         this.description = description;
         this.image = image;
@@ -24,43 +24,51 @@ public class Deal {
         this.discountPrice = discountPrice;
     }
     
-    private String getDescription() {
+    public int getImage() {
+    	return this.image;
+    }
+    
+    public void setImage(int i) {
+    	this.image = i;
+    }
+    
+    public String getDescription() {
     	return this.description;
     }
     
-    private void setDescription(String s) {
+    public void setDescription(String s) {
     	this.description = s;
     }
     
-    private int getCurrentSupporters() {
+    public int getCurrentSupporters() {
     	return this.currentSupporters;
     }
     
-    private void setCurrentSupporters(int i) {
+    public void setCurrentSupporters(int i) {
     	this.currentSupporters = i;
     }
     
-    private int getMaxSupporters() {
+    public int getMaxSupporters() {
     	return this.maxSupporters;
     }
     
-    private void setMaxSupporters(int i) {
+    public void setMaxSupporters(int i) {
     	this.maxSupporters = i;
     }
     
-    private int getRegularPrice() {
+    public float getRegularPrice() {
     	return this.regularPrice;
     }
     
-    private void setRegularPrice(int i) {
+    public void setRegularPrice(float i) {
     	this.regularPrice = i;
     }
     
-    private int getDiscountPrice() {
+    public float getDiscountPrice() {
     	return this.discountPrice;
     }
     
-    private void setDiscountPrice(int i) {
+    public void setDiscountPrice(float i) {
     	this.discountPrice = i;
     }
     
