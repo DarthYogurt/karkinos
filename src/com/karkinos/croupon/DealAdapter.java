@@ -71,15 +71,6 @@ public class DealAdapter extends ArrayAdapter<Deal> {
         holder.txtRegularPrice.setPaintFlags(holder.txtRegularPrice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
         holder.txtDiscountPrice.setText(String.valueOf("$" + discountPrice));
         
-//	OLD CODE USING REGULAR ARRAY VS ARRAYLIST        
-//        Deal dealEntry = data[position];
-//        holder.imgDealImage.setImageResource(dealEntry.image);
-//        holder.txtDescription.setText(dealEntry.description);
-//        holder.txtSupporters.setText(String.valueOf(dealEntry.currentSupporters + " / " + dealEntry.maxSupporters + " Supporters"));
-//        holder.txtRegularPrice.setText(String.valueOf("$" + dealEntry.regularPrice));
-//        holder.txtRegularPrice.setPaintFlags(holder.txtRegularPrice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
-//        holder.txtDiscountPrice.setText(String.valueOf("$" + dealEntry.discountPrice));
-        
         return convertView;
     }
    
