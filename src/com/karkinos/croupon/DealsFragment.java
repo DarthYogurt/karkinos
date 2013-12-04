@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class DealsFragment extends Fragment {
 		
@@ -29,8 +30,17 @@ public class DealsFragment extends Fragment {
 		
 	    Log.d("InDealsFragment", "HERE");
 	    // Sample set of data passed to adapter for testing purposes
-        ArrayList<Deal> all_deals =  d.getCurrentDeals();
-       /*.*/
+
+        final ArrayList<Deal> all_deals =  d.getCurrentDeals();
+
+//=======
+//        final ArrayList<Deal> all_deals = new ArrayList<Deal>();
+//        all_deals.add(new Deal("Deal 1", R.drawable.test_image, 389, 700, 750, 500));
+//        all_deals.add(new Deal("Deal 2", R.drawable.test_image, 20, 80, 1800, 1500));
+//        all_deals.add(new Deal("Deal 3", R.drawable.test_image, 1932, 2000, 75, 60));
+//        all_deals.add(new Deal("Deal 4", R.drawable.test_image, 198, 450, 450, 350));
+//        all_deals.add(new Deal("Deal 5", R.drawable.test_image, 60, 70, 1500, 1100));
+//>>>>>>> changes
         
         // Sets up adapter to pass data into XML
         DealAdapter adapter = new DealAdapter(getActivity(), R.layout.listview_item_row, all_deals);
@@ -44,8 +54,17 @@ public class DealsFragment extends Fragment {
         listView.setOnItemClickListener(new OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+				
+				Deal deal = all_deals.get(position);
 				Intent intent = new Intent(getActivity(), DealPage.class);
+				Bundle bundle = new Bundle();
+				bundle.putString("Description", deal.description);
+				bundle.putInt("Image", deal.image);
+				bundle.putInt("CurrentSupporters", deal.currentSupporters);
+				bundle.putInt("MaxSupporters", deal.maxSupporters);
+				bundle.putInt("RegularPrice", deal.regularPrice);
+				bundle.putInt("DiscountPrice", deal.discountPrice);
+				intent.putExtras(bundle);
 				startActivity(intent);
 			}
         });

@@ -3,6 +3,8 @@ package com.karkinos.croupon;
 import java.text.SimpleDateFormat;
 import java.util.TimeZone;
 
+import org.joda.time.DateTime;
+
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.app.Activity;
@@ -40,6 +42,8 @@ public class DealPage extends Activity {
 		setContentView(R.layout.activity_deal_page);
 		// Show the Up button in the action bar.
 		setupActionBar();
+		
+		Bundle bundle = getIntent().getExtras();
 		
 		mSimpleDateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
 		mTimerTextView = (TextView) findViewById(R.id.txtCountDownTimer);
