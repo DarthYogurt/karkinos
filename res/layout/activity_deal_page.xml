@@ -58,7 +58,7 @@
 			                android:text="@string/txtOurPrice" />
 	                
 		                <TextView
-		                    android:id="@+id/txtDealPrice"
+		                    android:id="@+id/txtDiscountPrice"
 			                android:layout_width="0dp"
 			                android:layout_height="wrap_content"
 			                android:layout_weight="1"
@@ -201,7 +201,6 @@
 	        android:layout_alignBaseline="@id/txtProgress"
 	        android:layout_toRightOf="@id/txtProgress"
 	        android:paddingLeft="5dp"
-	        android:text="300/500 Supporters"
 	        android:textColor="#fff"
 	        android:textStyle="bold" />
       		

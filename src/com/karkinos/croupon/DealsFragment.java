@@ -62,8 +62,8 @@ public class DealsFragment extends Fragment {
 				bundle.putInt("Image", deal.image);
 				bundle.putInt("CurrentSupporters", deal.currentSupporters);
 				bundle.putInt("MaxSupporters", deal.maxSupporters);
-				bundle.putInt("RegularPrice", deal.regularPrice);
-				bundle.putInt("DiscountPrice", deal.discountPrice);
+				bundle.putFloat("RegularPrice", deal.regularPrice);
+				bundle.putFloat("DiscountPrice", deal.discountPrice);
 				intent.putExtras(bundle);
 				startActivity(intent);
 			}
