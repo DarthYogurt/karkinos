@@ -75,27 +75,20 @@ public class Database{
 				d.setCurrentSupporters(sd.getInt("currentSupporters"));
 				d.setMaxSupporters(sd.getInt("maxSupporters"));
 				//d.setRegularPrice(sd.getDouble("regularPrice"));
-		
+				//d.setDiscountPrice(sd.getDouble("discountPrice"));
+				//d.setMsrp(sd.getDouble("msrp"));
+				//d.setLowestPrice(sd.getDouble("lowestMarketPrice"));
 
-//			    public float regularPrice = 0;
-//			    public float discountPrice = 0;
-//			    public float msrp = 0;
-//			    public float lowestMarketPrice = 0;
-//			    public int rank = 0;
-//			    public int votes = 0;
-//			    public int categoryId = 0;
-//			    public int championId = 0;
-//			    public String qa = "";
-//			    public String comments = "";
-//			    public String webUrls = "";
-//				
-//				String description = sd.getString("description");
-//				int image = R.drawable.samsung_tv;
-//				int currentSupporters = Integer.parseInt(sd.getString("currentSupporters"));
-//				int maxSupporters = 50;    //NEEDS EDITING
-//				float regularPrice = Float.parseFloat(sd.getString("regularPrice"));
-//				float discountPrice = Float.parseFloat(sd.getString("discountPrice"));
 				
+				
+				//d.setRank(sd.getInt("rank"));
+				//d.setVotes(sd.getInt("votes"));
+				//d.setCategoryId(sd.getInt("categoryId"));
+				//d.setChampionId(sd.getInt("championId"));
+				//d.setQa(sd.getString("qa"));
+				//d.setComments(sd.getString("comments"));
+				//d.setWebUrls(sd.getString("webUrls"));
+	
 				
 				
 				
@@ -142,11 +135,11 @@ public class Database{
 			
 			// samsung TV 2130837508
 			String [][] deals = new String[][] {
-					{"412", "Samsung TV 1100Hz 10902p", Integer.toString(R.drawable.samsung_tv), "100", "999", "400.15","300.50","Samsung TV 1000Hz 10920p"},
-					{"12", "LGS TV, Larger than life 1231312", Integer.toString(R.drawable.test_image) , "32", "55", "800", "42.5","LGS TV, Larger than life 1231312"},
-					{"2", "PS8", Integer.toString(R.drawable.samsung_tv), "1", "5", "600","123", "PS8"},
-					{"2", "PS8", Integer.toString(R.drawable.test_image), "10000", "12131", "600","123",  "PS8"},
-					{"2", "PS8", Integer.toString(R.drawable.samsung_tv), "10000", "124123","600","123",  "PS8"},
+					{"412", "Samsung TV 1100Hz 10902p", Integer.toString(R.drawable.samsung_tv), "100", "999", "400.15","300.50","Samsung TV 1000Hz 10920p", "1000.0", "999"},
+					{"12", "LGS TV, Larger than life 1231312", Integer.toString(R.drawable.test_image) , "32", "55", "800", "42.5","LGS TV, Larger than life 1231312","1200", "1150"},
+					{"2", "PS8", Integer.toString(R.drawable.samsung_tv), "1", "5", "600","123", "PS8", "400", "390"},
+					{"2", "PS8", Integer.toString(R.drawable.test_image), "10000", "12131", "600","123",  "PS8", "700", "660"},
+					{"2", "PS8", Integer.toString(R.drawable.samsung_tv), "10000", "124123","600","123",  "PS8", "800", "777"},
 			};
 			        
 			for (int i=0; i<deals.length;i++){
@@ -160,6 +153,8 @@ public class Database{
 				writer.name("regularPrice").value(deals[i][5]);
 				writer.name("discountPrice").value(deals[i][6]);
 				writer.name("title").value(deals[i][7]);
+				writer.name("msrp").value(deals[i][8]);
+				writer.name("lowestMarketPrice").value(deals[i][9]);
 
 				writer.endObject();
 			}
