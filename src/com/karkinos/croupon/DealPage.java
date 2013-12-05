@@ -56,6 +56,8 @@ public class DealPage extends Activity {
 //		String discountPrice = Float.toString(bundle.getFloat("DiscountPrice"));
 		
 		ImageView imgDealImage = (ImageView)findViewById(R.id.imgDealImage);
+		TextView txtTitle = (TextView)findViewById(R.id.txtTitle);
+		TextView txtDescription = (TextView)findViewById(R.id.txtDescription);
 		TextView txtSupporters = (TextView)findViewById(R.id.txtSupporters);
 		TextView txtDiscountPrice = (TextView)findViewById(R.id.txtDiscountPrice);
 		
