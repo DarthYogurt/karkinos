@@ -49,7 +49,7 @@ public class DealsFragment extends Fragment {
 				Deal deal = all_deals.get(position);
 				Intent intent = new Intent(getActivity(), DealPage.class);
 				Bundle bundle = new Bundle();
-				bundle.putInt("id", deal.id);
+				bundle.putInt("id", deal.getId());
 				bundle.putParcelable("db", (Parcelable) d);
 				
 //				bundle.putString("Description", deal.description);

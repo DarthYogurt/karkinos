@@ -6,6 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Date;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -14,6 +15,7 @@ import org.json.JSONObject;
 import android.content.Context;
 import android.os.Environment;
 import android.util.JsonWriter;
+import android.util.Log;
 
 
 public class Database{
@@ -25,6 +27,13 @@ public class Database{
 	
 	public Database(Context context){
 		this.parentContext = context;
+	}
+	
+	public Deal getDeal(int id){
+		
+		Deal d = new Deal();
+		
+		return d;
 	}
 	
 	public ArrayList<Deal> getCurrentDeals(){
@@ -57,17 +66,49 @@ public class Database{
 			JSONObject sd = null;
 			try {
 				sd = (JSONObject) dealArray.get(i);
-				String description = sd.getString("description");
-				int image = R.drawable.samsung_tv;
-				int currentSupporters = Integer.parseInt(sd.getString("currentSupporters"));
-				int maxSupporters = 50;    //NEEDS EDITING
-				float regularPrice = Float.parseFloat(sd.getString("regularPrice"));
-				float discountPrice = Float.parseFloat(sd.getString("discountPrice"));
-				Deal d = new Deal(description, image, currentSupporters, maxSupporters, regularPrice, discountPrice);
+				Deal d = new Deal();
+				
+				d.setId(sd.getInt("id"));
+				d.setImage(sd.getInt("image"));
+				//d.setTitle(sd.getString("title"));
+				//d.setTitle(sd.getString("title"));
+				
+
+//				
+//				public String title = "";
+//				public String description = "";
+//			    public int currentSupporters = 0;
+//			    public int maxSupporters = 0;
+//			    public float regularPrice = 0;
+//			    public float discountPrice = 0;
+//			    public float msrp = 0;
+//			    public float lowestMarketPrice = 0;
+//			    public int rank = 0;
+//			    public int votes = 0;
+//			    public int categoryId = 0;
+//			    public int championId = 0;
+//			    public String qa = "";
+//			    public String comments = "";
+//			    public String webUrls = "";
+//				
+//				String description = sd.getString("description");
+//				int image = R.drawable.samsung_tv;
+//				int currentSupporters = Integer.parseInt(sd.getString("currentSupporters"));
+//				int maxSupporters = 50;    //NEEDS EDITING
+//				float regularPrice = Float.parseFloat(sd.getString("regularPrice"));
+//				float discountPrice = Float.parseFloat(sd.getString("discountPrice"));
+				
+				
+				
+				
+				
+				
+				String s = sd.getString("title");
 				dealsToReturn.add(d);
 			} catch (JSONException e) {e.printStackTrace();}
 		}
 		
+		//Log.d("BETA", (String)dealsToReturn[0].getId());
 		return dealsToReturn;
 		//public Deal(String description, int image, int currentSupporters, 
 		 //int maxSupporters, int regularPrice, int discountPrice) {
@@ -96,19 +137,19 @@ public class Database{
 	public void writeDataToFile(){
 		
 		File sdDir = Environment.getExternalStorageDirectory();
-		
 		try {
 			writer = new JsonWriter(new FileWriter(STOREDIR + "/" + JSONFILENAME, false));;
 			writer.beginObject();
 			writer.name("deals");
 			writer.beginArray();
 			
+			// samsung TV 2130837508
 			String [][] deals = new String[][] {
-					{"412", "Samsung TV 1100Hz 10902p", "", "100", "400.15","300.50"},
-					{"12", "LGS TV, Larger than life 1231312", "" , "69696969", "800", "42.5"},
-					{"2", "PS8", "" , "214123", "10000", "600"},
-					{"2", "PS8", "" , "214123", "10000", "600"},
-					{"2", "PS8", "" , "214123", "10000", "600"},
+					{"412", "Samsung TV 1100Hz 10902p", Integer.toString(R.drawable.samsung_tv), "100", "400.15","300.50","Samsung TV 1000Hz 10920p"},
+					{"12", "LGS TV, Larger than life 1231312", Integer.toString(R.drawable.test_image) , "69696969", "800", "42.5","LGS TV, Larger than life 1231312"},
+					{"2", "PS8", Integer.toString(R.drawable.samsung_tv), "10000", "600","123", "PS8"},
+					{"2", "PS8", Integer.toString(R.drawable.test_image), "10000", "600","123",  "PS8"},
+					{"2", "PS8", Integer.toString(R.drawable.samsung_tv), "10000", "600","123",  "PS8"},
 			};
 			        
 			for (int i=0; i<deals.length;i++){
@@ -120,6 +161,7 @@ public class Database{
 				writer.name("currentSupporters").value(deals[i][3]);
 				writer.name("regularPrice").value(deals[i][4]);
 				writer.name("discountPrice").value(deals[i][5]);
+				writer.name("title").value(deals[i][6]);
 
 				writer.endObject();
 			}
@@ -133,23 +175,7 @@ public class Database{
 			System.out.println();
 		}
 
-		
-		//Toast.makeText(this.parentContext, jsonString, Toast.LENGTH_LONG).show();
-		
-/*		String error = null;
-		JSONObject mainObject = null;
-		try{
-			mainObject = new JSONObject(jsonString);
-		}
-		catch (JSONException e){
-			Toast.makeText(this.parentContext, "JSON Could not write", Toast.LENGTH_SHORT).show();
-		}
-		*/
 
-
-	
-		
-		
 	}
 	
 }
