@@ -74,11 +74,20 @@ public class Database{
 				d.setDescription(sd.getString("description"));
 				d.setCurrentSupporters(sd.getInt("currentSupporters"));
 				d.setMaxSupporters(sd.getInt("maxSupporters"));
-				//d.setRegularPrice(sd.getDouble("regularPrice"));
-				//d.setDiscountPrice(sd.getDouble("discountPrice"));
-				//d.setMsrp(sd.getDouble("msrp"));
-				//d.setLowestPrice(sd.getDouble("lowestMarketPrice"));
-
+				d.setRegularPrice(sd.getDouble("regularPrice"));
+				d.setDiscountPrice(sd.getDouble("discountPrice"));
+				d.setMsrp(sd.getDouble("msrp"));
+				d.setLowestMarketPrice(sd.getDouble("lowestMarketPrice"));
+				
+				
+				
+				d.setRank(3);
+				d.setVotes(100);
+				d.setCategoryId(41);
+				d.setChampionId(32);
+				d.setQa("is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.");
+				d.setComments("Sed interdum felis et nisl sollicitudin aliquet. Nullam et ligula ullamcorper, adipiscing nulla ut, luctus dui. Nam iaculis vitae sem id pellentesque. Aliquam fringilla aliquam dignissim. Sed rhoncus quam lorem, accumsan varius nibh posuere non. Etiam ligula nisi, tincidunt eget fermentum nec, tincidunt quis nisl. Duis id justo et augue adipiscing laoreet in a nunc. Donec placerat ut dolor vel sollicitudin. Nullam sodales felis ut nulla interdum, quis posuere justo laoreet. Sed scelerisque felis ut libero malesuada suscipit. Sed sit amet egestas turpis, sit amet adipiscing sapien. Quisque viverra odio id accumsan tincidunt. Sed nibh justo, porta eget mi tristique, consectetur scelerisque dolor. Nullam dapibus, diam at sagittis ornare, mi tellus tristique odio, a venenatis purus nunc at urna.");
+				d.setWebUrls("www.google.com");
 				
 				
 				//d.setRank(sd.getInt("rank"));
