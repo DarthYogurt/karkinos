@@ -70,15 +70,13 @@ public class Database{
 				
 				d.setId(sd.getInt("id"));
 				d.setImage(sd.getInt("image"));
-				//d.setTitle(sd.getString("title"));
-				//d.setTitle(sd.getString("title"));
-				
+				d.setTitle(sd.getString("title"));
+				d.setDescription(sd.getString("description"));
+				d.setCurrentSupporters(sd.getInt("currentSupporters"));
+				d.setMaxSupporters(sd.getInt("maxSupporters"));
+				//d.setRegularPrice(sd.getDouble("regularPrice"));
+		
 
-//				
-//				public String title = "";
-//				public String description = "";
-//			    public int currentSupporters = 0;
-//			    public int maxSupporters = 0;
 //			    public float regularPrice = 0;
 //			    public float discountPrice = 0;
 //			    public float msrp = 0;
@@ -103,7 +101,6 @@ public class Database{
 				
 				
 				
-				String s = sd.getString("title");
 				dealsToReturn.add(d);
 			} catch (JSONException e) {e.printStackTrace();}
 		}
@@ -145,11 +142,11 @@ public class Database{
 			
 			// samsung TV 2130837508
 			String [][] deals = new String[][] {
-					{"412", "Samsung TV 1100Hz 10902p", Integer.toString(R.drawable.samsung_tv), "100", "400.15","300.50","Samsung TV 1000Hz 10920p"},
-					{"12", "LGS TV, Larger than life 1231312", Integer.toString(R.drawable.test_image) , "69696969", "800", "42.5","LGS TV, Larger than life 1231312"},
-					{"2", "PS8", Integer.toString(R.drawable.samsung_tv), "10000", "600","123", "PS8"},
-					{"2", "PS8", Integer.toString(R.drawable.test_image), "10000", "600","123",  "PS8"},
-					{"2", "PS8", Integer.toString(R.drawable.samsung_tv), "10000", "600","123",  "PS8"},
+					{"412", "Samsung TV 1100Hz 10902p", Integer.toString(R.drawable.samsung_tv), "100", "999", "400.15","300.50","Samsung TV 1000Hz 10920p"},
+					{"12", "LGS TV, Larger than life 1231312", Integer.toString(R.drawable.test_image) , "32", "55", "800", "42.5","LGS TV, Larger than life 1231312"},
+					{"2", "PS8", Integer.toString(R.drawable.samsung_tv), "1", "5", "600","123", "PS8"},
+					{"2", "PS8", Integer.toString(R.drawable.test_image), "10000", "12131", "600","123",  "PS8"},
+					{"2", "PS8", Integer.toString(R.drawable.samsung_tv), "10000", "124123","600","123",  "PS8"},
 			};
 			        
 			for (int i=0; i<deals.length;i++){
@@ -159,9 +156,10 @@ public class Database{
 				writer.name("description").value(deals[i][1]);
 				writer.name("image").value(deals[i][2]);
 				writer.name("currentSupporters").value(deals[i][3]);
-				writer.name("regularPrice").value(deals[i][4]);
-				writer.name("discountPrice").value(deals[i][5]);
-				writer.name("title").value(deals[i][6]);
+				writer.name("maxSupporters").value(deals[i][3]);
+				writer.name("regularPrice").value(deals[i][5]);
+				writer.name("discountPrice").value(deals[i][6]);
+				writer.name("title").value(deals[i][7]);
 
 				writer.endObject();
 			}
