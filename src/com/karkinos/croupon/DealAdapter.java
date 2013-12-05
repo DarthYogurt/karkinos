@@ -12,6 +12,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+
+// Adapter to populate ListView with ArrayList<Deal>
 public class DealAdapter extends ArrayAdapter<Deal> {
 
     Context context; 
@@ -28,7 +30,7 @@ public class DealAdapter extends ArrayAdapter<Deal> {
     static class ViewHolder
     {
     	ImageView imgDealImage;
-    	TextView txtDescription;
+    	TextView txtTitle;
         TextView txtSupporters;
         TextView txtRegularPrice;
         TextView txtDiscountPrice;
@@ -45,7 +47,7 @@ public class DealAdapter extends ArrayAdapter<Deal> {
             
             holder = new ViewHolder();
             holder.imgDealImage = (ImageView)convertView.findViewById(R.id.imgDealImage);
-            holder.txtDescription = (TextView)convertView.findViewById(R.id.txtDescription);
+            holder.txtTitle = (TextView)convertView.findViewById(R.id.txtTitle);
             holder.txtSupporters = (TextView)convertView.findViewById(R.id.txtSupporters);
             holder.txtRegularPrice = (TextView)convertView.findViewById(R.id.txtRegularPrice);
             holder.txtDiscountPrice = (TextView)convertView.findViewById(R.id.txtDiscountPrice);
@@ -58,14 +60,14 @@ public class DealAdapter extends ArrayAdapter<Deal> {
         }
 
         int image = data.get(position).getImage();
-        String description = data.get(position).getDescription();
+        String title = data.get(position).getTitle();
         int currentSupporters = data.get(position).getCurrentSupporters();
         int maxSupporters = data.get(position).getMaxSupporters();
-        float regularPrice = data.get(position).getRegularPrice();
-        float discountPrice = data.get(position).getDiscountPrice();
+        double regularPrice = data.get(position).getRegularPrice();
+        double discountPrice = data.get(position).getDiscountPrice();
         
         holder.imgDealImage.setImageResource(image);
-        holder.txtDescription.setText(description);
+        holder.txtTitle.setText(title);
         holder.txtSupporters.setText(String.valueOf(currentSupporters + " / " + maxSupporters + " Supporters"));
         holder.txtRegularPrice.setText(String.valueOf("$" + regularPrice));
         holder.txtRegularPrice.setPaintFlags(holder.txtRegularPrice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
