@@ -45,19 +45,20 @@ public class DealPage extends Activity {
 		setupActionBar();
 		
 		Bundle bundle = getIntent().getExtras();
-		String description = bundle.getString("Description");
-		int image = bundle.getInt("Image");
-		String currentSupporters = Integer.toString(bundle.getInt("CurrentSupporters"));
-		String maxSupporters = Integer.toString(bundle.getInt("MaxSupporters"));
-		String supporters = currentSupporters + " / " + maxSupporters + " Supporters";
-		String regularPrice = Float.toString(bundle.getFloat("RegularPrice"));
-		String discountPrice = Float.toString(bundle.getFloat("DiscountPrice"));
+		int id = bundle.getInt("id");
+		Database db = bundle.getParcelable("db");
+		
+//		String description = bundle.getString("Description");
+//		int image = bundle.getInt("Image");
+//		String currentSupporters = Integer.toString(bundle.getInt("CurrentSupporters"));
+//		String maxSupporters = Integer.toString(bundle.getInt("MaxSupporters"));
+//		String supporters = currentSupporters + " / " + maxSupporters + " Supporters";
+//		String regularPrice = Float.toString(bundle.getFloat("RegularPrice"));
+//		String discountPrice = Float.toString(bundle.getFloat("DiscountPrice"));
 		
 		ImageView imgDealImage = (ImageView)findViewById(R.id.imgDealImage);
 		TextView txtSupporters = (TextView)findViewById(R.id.txtSupporters);
-		txtSupporters.setText(supporters);
 		TextView txtDiscountPrice = (TextView)findViewById(R.id.txtDiscountPrice);
-		txtDiscountPrice.setText(discountPrice);
 		
 		mSimpleDateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
 		mTimerTextView = (TextView) findViewById(R.id.txtCountDownTimer);
