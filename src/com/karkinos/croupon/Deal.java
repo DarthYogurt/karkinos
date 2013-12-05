@@ -10,10 +10,10 @@ public class Deal {
 	private String description = "";
 	private int currentSupporters = 0;
 	private int maxSupporters = 0;
-	private float regularPrice = 0;
-	private float discountPrice = 0;
-	private float msrp = 0;
-	private float lowestMarketPrice = 0;
+	private double regularPrice = 0;
+	private double discountPrice = 0;
+	private double msrp = 0;
+	private double lowestMarketPrice = 0;
 	private int rank = 0;
 	private int votes = 0;
 	private int categoryId = 0;
@@ -22,7 +22,6 @@ public class Deal {
 	private String comments = "";
 	private String webUrls = "";
     private Date endingTime = new Date();
-    // date/time dealEnding
     
     public Deal() {
     }
@@ -69,32 +68,32 @@ public class Deal {
     	this.maxSupporters = i;
     }
     
-    public float getRegularPrice() {
+    public double getRegularPrice() {
     	return this.regularPrice;
     }
-    public void setRegularPrice(float i) {
-    	this.regularPrice = i;
+    public void setRegularPrice(double d) {
+    	this.regularPrice = d;
     }
     
-    public float getDiscountPrice() {
+    public double getDiscountPrice() {
     	return this.discountPrice;
     }
-    public void setDiscountPrice(float i) {
-    	this.discountPrice = i;
+    public void setDiscountPrice(double d) {
+    	this.discountPrice = d;
     }
  
-    public float getMsrp() {
+    public double getMsrp() {
     	return this.msrp;
     }
-    public void setMsrp(float f) {
-    	this.msrp = f;
+    public void setMsrp(double d) {
+    	this.msrp = d;
     }
     
-    public float getLowestMarketPrice() {
+    public double getLowestMarketPrice() {
     	return this.lowestMarketPrice;
     }
-    public void setLowestMarketPrice(float f) {
-    	this.lowestMarketPrice = f;
+    public void setLowestMarketPrice(double d) {
+    	this.lowestMarketPrice = d;
     }
     
     public int getRank() {
@@ -144,5 +143,12 @@ public class Deal {
     }
     public void setWebUrls(String s) {
     	this.webUrls = s;
+    }
+    
+    public Date getEndingTime() {
+    	return this.endingTime;
+    }
+    public void setEndingTime(Date d) {
+    	this.endingTime = d;
     }
 }
