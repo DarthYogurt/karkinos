@@ -1,6 +1,8 @@
 package com.karkinos.croupon;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.TimeZone;
 
 import org.joda.time.DateTime;
@@ -43,8 +45,35 @@ public class DealPage extends Activity {
 		setContentView(R.layout.activity_deal_page);
 		setupActionBar();
 		
+		// TEMP: WRITE DATABASE TO FLAT FILE AND STORES IN ARRAYLIST
+		final Database d = new Database(this);
+	    d.writeDataToFile();
+	    final ArrayList<Deal> all_deals =  d.getCurrentDeals();
+		
 		Bundle bundle = getIntent().getExtras();
 		int id = bundle.getInt("id");
+		
+		for (Deal d : all_deals) {
+			if (d.getId() == id) {
+				int image = d.getImage();
+				String title = d.getTitle();
+				String description = d.getDescription();
+				int currentSupporters = d.getCurrentSupporters();
+				int maxSupporters = d.getMaxSupporters();
+				double regularPrice = d.getRegularPrice();
+				double discountPrice = d.getDiscountPrice();
+				double msrp = d.getMsrp();
+				double lowestMarketPrice = d.getLowestMarketPrice();
+				int rank = d.getRank();
+				int votes = d.getVotes();
+				int categoryId = d.getCategoryId();
+				int championId = d.getChampionId();
+				String qa = d.getQa();
+				String comments = d.getComments();
+				String webUrls = d.getWebUrls();
+				Date endingTime = d.getEndingTime();
+			}
+		}
 		
 		ImageView imgDealImage = (ImageView)findViewById(R.id.imgDealImage);
 		TextView txtTitle = (TextView)findViewById(R.id.txtTitle);
