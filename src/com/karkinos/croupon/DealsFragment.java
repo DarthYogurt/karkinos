@@ -50,8 +50,6 @@ public class DealsFragment extends Fragment {
 				Intent intent = new Intent(getActivity(), DealPage.class);
 				Bundle bundle = new Bundle();
 				bundle.putInt("id", deal.getId());
-				bundle.putParcelable("db", (Parcelable) d);
-
 				intent.putExtras(bundle);
 				startActivity(intent);
 			}

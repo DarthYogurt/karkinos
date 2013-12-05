@@ -29,24 +29,27 @@ public final class R {
         public static final int test_image=0x7f020005;
     }
     public static final class id {
-        public static final int action_settings=0x7f080010;
-        public static final int bottomContainer=0x7f080004;
-        public static final int btnJoinCause=0x7f08000a;
-        public static final int dealsListView=0x7f08000d;
+        public static final int action_settings=0x7f080013;
+        public static final int bottomContainer=0x7f080007;
+        public static final int btnJoinCause=0x7f08000d;
+        public static final int dealsListView=0x7f080010;
         public static final int imgDealImage=0x7f080001;
-        public static final int pager=0x7f08000b;
-        public static final int pager_tab_strip=0x7f08000c;
-        public static final int progressBar=0x7f080009;
-        public static final int search=0x7f080011;
-        public static final int txtCountDownTimer=0x7f080006;
+        public static final int pager=0x7f08000e;
+        public static final int pager_tab_strip=0x7f08000f;
+        public static final int progressBar=0x7f08000c;
+        public static final int search=0x7f080014;
+        public static final int txtCountDownTimer=0x7f080009;
         public static final int txtDescription=0x7f080003;
         public static final int txtDiscountPrice=0x7f080002;
-        public static final int txtHeader=0x7f08000e;
-        public static final int txtProgress=0x7f080007;
-        public static final int txtRegularPrice=0x7f08000f;
-        public static final int txtSupporters=0x7f080008;
-        public static final int txtTimeLeft=0x7f080005;
+        public static final int txtHeader=0x7f080011;
+        public static final int txtProgress=0x7f08000a;
+        public static final int txtQA=0x7f080004;
+        public static final int txtRank=0x7f080005;
+        public static final int txtRegularPrice=0x7f080012;
+        public static final int txtSupporters=0x7f08000b;
+        public static final int txtTimeLeft=0x7f080008;
         public static final int txtTitle=0x7f080000;
+        public static final int txtVotes=0x7f080006;
     }
     public static final class layout {
         public static final int activity_deal_page=0x7f030000;

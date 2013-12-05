@@ -22,10 +22,14 @@
 		        android:id="@+id/txtTitle"
 		        android:layout_width="fill_parent"
 		        android:layout_height="wrap_content"
+		        android:gravity="center"
 		        android:textStyle="bold"
 		        android:textSize="24sp"
 		        android:textColor="#fff"
-		        android:background="#66ccff" />
+		        android:background="#66ccff"
+		        android:paddingTop="5dp"
+		        android:paddingBottom="5dp"
+		        android:text="Title Test" />
 	        
 	        <ImageView 
 	            android:id="@+id/imgDealImage"
@@ -155,6 +159,7 @@
 					android:background="#66ccff" />
 	            
 	            <TextView 
+	                android:id="@+id/txtQA"
 	                android:layout_width="fill_parent"
 	                android:layout_height="wrap_content"
 	                android:text="@string/dummyText"
@@ -171,16 +176,41 @@
 	                    <TextView
 			                android:layout_width="wrap_content"
 			                android:layout_height="wrap_content"
+			                android:gravity="center"
 			                android:textStyle="bold"
-			                android:textColor="#009933"
-			                android:text="@string/rankHeading" />
+			                android:textColor="#000"
+			                android:text="@string/rankHeading"
+			                style="@style/DealPageHeading" />
 
 		                <TextView
 			                android:layout_width="wrap_content"
 			                android:layout_height="wrap_content"
+			                android:gravity="center"
 			                android:textStyle="bold"
-			                android:textColor="#009933"
-			                android:text="@string/votesHeading" />
+			                android:textColor="#000"
+			                android:text="@string/votesHeading"
+			                style="@style/DealPageHeading" />
+	                </TableRow>
+	                <TableRow>
+	                    <TextView
+	                        android:id="@+id/txtRank"
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+			                android:gravity="center"
+			                android:textStyle="bold"
+			                android:textColor="#66ccff"
+			                android:textSize="20sp"
+			                android:text="10" />
+
+		                <TextView
+		                    android:id="@+id/txtVotes"
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+			                android:gravity="center"
+			                android:textStyle="bold"
+			                android:textColor="#66ccff"
+			                android:textSize="20sp"
+			                android:text="432" />
 	                </TableRow>
 	            </TableLayout>
 	            <!-- END RANK/VOTES SECTION -->
