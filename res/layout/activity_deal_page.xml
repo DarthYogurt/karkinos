@@ -23,7 +23,7 @@
 		        android:layout_width="fill_parent"
 		        android:layout_height="wrap_content"
 		        android:adjustViewBounds="true"
-		        android:contentDescription="@string/txtDealImage" />
+		        android:contentDescription="@string/imageInfo" />
 	        
 	        <LinearLayout
 	            android:layout_width="fill_parent"
@@ -35,7 +35,7 @@
 				<TextView 
 				    android:layout_width="fill_parent"
 	                android:layout_height="wrap_content"
-	                android:text="@string/txtPrices"
+	                android:text="@string/pricesHeading"
 	                style="@style/DealPageHeading" />
 	            
 	            <View 
@@ -47,14 +47,14 @@
 	                android:layout_width="fill_parent"
 	                android:layout_height="wrap_content"
 	                android:paddingBottom="20dp" >
-	                <TableRow >
+	                <TableRow>
 	                    <TextView
 			                android:layout_width="0dp"
 			                android:layout_height="wrap_content"
 			                android:layout_weight="2"
 			                android:textStyle="bold"
 			                android:textColor="#009933"
-			                android:text="@string/txtOurPrice" />
+			                android:text="@string/ourPrice" />
 	                
 		                <TextView
 		                    android:id="@+id/txtDiscountPrice"
@@ -65,12 +65,12 @@
 			                android:textColor="#009933"
 			                android:text="$150" />
 	                </TableRow>
-	                <TableRow >
+	                <TableRow>
 	                    <TextView
 			                android:layout_width="0dp"
 			                android:layout_height="wrap_content"
 			                android:layout_weight="2"
-			                android:text="@string/txtAmazon" />
+			                android:text="MSRP:" />
 	                
 		                <TextView
 			                android:layout_width="0dp"
@@ -78,12 +78,12 @@
 			                android:layout_weight="1"
 			                android:text="$200" />
 	                </TableRow>
-	                <TableRow >
+	                <TableRow>
 	                    <TextView
 			                android:layout_width="0dp"
 			                android:layout_height="wrap_content"
 			                android:layout_weight="2"
-			                android:text="@string/txtNewegg" />
+			                android:text="Lowest Price Online:" />
 	                
 		                <TextView
 			                android:layout_width="0dp"
@@ -98,7 +98,7 @@
 	            <TextView 
 	                android:layout_width="fill_parent"
 	                android:layout_height="wrap_content"
-	                android:text="@string/txtDescription"
+	                android:text="@string/descriptionHeading"
 	                style="@style/DealPageHeading" />
 	            
 	            <View 
@@ -117,7 +117,7 @@
 	            <TextView 
 	                android:layout_width="fill_parent"
 	                android:layout_height="wrap_content"
-	                android:text="@string/txtSpecifics"
+	                android:text="@string/specificsHeading"
 	                style="@style/DealPageHeading" />
 	            
 	            <View 
@@ -136,7 +136,7 @@
 	            <TextView 
 	                android:layout_width="fill_parent"
 	                android:layout_height="wrap_content"
-	                android:text="@string/txtQA"
+	                android:text="@string/qaHeading"
 	                style="@style/DealPageHeading" />
 	            
 	            <View 
@@ -150,6 +150,30 @@
 	                android:text="@string/dummyText"
 	                android:paddingBottom="20dp" />
 	            <!-- END Q&A SECTION -->
+	            
+	            <!-- RANK/VOTES SECTION -->
+	            <TableLayout
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:stretchColumns="*"
+	                android:paddingBottom="20dp" >
+	                <TableRow>
+	                    <TextView
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+			                android:textStyle="bold"
+			                android:textColor="#009933"
+			                android:text="@string/rankHeading" />
+
+		                <TextView
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+			                android:textStyle="bold"
+			                android:textColor="#009933"
+			                android:text="@string/votesHeading" />
+	                </TableRow>
+	            </TableLayout>
+	            <!-- END RANK/VOTES SECTION -->
 	            
 	        </LinearLayout>
 
@@ -170,7 +194,7 @@
             android:id="@+id/txtTimeLeft"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/txtTimeLeft"
+            android:text="@string/timeLeft"
             android:textColor="#fff"
             android:textStyle="bold" />
       	
@@ -189,7 +213,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/txtTimeLeft"
-            android:text="@string/txtProgress"
+            android:text="@string/progress"
             android:textColor="#fff"
             android:textStyle="bold" />
       	
@@ -217,7 +241,7 @@
        		android:layout_height="wrap_content"
        		android:layout_above="@id/progressBar"
        		android:layout_alignParentRight="true"
-            android:text="@string/txtJoinCause"
+            android:text="@string/joinCause"
             android:background="@drawable/btn_join_cause"
             style="@style/ButtonText" />
 

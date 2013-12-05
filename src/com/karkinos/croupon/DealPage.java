@@ -41,7 +41,6 @@ public class DealPage extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_deal_page);
-		// Show the Up button in the action bar.
 		setupActionBar();
 		
 		Bundle bundle = getIntent().getExtras();
@@ -80,9 +79,7 @@ public class DealPage extends Activity {
 	 * Set up the {@link android.app.ActionBar}.
 	 */
 	private void setupActionBar() {
-
 		getActionBar().setDisplayHomeAsUpEnabled(true);
-
 	}
 
 	@Override

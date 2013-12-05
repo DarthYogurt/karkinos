@@ -11,18 +11,19 @@
     <string name="browseCategories">Browse Categories</string>
     <string name="localDeals">Local Deals</string>
     
-    <string name="txtPrices">Prices</string>
-    <string name="txtOurPrice">Our Price:</string>
-    <string name="txtDescription">Description</string>
-    <string name="txtSpecifics">Specifics</string>
-    <string name="txtQA">Q &amp; A</string>
-    <string name="txtDealImage">Deal Image</string>
-    <string name="txtProgress">Progress:</string>
-    <string name="txtTimeLeft">Time Left:</string>
-    <string name="txtJoinCause">Join Cause</string>
+    <string name="pricesHeading">Prices</string>
+    <string name="descriptionHeading">Description</string>
+    <string name="specificsHeading">Specifics</string>
+    <string name="qaHeading">Q &amp; A</string>
+    <string name="rankHeading">Rank</string>
+    <string name="votesHeading">Votes</string>
     
-    <string name="txtAmazon">Amazon:</string>
-    <string name="txtNewegg">Newegg:</string>
+    <string name="imageInfo">Deal Image</string>
+    <string name="ourPrice">Our Price:</string>
+    <string name="progress">Progress:</string>
+    <string name="timeLeft">Time Left:</string>
+    <string name="joinCause">Join Cause</string>
+    
     
     <string name="dummyText">This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. </string>
 
