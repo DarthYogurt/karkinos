@@ -161,7 +161,7 @@ public class Database{
 					{"412", "Samsung TV 1100Hz 10902p", Integer.toString(R.drawable.samsung_tv), "100", "999", "400.15","300.50","Samsung TV 1000Hz 10920p", "1000.0", "999"},
 					{"12", "LGS TV, Larger than life 1231312", Integer.toString(R.drawable.lg_tv) , "32", "55", "800", "42.5","LGS TV, Larger than life 1231312","1200", "1150"},
 					{"2", "PS8", Integer.toString(R.drawable.ps4), "1", "5", "600","123", "PS8", "400", "390"},
-					{"3", "XBOX", Integer.toString(R.drawable.xbox_One), "10000", "12131", "600","123",  "PS8", "700", "660"},
+					{"3", "DESCRIPTION OF XBOX8", Integer.toString(R.drawable.xbox_one), "10000", "12131", "600","123",  "PS8", "700", "660"},
 					{"10", "PS8", Integer.toString(R.drawable.samsung_tv), "10000", "124123","600","123",  "PS8", "800", "777"},
 			};
 			        
