@@ -6,6 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 
 import org.json.JSONArray;
@@ -80,7 +81,6 @@ public class Database{
 				d.setLowestMarketPrice(sd.getDouble("lowestMarketPrice"));
 				
 				
-				
 				d.setRank(3);
 				d.setVotes(100);
 				d.setCategoryId(41);
@@ -88,6 +88,20 @@ public class Database{
 				d.setQa("is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.");
 				d.setComments("Sed interdum felis et nisl sollicitudin aliquet. Nullam et ligula ullamcorper, adipiscing nulla ut, luctus dui. Nam iaculis vitae sem id pellentesque. Aliquam fringilla aliquam dignissim. Sed rhoncus quam lorem, accumsan varius nibh posuere non. Etiam ligula nisi, tincidunt eget fermentum nec, tincidunt quis nisl. Duis id justo et augue adipiscing laoreet in a nunc. Donec placerat ut dolor vel sollicitudin. Nullam sodales felis ut nulla interdum, quis posuere justo laoreet. Sed scelerisque felis ut libero malesuada suscipit. Sed sit amet egestas turpis, sit amet adipiscing sapien. Quisque viverra odio id accumsan tincidunt. Sed nibh justo, porta eget mi tristique, consectetur scelerisque dolor. Nullam dapibus, diam at sagittis ornare, mi tellus tristique odio, a venenatis purus nunc at urna.");
 				d.setWebUrls("www.google.com");
+				
+				
+			    
+			    Calendar cal = Calendar.getInstance();
+			    cal.set(Calendar.YEAR, 2014);
+			    cal.set(Calendar.MONTH,11);
+			    cal.set(Calendar.DAY_OF_MONTH, 15);
+			    cal.set(Calendar.HOUR_OF_DAY, 20);
+			    cal.set(Calendar.MINUTE,30);
+			    cal.set(Calendar.SECOND,0);
+			    
+			
+				
+				d.setEndingTime(cal.getTime());
 				
 				
 				//d.setRank(sd.getInt("rank"));
