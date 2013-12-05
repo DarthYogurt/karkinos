@@ -6,6 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 
 import org.json.JSONArray;
@@ -80,7 +81,6 @@ public class Database{
 				d.setLowestMarketPrice(sd.getDouble("lowestMarketPrice"));
 				
 				
-				
 				d.setRank(3);
 				d.setVotes(100);
 				d.setCategoryId(41);
@@ -88,6 +88,20 @@ public class Database{
 				d.setQa("is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.");
 				d.setComments("Sed interdum felis et nisl sollicitudin aliquet. Nullam et ligula ullamcorper, adipiscing nulla ut, luctus dui. Nam iaculis vitae sem id pellentesque. Aliquam fringilla aliquam dignissim. Sed rhoncus quam lorem, accumsan varius nibh posuere non. Etiam ligula nisi, tincidunt eget fermentum nec, tincidunt quis nisl. Duis id justo et augue adipiscing laoreet in a nunc. Donec placerat ut dolor vel sollicitudin. Nullam sodales felis ut nulla interdum, quis posuere justo laoreet. Sed scelerisque felis ut libero malesuada suscipit. Sed sit amet egestas turpis, sit amet adipiscing sapien. Quisque viverra odio id accumsan tincidunt. Sed nibh justo, porta eget mi tristique, consectetur scelerisque dolor. Nullam dapibus, diam at sagittis ornare, mi tellus tristique odio, a venenatis purus nunc at urna.");
 				d.setWebUrls("www.google.com");
+				
+				
+			    
+			    Calendar cal = Calendar.getInstance();
+			    cal.set(Calendar.YEAR, 2014);
+			    cal.set(Calendar.MONTH,11);
+			    cal.set(Calendar.DAY_OF_MONTH, 15);
+			    cal.set(Calendar.HOUR_OF_DAY, 20);
+			    cal.set(Calendar.MINUTE,30);
+			    cal.set(Calendar.SECOND,0);
+			    
+			
+				
+				d.setEndingTime(cal.getTime());
 				
 				
 				//d.setRank(sd.getInt("rank"));
@@ -145,10 +159,10 @@ public class Database{
 			// samsung TV 2130837508
 			String [][] deals = new String[][] {
 					{"412", "Samsung TV 1100Hz 10902p", Integer.toString(R.drawable.samsung_tv), "100", "999", "400.15","300.50","Samsung TV 1000Hz 10920p", "1000.0", "999"},
-					{"12", "LGS TV, Larger than life 1231312", Integer.toString(R.drawable.test_image) , "32", "55", "800", "42.5","LGS TV, Larger than life 1231312","1200", "1150"},
-					{"2", "PS8", Integer.toString(R.drawable.samsung_tv), "1", "5", "600","123", "PS8", "400", "390"},
-					{"2", "PS8", Integer.toString(R.drawable.test_image), "10000", "12131", "600","123",  "PS8", "700", "660"},
-					{"2", "PS8", Integer.toString(R.drawable.samsung_tv), "10000", "124123","600","123",  "PS8", "800", "777"},
+					{"12", "LGS TV, Larger than life 1231312", Integer.toString(R.drawable.lg_tv) , "32", "55", "800", "42.5","LGS TV, Larger than life 1231312","1200", "1150"},
+					{"2", "PS8", Integer.toString(R.drawable.ps4), "1", "5", "600","123", "PS8", "400", "390"},
+					{"3", "XBOX", Integer.toString(R.drawable.xbox_One), "10000", "12131", "600","123",  "PS8", "700", "660"},
+					{"10", "PS8", Integer.toString(R.drawable.samsung_tv), "10000", "124123","600","123",  "PS8", "800", "777"},
 			};
 			        
 			for (int i=0; i<deals.length;i++){
