@@ -39,46 +39,50 @@ public final class R {
         public static final int progressBar=0x7f080007;
         public static final int search=0x7f080010;
         public static final int txtCountDownTimer=0x7f080004;
-        public static final int txtDescription=0x7f08000d;
         public static final int txtDiscountPrice=0x7f080001;
         public static final int txtHeader=0x7f08000c;
         public static final int txtProgress=0x7f080005;
         public static final int txtRegularPrice=0x7f08000e;
         public static final int txtSupporters=0x7f080006;
         public static final int txtTimeLeft=0x7f080003;
+        public static final int txtTitle=0x7f08000d;
     }
     public static final class layout {
         public static final int activity_deal_page=0x7f030000;
         public static final int activity_main=0x7f030001;
-        public static final int fragment_show_deals=0x7f030002;
-        public static final int listview_header_row=0x7f030003;
-        public static final int listview_item_row=0x7f030004;
+        public static final int activity_nominate_page=0x7f030002;
+        public static final int fragment_show_deals=0x7f030003;
+        public static final int listview_header_row=0x7f030004;
+        public static final int listview_item_row=0x7f030005;
     }
     public static final class menu {
         public static final int deal_page=0x7f070000;
         public static final int main=0x7f070001;
+        public static final int nominate_page=0x7f070002;
     }
     public static final class string {
-        public static final int action_settings=0x7f050001;
+        public static final int action_settings=0x7f050002;
         public static final int app_name=0x7f050000;
-        public static final int browseCategories=0x7f050006;
-        public static final int dummyText=0x7f050013;
-        public static final int featuredDeals=0x7f050005;
-        public static final int localDeals=0x7f050007;
-        public static final int myDeals=0x7f050004;
-        public static final int myFriends=0x7f050003;
-        public static final int search_title=0x7f050002;
-        public static final int txtAmazon=0x7f050011;
-        public static final int txtDealImage=0x7f05000d;
-        public static final int txtDescription=0x7f05000a;
-        public static final int txtJoinCause=0x7f050010;
-        public static final int txtNewegg=0x7f050012;
-        public static final int txtOurPrice=0x7f050009;
-        public static final int txtPrices=0x7f050008;
-        public static final int txtProgress=0x7f05000e;
-        public static final int txtQA=0x7f05000c;
-        public static final int txtSpecifics=0x7f05000b;
-        public static final int txtTimeLeft=0x7f05000f;
+        public static final int browseCategories=0x7f050007;
+        public static final int descriptionHeading=0x7f05000a;
+        public static final int dummyText=0x7f050014;
+        public static final int featuredDeals=0x7f050006;
+        public static final int imageInfo=0x7f05000f;
+        public static final int joinCause=0x7f050013;
+        public static final int localDeals=0x7f050008;
+        public static final int myDeals=0x7f050005;
+        public static final int myFriends=0x7f050004;
+        public static final int nominatePageHeading=0x7f050015;
+        public static final int ourPrice=0x7f050010;
+        public static final int pricesHeading=0x7f050009;
+        public static final int progress=0x7f050011;
+        public static final int qaHeading=0x7f05000c;
+        public static final int rankHeading=0x7f05000d;
+        public static final int search_title=0x7f050003;
+        public static final int specificsHeading=0x7f05000b;
+        public static final int timeLeft=0x7f050012;
+        public static final int title_activity_nominate_page=0x7f050001;
+        public static final int votesHeading=0x7f05000e;
     }
     public static final class style {
         /** 

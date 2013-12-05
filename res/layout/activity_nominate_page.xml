@@ -1,0 +1,24 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NominatePage"
+    android:background="#fff" >
+
+	<TextView
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:gravity="center"
+	    android:background="#66ccff"
+	    android:text="@string/nominatePageHeading"
+	    android:textSize="20sp"
+	    android:textColor="#fff"
+	    android:shadowColor="#ccc"
+	    android:shadowDx="1"
+	    android:shadowDy="1"
+	    android:shadowRadius="1" />
+    
+	
+    
+</LinearLayout>
