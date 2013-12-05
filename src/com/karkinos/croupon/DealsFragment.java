@@ -51,13 +51,7 @@ public class DealsFragment extends Fragment {
 				Bundle bundle = new Bundle();
 				bundle.putInt("id", deal.getId());
 				bundle.putParcelable("db", (Parcelable) d);
-				
-//				bundle.putString("Description", deal.description);
-//				bundle.putInt("Image", deal.image);
-//				bundle.putInt("CurrentSupporters", deal.currentSupporters);
-//				bundle.putInt("MaxSupporters", deal.maxSupporters);
-//				bundle.putFloat("RegularPrice", deal.regularPrice);
-//				bundle.putFloat("DiscountPrice", deal.discountPrice);
+
 				intent.putExtras(bundle);
 				startActivity(intent);
 			}
