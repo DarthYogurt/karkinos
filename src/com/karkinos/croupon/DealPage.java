@@ -63,35 +63,29 @@ public class DealPage extends Activity {
 		setContentView(R.layout.activity_deal_page);
 		setupActionBar();
 		
-		// TEMP: WRITE DATABASE TO FLAT FILE AND STORES IN ARRAYLIST
-		final Database db = new Database(this);
-	    db.writeDataToFile();
-	    final ArrayList<Deal> all_deals =  db.getCurrentDeals();
-		
 		Bundle bundle = getIntent().getExtras();
 		int id = bundle.getInt("id");
 		
-		for (Deal d : all_deals) {
-			if (d.getId() == id) {
-				image = d.getImage();
-				title = d.getTitle();
-				description = d.getDescription();
-				currentSupporters = d.getCurrentSupporters();
-				maxSupporters = d.getMaxSupporters();
-				regularPrice = d.getRegularPrice();
-				discountPrice = d.getDiscountPrice();
-				msrp = d.getMsrp();
-				lowestMarketPrice = d.getLowestMarketPrice();
-				rank = d.getRank();
-				votes = d.getVotes();
-				categoryId = d.getCategoryId();
-				championId = d.getChampionId();
-				qa = d.getQa();
-				comments = d.getComments();
-				webUrls = d.getWebUrls();
-				endingTime = d.getEndingTime();
-			}
-		}
+		final Database db = new Database(this);
+		
+		Deal d = db.getDeal(id);
+		image = d.getImage();
+		title = d.getTitle();
+		description = d.getDescription();
+		currentSupporters = d.getCurrentSupporters();
+		maxSupporters = d.getMaxSupporters();
+		regularPrice = d.getRegularPrice();
+		discountPrice = d.getDiscountPrice();
+		msrp = d.getMsrp();
+		lowestMarketPrice = d.getLowestMarketPrice();
+		rank = d.getRank();
+		votes = d.getVotes();
+		categoryId = d.getCategoryId();
+		championId = d.getChampionId();
+		qa = d.getQa();
+		comments = d.getComments();
+		webUrls = d.getWebUrls();
+		endingTime = d.getEndingTime();
 		
 		ImageView imgDealImage = (ImageView)findViewById(R.id.imgDealImage);
 		imgDealImage.setImageResource(image);
