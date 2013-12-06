@@ -93,6 +93,7 @@ public class DealPage extends Activity {
 		TextView txtLowestMarketPrice = (TextView)findViewById(R.id.txtLowestMarketPrice);
 		TextView txtRank = (TextView)findViewById(R.id.txtRank);
 		TextView txtVotes = (TextView)findViewById(R.id.txtVotes);
+		TextView txtCategory = (TextView)findViewById(R.id.txtCategory);
 		TextView txtQA = (TextView)findViewById(R.id.txtQA);
 		TextView txtComments = (TextView)findViewById(R.id.txtComments);
 		TextView txtWebUrls = (TextView)findViewById(R.id.txtWebUrls);
@@ -107,6 +108,7 @@ public class DealPage extends Activity {
 		txtLowestMarketPrice.setText(String.valueOf("$" + String.format("%.2f", lowestMarketPrice)));
 		txtRank.setText(String.valueOf(rank));
 		txtVotes.setText(String.valueOf(votes));
+		txtCategory.setText(String.valueOf(categoryId));
 		txtQA.setText(qa);
 		txtComments.setText(comments);
 		txtWebUrls.setText(webUrls);

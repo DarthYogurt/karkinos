@@ -181,7 +181,7 @@
 	                android:paddingBottom="20dp" />
 	            <!-- END WEBSITES SECTION -->	            
 	            
-	            <!-- RANK/VOTES SECTION -->
+	            <!-- CATEGORY/RANK/VOTES SECTION -->
 	            <TableLayout
 	                android:layout_width="fill_parent"
 	                android:layout_height="wrap_content"
@@ -197,6 +197,15 @@
 			                android:text="@string/rankHeading"
 			                style="@style/DealPageHeading" />
 
+	                    <TextView
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+			                android:gravity="center"
+			                android:textStyle="bold"
+			                android:textColor="#000"
+			                android:text="@string/categoryHeading"
+			                style="@style/DealPageHeading" />
+	                    
 		                <TextView
 			                android:layout_width="wrap_content"
 			                android:layout_height="wrap_content"
@@ -216,6 +225,15 @@
 			                android:textColor="#66ccff"
 			                android:textSize="20sp" />
 
+	                    <TextView
+	                        android:id="@+id/txtCategory"
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+			                android:gravity="center"
+			                android:textStyle="bold"
+			                android:textColor="#66ccff"
+			                android:textSize="20sp" />
+	                    
 		                <TextView
 		                    android:id="@+id/txtVotes"
 			                android:layout_width="wrap_content"
@@ -226,7 +244,22 @@
 			                android:textSize="20sp" />
 	                </TableRow>
 	            </TableLayout>
-	            <!-- END RANK/VOTES SECTION -->
+	            <!-- END CATEGORY/RANK/VOTES SECTION -->
+	            
+	            <!-- CHAMPION SECTION -->
+	            <TextView 
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:background="@drawable/rounded_corners"
+	                android:padding="10dp"
+	                android:shadowColor="#fff"
+					android:shadowDx="1"
+					android:shadowDy="1"
+					android:shadowRadius="2"
+	                android:textStyle="bold"
+	                android:textSize="18sp"
+	                android:text="Champion Name" />
+	            <!-- END CHAMPION SECTION -->
 	            
 	        </LinearLayout>
 

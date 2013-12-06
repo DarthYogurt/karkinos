@@ -16,6 +16,7 @@
     <string name="qaHeading">Q &amp; A</string>
     <string name="websitesHeading">Websites</string>
     <string name="commentsHeading">Comments</string>
+    <string name="categoryHeading">Category</string>
     <string name="rankHeading">Rank</string>
     <string name="votesHeading">Votes</string>
     <string name="imageInfo">Deal Image</string>
