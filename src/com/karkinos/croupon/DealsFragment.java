@@ -29,7 +29,6 @@ public class DealsFragment extends Fragment {
 		//d.readDataFromFile();
 		
 	    Log.d("InDealsFragment", "HERE");
-	    // Sample set of data passed to adapter for testing purposes
 
         final ArrayList<Deal> all_deals =  d.getCurrentDeals();
         
@@ -40,7 +39,7 @@ public class DealsFragment extends Fragment {
         // View header = (View)inflater.inflate(R.layout.listview_header_row, null);
         // LV.addHeaderView(header);
         
-        listView.setAdapter(adapter);       
+        listView.setAdapter(adapter);
         
         listView.setOnItemClickListener(new OnItemClickListener() {
 			@Override

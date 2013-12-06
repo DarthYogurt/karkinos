@@ -68,10 +68,10 @@ public class DealAdapter extends ArrayAdapter<Deal> {
         
         holder.imgDealImage.setImageResource(image);
         holder.txtTitle.setText(title);
-        holder.txtSupporters.setText(String.valueOf(currentSupporters + " / " + maxSupporters + " Supporters"));
-        holder.txtRegularPrice.setText(String.valueOf("$" + regularPrice));
+        holder.txtSupporters.setText(String.valueOf(currentSupporters + "/" + maxSupporters + " Supporters"));
+        holder.txtRegularPrice.setText(String.valueOf("$" + String.format("%.2f", regularPrice)));
         holder.txtRegularPrice.setPaintFlags(holder.txtRegularPrice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
-        holder.txtDiscountPrice.setText(String.valueOf("$" + discountPrice));
+        holder.txtDiscountPrice.setText(String.valueOf("$" + String.format("%.2f", discountPrice)));
         
         return convertView;
     }

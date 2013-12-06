@@ -10,6 +10,7 @@ import org.joda.time.DateTime;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.app.Activity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -41,21 +42,19 @@ public class DealPage extends Activity {
 	Date endingTime;
 	Button btnJoinCause;
 	
-	
-	long mMilliseconds = 60000;
-	SimpleDateFormat mSimpleDateFormat = new SimpleDateFormat("HH:mm:ss");
-	TextView mTimerTextView;
-	
-	CountDownTimer mCountDownTimer = new CountDownTimer(mMilliseconds, 1000) {
-		@Override
-		public void onFinish() {
-			mTimerTextView.setText(mSimpleDateFormat.format(0));
-		}
-		
-		public void onTick(long millisUntilFinished) {
-			mTimerTextView.setText(mSimpleDateFormat.format(millisUntilFinished));
-		}
-	};
+	long mMilliseconds;
+	CountDownTimer mCountDownTimer;
+//	SimpleDateFormat mSimpleDateFormat = new SimpleDateFormat("D:HH:mm:ss");
+//	CountDownTimer mCountDownTimer = new CountDownTimer(mMilliseconds, 1000) {
+//		@Override
+//		public void onFinish() {
+//			mTimerTextView.setText(mSimpleDateFormat.format(0));
+//		}
+//		
+//		public void onTick(long millisUntilFinished) {
+//			mTimerTextView.setText(mSimpleDateFormat.format(millisUntilFinished));
+//		}
+//	};
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +65,7 @@ public class DealPage extends Activity {
 		Bundle bundle = getIntent().getExtras();
 		int id = bundle.getInt("id");
 		
-		final Database db = new Database(this);
+		Database db = new Database(this);
 		
 		Deal d = db.getDeal(id);
 		image = d.getImage();
@@ -88,22 +87,22 @@ public class DealPage extends Activity {
 		endingTime = d.getEndingTime();
 		
 		ImageView imgDealImage = (ImageView)findViewById(R.id.imgDealImage);
-		imgDealImage.setImageResource(image);
 		TextView txtTitle = (TextView)findViewById(R.id.txtTitle);
-		txtTitle.setText(title);
 		TextView txtDescription = (TextView)findViewById(R.id.txtDescription);
-		txtDescription.setText(description);
 		TextView txtSupporters = (TextView)findViewById(R.id.txtSupporters);
-		txtSupporters.setText(currentSupporters + " / " + maxSupporters + " Supporters");
 		TextView txtDiscountPrice = (TextView)findViewById(R.id.txtDiscountPrice);
-		txtDiscountPrice.setText(Double.toString(discountPrice));
 		TextView txtQA = (TextView)findViewById(R.id.txtQA);
+		
+		imgDealImage.setImageResource(image);
+		txtTitle.setText(title);
+		txtDescription.setText(description);
+		txtSupporters.setText(currentSupporters + " / " + maxSupporters + " Supporters");
+		txtDiscountPrice.setText(Double.toString(discountPrice));
 		txtQA.setText(qa);
 		
-		mSimpleDateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
-		mTimerTextView = (TextView) findViewById(R.id.txtCountDownTimer);
-		
-		mCountDownTimer.start();
+		mMilliseconds = endingTime.getTime();
+		TextView mTimerTextView = (TextView) findViewById(R.id.txtCountDownTimer);
+
 		
 		btnJoinCause = (Button)findViewById(R.id.btnJoinCause);
 		btnJoinCause.setOnClickListener(new OnClickListener() {
@@ -115,6 +114,27 @@ public class DealPage extends Activity {
 			}
 		});
 	}
+	
+	public class MyCountDownTimer extends CountDownTimer {
+		public MyCountDownTimer(long millisInFuture, long countDownInterval) {
+			super(millisInFuture, countDownInterval);
+			
+		}
+		
+		@Override
+		public void onFinish() {
+			
+		}
+		
+		@Override
+		public void onTick(long millisUntilFinished) {
+			long seconds = (long) (millisUntilFinished / 1000 % 60);
+			long minutes = (long) (millisUntilFinished / (1000*60) % 60);
+			long hours = (long) (millisUntilFinished / (1000*60*60) % 24);
+			int days = (int) (millisUntilFinished / (1000*60*60*24) % 365);	
+		}
+	}
+	
 
 	/**
 	 * Set up the {@link android.app.ActionBar}.
