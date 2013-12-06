@@ -30,11 +30,72 @@ public class Database{
 		this.parentContext = context;
 	}
 	
-	public Deal getDeal(int id){
+	public Deal getDeal(int selectedId){
+		// This will need to be altered to search a database. Currently it's reading from a file and returning the first item which matches it's id.
+		JSONObject jsonFromFile = null;
+		JSONArray dealArray = null;
+		String displayText = readDataFromFile();
 		
-		Deal d = new Deal();
+		try{
+			jsonFromFile = new JSONObject(displayText);
+		}
+		catch (JSONException e){}
 		
-		return d;
+		
+		try {
+			dealArray= jsonFromFile.getJSONArray("deals");
+		} catch (JSONException e) {	e.printStackTrace();		}
+		
+		
+		for (int i=0; i < dealArray.length(); i++){
+			JSONObject sd = null;
+			try {
+				sd = (JSONObject) dealArray.get(i);
+				
+				if (sd.getInt("id") == selectedId){
+					Deal d = new Deal();
+					
+					d.setId(sd.getInt("id"));
+					d.setImage(sd.getInt("image"));
+					d.setTitle(sd.getString("title"));
+					d.setDescription(sd.getString("description"));
+					d.setCurrentSupporters(sd.getInt("currentSupporters"));
+					d.setMaxSupporters(sd.getInt("maxSupporters"));
+					d.setRegularPrice(sd.getDouble("regularPrice"));
+					d.setDiscountPrice(sd.getDouble("discountPrice"));
+					d.setMsrp(sd.getDouble("msrp"));
+					d.setLowestMarketPrice(sd.getDouble("lowestMarketPrice"));
+					
+					d.setRank(3);
+					d.setVotes(100);
+					d.setCategoryId(41);
+					d.setChampionId(32);
+					d.setQa("is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.");
+					d.setComments("Sed interdum felis et nisl sollicitudin aliquet. Nullam et ligula ullamcorper, adipiscing nulla ut, luctus dui. Nam iaculis vitae sem id pellentesque. Aliquam fringilla aliquam dignissim. Sed rhoncus quam lorem, accumsan varius nibh posuere non. Etiam ligula nisi, tincidunt eget fermentum nec, tincidunt quis nisl. Duis id justo et augue adipiscing laoreet in a nunc. Donec placerat ut dolor vel sollicitudin. Nullam sodales felis ut nulla interdum, quis posuere justo laoreet. Sed scelerisque felis ut libero malesuada suscipit. Sed sit amet egestas turpis, sit amet adipiscing sapien. Quisque viverra odio id accumsan tincidunt. Sed nibh justo, porta eget mi tristique, consectetur scelerisque dolor. Nullam dapibus, diam at sagittis ornare, mi tellus tristique odio, a venenatis purus nunc at urna.");
+					d.setWebUrls("www.google.com");
+					
+				    Calendar cal = Calendar.getInstance();
+				    cal.set(Calendar.YEAR, 2014);
+				    cal.set(Calendar.MONTH,11);
+				    cal.set(Calendar.DAY_OF_MONTH, 15);
+				    cal.set(Calendar.HOUR_OF_DAY, 20);
+				    cal.set(Calendar.MINUTE,30);
+				    cal.set(Calendar.SECOND,0);
+				   
+					d.setEndingTime(cal.getTime());
+					
+					//d.setRank(sd.getInt("rank"));
+					//d.setVotes(sd.getInt("votes"));
+					//d.setCategoryId(sd.getInt("categoryId"));
+					//d.setChampionId(sd.getInt("championId"));
+					//d.setQa(sd.getString("qa"));
+					//d.setComments(sd.getString("comments"));
+					//d.setWebUrls(sd.getString("webUrls"));
+					return d;
+				}
+			} catch (JSONException e) {e.printStackTrace();}
+		}
+		return null;
 	}
 	
 	public ArrayList<Deal> getCurrentDeals(){
@@ -51,11 +112,8 @@ public class Database{
 			System.out.println();
 		}
 		
-		
 		try {
 			dealArray= jsonFromFile.getJSONArray("deals");
-			
-			
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -89,8 +147,6 @@ public class Database{
 				d.setComments("Sed interdum felis et nisl sollicitudin aliquet. Nullam et ligula ullamcorper, adipiscing nulla ut, luctus dui. Nam iaculis vitae sem id pellentesque. Aliquam fringilla aliquam dignissim. Sed rhoncus quam lorem, accumsan varius nibh posuere non. Etiam ligula nisi, tincidunt eget fermentum nec, tincidunt quis nisl. Duis id justo et augue adipiscing laoreet in a nunc. Donec placerat ut dolor vel sollicitudin. Nullam sodales felis ut nulla interdum, quis posuere justo laoreet. Sed scelerisque felis ut libero malesuada suscipit. Sed sit amet egestas turpis, sit amet adipiscing sapien. Quisque viverra odio id accumsan tincidunt. Sed nibh justo, porta eget mi tristique, consectetur scelerisque dolor. Nullam dapibus, diam at sagittis ornare, mi tellus tristique odio, a venenatis purus nunc at urna.");
 				d.setWebUrls("www.google.com");
 				
-				
-			    
 			    Calendar cal = Calendar.getInstance();
 			    cal.set(Calendar.YEAR, 2014);
 			    cal.set(Calendar.MONTH,11);
@@ -98,11 +154,8 @@ public class Database{
 			    cal.set(Calendar.HOUR_OF_DAY, 20);
 			    cal.set(Calendar.MINUTE,30);
 			    cal.set(Calendar.SECOND,0);
-			    
-			
-				
+			   
 				d.setEndingTime(cal.getTime());
-				
 				
 				//d.setRank(sd.getInt("rank"));
 				//d.setVotes(sd.getInt("votes"));
@@ -112,20 +165,10 @@ public class Database{
 				//d.setComments(sd.getString("comments"));
 				//d.setWebUrls(sd.getString("webUrls"));
 	
-				
-				
-				
-				
-				
 				dealsToReturn.add(d);
 			} catch (JSONException e) {e.printStackTrace();}
 		}
-		
-		//Log.d("BETA", (String)dealsToReturn[0].getId());
 		return dealsToReturn;
-		//public Deal(String description, int image, int currentSupporters, 
-		 //int maxSupporters, int regularPrice, int discountPrice) {
-	
 	}
 
 	public String readDataFromFile(){
@@ -147,8 +190,11 @@ public class Database{
 		return displayText;
 }
 
+	
+	
+	
 	public void writeDataToFile(){
-		
+		/* Disregard as this is a temporary fix to fill in data  Eventually database class will */
 		File sdDir = Environment.getExternalStorageDirectory();
 		try {
 			writer = new JsonWriter(new FileWriter(STOREDIR + "/" + JSONFILENAME, false));;
