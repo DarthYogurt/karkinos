@@ -9,6 +9,7 @@ import org.joda.time.DateTime;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.app.Activity;
+import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,6 +17,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.support.v4.app.NavUtils;
@@ -97,7 +99,9 @@ public class DealPage extends Activity {
 		TextView txtQA = (TextView)findViewById(R.id.txtQA);
 		TextView txtComments = (TextView)findViewById(R.id.txtComments);
 		TextView txtWebUrls = (TextView)findViewById(R.id.txtWebUrls);
-		TextView txtEndingTime = (TextView) findViewById(R.id.txtEndingTime);
+		TextView txtEndingTime = (TextView)findViewById(R.id.txtEndingTime);
+		RelativeLayout btnToChampionPage = (RelativeLayout)findViewById(R.id.btnToChampionPage);
+		Button btnJoinCause = (Button)findViewById(R.id.btnJoinCause);
 		
 		imgDealImage.setImageResource(image);
 		txtTitle.setText(title);
@@ -114,8 +118,21 @@ public class DealPage extends Activity {
 		txtWebUrls.setText(webUrls);
 		
 
+		btnToChampionPage.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View view) {
+//				Intent intent = new Intent(this, ChampionPage.class);
+//				Bundle bundle = new Bundle();
+//				bundle.putInt("championId", championId);
+//				intent.putExtras(bundle);
+//				startActivity(intent);
+				
+				Toast test;
+				test = Toast.makeText(getApplicationContext(), "Champion Page Button Works!", Toast.LENGTH_SHORT);
+				test.show();
+			}
+		});
 		
-		btnJoinCause = (Button)findViewById(R.id.btnJoinCause);
 		btnJoinCause.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View view) {

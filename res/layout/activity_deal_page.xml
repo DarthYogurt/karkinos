@@ -247,18 +247,28 @@
 	            <!-- END CATEGORY/RANK/VOTES SECTION -->
 	            
 	            <!-- CHAMPION SECTION -->
-	            <TextView 
+	            <RelativeLayout
+	                android:id="@+id/btnToChampionPage"
 	                android:layout_width="fill_parent"
 	                android:layout_height="wrap_content"
-	                android:background="@drawable/rounded_corners"
+	                android:background="@drawable/btn_white_glossy"
 	                android:padding="10dp"
-	                android:shadowColor="#fff"
-					android:shadowDx="1"
-					android:shadowDy="1"
-					android:shadowRadius="2"
-	                android:textStyle="bold"
-	                android:textSize="18sp"
-	                android:text="Champion Name" />
+	                android:clickable="true" >
+	                
+	                <TextView 
+	                    android:id="@+id/txtChampionName"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_centerVertical="true"
+		                android:layout_alignParentLeft="true"
+		                android:shadowColor="#ccc"
+						android:shadowDx="2"
+						android:shadowDy="2"
+						android:shadowRadius="2"
+		                android:textStyle="bold"
+		                android:textSize="18sp"
+		                android:text="(insert champion name)" />
+	            </RelativeLayout>
 	            <!-- END CHAMPION SECTION -->
 	            
 	        </LinearLayout>
@@ -328,7 +338,7 @@
        		android:layout_above="@id/progressBar"
        		android:layout_alignParentRight="true"
             android:text="@string/joinCause"
-            android:background="@drawable/btn_join_cause"
+            android:background="@drawable/btn_green_matte"
             style="@style/ButtonText" />
 
     </RelativeLayout>
