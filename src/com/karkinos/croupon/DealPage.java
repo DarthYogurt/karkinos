@@ -1,7 +1,6 @@
 package com.karkinos.croupon;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.TimeZone;
 
@@ -17,7 +16,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.support.v4.app.NavUtils;
@@ -91,17 +89,28 @@ public class DealPage extends Activity {
 		TextView txtDescription = (TextView)findViewById(R.id.txtDescription);
 		TextView txtSupporters = (TextView)findViewById(R.id.txtSupporters);
 		TextView txtDiscountPrice = (TextView)findViewById(R.id.txtDiscountPrice);
+		TextView txtMsrp = (TextView)findViewById(R.id.txtMsrp);
+		TextView txtLowestMarketPrice = (TextView)findViewById(R.id.txtLowestMarketPrice);
+		TextView txtRank = (TextView)findViewById(R.id.txtRank);
+		TextView txtVotes = (TextView)findViewById(R.id.txtVotes);
 		TextView txtQA = (TextView)findViewById(R.id.txtQA);
+		TextView txtComments = (TextView)findViewById(R.id.txtComments);
+		TextView txtWebUrls = (TextView)findViewById(R.id.txtWebUrls);
+		TextView txtEndingTime = (TextView) findViewById(R.id.txtEndingTime);
 		
 		imgDealImage.setImageResource(image);
 		txtTitle.setText(title);
 		txtDescription.setText(description);
-		txtSupporters.setText(currentSupporters + " / " + maxSupporters + " Supporters");
-		txtDiscountPrice.setText(Double.toString(discountPrice));
+		txtSupporters.setText(currentSupporters + "/" + maxSupporters + " Supporters");
+		txtDiscountPrice.setText(String.valueOf("$" + String.format("%.2f", discountPrice)));
+		txtMsrp.setText(String.valueOf("$" + String.format("%.2f", msrp)));
+		txtLowestMarketPrice.setText(String.valueOf("$" + String.format("%.2f", lowestMarketPrice)));
+		txtRank.setText(String.valueOf(rank));
+		txtVotes.setText(String.valueOf(votes));
 		txtQA.setText(qa);
+		txtComments.setText(comments);
+		txtWebUrls.setText(webUrls);
 		
-		mMilliseconds = endingTime.getTime();
-		TextView mTimerTextView = (TextView) findViewById(R.id.txtCountDownTimer);
 
 		
 		btnJoinCause = (Button)findViewById(R.id.btnJoinCause);

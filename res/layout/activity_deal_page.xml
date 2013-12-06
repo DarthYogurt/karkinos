@@ -81,26 +81,26 @@
 			                android:layout_width="0dp"
 			                android:layout_height="wrap_content"
 			                android:layout_weight="2"
-			                android:text="MSRP:" />
+			                android:text="@string/msrp" />
 	                
 		                <TextView
+		                    android:id="@+id/txtMsrp"
 			                android:layout_width="0dp"
 			                android:layout_height="wrap_content"
-			                android:layout_weight="1"
-			                android:text="$200" />
+			                android:layout_weight="1" />
 	                </TableRow>
 	                <TableRow>
 	                    <TextView
 			                android:layout_width="0dp"
 			                android:layout_height="wrap_content"
 			                android:layout_weight="2"
-			                android:text="Lowest Price Online:" />
+			                android:text="@string/lowestMarketPrice" />
 	                
 		                <TextView
+		                    android:id="@+id/txtLowestMarketPrice"
 			                android:layout_width="0dp"
 			                android:layout_height="wrap_content"
-			                android:layout_weight="1"
-			                android:text="$180" />
+			                android:layout_weight="1" />
 	                </TableRow>
 	            </TableLayout>
 				<!-- END PRICES SECTION -->
@@ -121,28 +121,8 @@
 	                android:id="@+id/txtDescription"
 	                android:layout_width="fill_parent"
 	                android:layout_height="wrap_content"
-	                android:text="@string/dummyText"
 	                android:paddingBottom="20dp" />
-	            <!-- END DESCRIPTION SECTION -->
-	            
-	            <!-- SPECIFICS SECTION -->
-	            <TextView 
-	                android:layout_width="fill_parent"
-	                android:layout_height="wrap_content"
-	                android:text="@string/specificsHeading"
-	                style="@style/DealPageHeading" />
-	            
-	            <View 
-					android:layout_width="fill_parent"
-					android:layout_height="2dp"
-					android:background="#66ccff" />
-	            
-	            <TextView 
-	                android:layout_width="fill_parent"
-	                android:layout_height="wrap_content"
-	                android:text="@string/dummyText"
-	                android:paddingBottom="20dp" />
-	            <!-- END SPECIFICS SECTION -->
+	            <!-- END DESCRIPTION SECTION -->	            
 	            
 	            <!-- Q&A SECTION -->
 	            <TextView 
@@ -160,9 +140,46 @@
 	                android:id="@+id/txtQA"
 	                android:layout_width="fill_parent"
 	                android:layout_height="wrap_content"
-	                android:text="@string/dummyText"
 	                android:paddingBottom="20dp" />
 	            <!-- END Q&A SECTION -->
+	            
+	            <!-- COMMENTS SECTION -->
+	            <TextView 
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:text="@string/commentsHeading"
+	                style="@style/DealPageHeading" />
+	            
+	            <View 
+					android:layout_width="fill_parent"
+					android:layout_height="2dp"
+					android:background="#66ccff" />
+	            
+	            <TextView 
+	                android:id="@+id/txtComments"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:paddingBottom="20dp" />
+	            <!-- END COMMENTS SECTION -->
+	            
+	            <!-- WEBSITES SECTION -->
+	            <TextView 
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:text="@string/websitesHeading"
+	                style="@style/DealPageHeading" />
+	            
+	            <View 
+					android:layout_width="fill_parent"
+					android:layout_height="2dp"
+					android:background="#66ccff" />
+	            
+	            <TextView 
+	                android:id="@+id/txtWebUrls"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:paddingBottom="20dp" />
+	            <!-- END WEBSITES SECTION -->	            
 	            
 	            <!-- RANK/VOTES SECTION -->
 	            <TableLayout
@@ -235,7 +252,7 @@
             android:textStyle="bold" />
       	
         <TextView
-            android:id="@+id/txtCountDownTimer"
+            android:id="@+id/txtEndingTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@id/txtTimeLeft"
