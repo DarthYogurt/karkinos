@@ -1,6 +1,8 @@
 package com.karkinos.croupon;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.TimeZone;
 
 import org.joda.time.DateTime;
@@ -20,7 +22,25 @@ import android.widget.Toast;
 import android.support.v4.app.NavUtils;
 
 public class DealPage extends Activity {
+	int image;
+	String title;
+	String description;
+	int currentSupporters;
+	int maxSupporters;
+	double regularPrice;
+	double discountPrice;
+	double msrp;
+	double lowestMarketPrice;
+	int rank;
+	int votes;
+	int categoryId;
+	int championId;
+	String qa;
+	String comments;
+	String webUrls;
+	Date endingTime;
 	Button btnJoinCause;
+	
 	
 	long mMilliseconds = 60000;
 	SimpleDateFormat mSimpleDateFormat = new SimpleDateFormat("HH:mm:ss");
@@ -43,15 +63,48 @@ public class DealPage extends Activity {
 		setContentView(R.layout.activity_deal_page);
 		setupActionBar();
 		
+		// TEMP: WRITE DATABASE TO FLAT FILE AND STORES IN ARRAYLIST
+		final Database db = new Database(this);
+	    db.writeDataToFile();
+	    final ArrayList<Deal> all_deals =  db.getCurrentDeals();
+		
 		Bundle bundle = getIntent().getExtras();
 		int id = bundle.getInt("id");
 		
+		for (Deal d : all_deals) {
+			if (d.getId() == id) {
+				image = d.getImage();
+				title = d.getTitle();
+				description = d.getDescription();
+				currentSupporters = d.getCurrentSupporters();
+				maxSupporters = d.getMaxSupporters();
+				regularPrice = d.getRegularPrice();
+				discountPrice = d.getDiscountPrice();
+				msrp = d.getMsrp();
+				lowestMarketPrice = d.getLowestMarketPrice();
+				rank = d.getRank();
+				votes = d.getVotes();
+				categoryId = d.getCategoryId();
+				championId = d.getChampionId();
+				qa = d.getQa();
+				comments = d.getComments();
+				webUrls = d.getWebUrls();
+				endingTime = d.getEndingTime();
+			}
+		}
+		
 		ImageView imgDealImage = (ImageView)findViewById(R.id.imgDealImage);
+		imgDealImage.setImageResource(image);
 		TextView txtTitle = (TextView)findViewById(R.id.txtTitle);
+		txtTitle.setText(title);
 		TextView txtDescription = (TextView)findViewById(R.id.txtDescription);
+		txtDescription.setText(description);
 		TextView txtSupporters = (TextView)findViewById(R.id.txtSupporters);
+		txtSupporters.setText(currentSupporters + " / " + maxSupporters + " Supporters");
 		TextView txtDiscountPrice = (TextView)findViewById(R.id.txtDiscountPrice);
+		txtDiscountPrice.setText(Double.toString(discountPrice));
 		TextView txtQA = (TextView)findViewById(R.id.txtQA);
+		txtQA.setText(qa);
 		
 		mSimpleDateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
 		mTimerTextView = (TextView) findViewById(R.id.txtCountDownTimer);
