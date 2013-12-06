@@ -28,8 +28,7 @@
 		        android:textColor="#fff"
 		        android:background="#66ccff"
 		        android:paddingTop="5dp"
-		        android:paddingBottom="5dp"
-		        android:text="Title Test" />
+		        android:paddingBottom="5dp" />
 	        
 	        <ImageView 
 	            android:id="@+id/imgDealImage"
@@ -75,8 +74,7 @@
 			                android:layout_height="wrap_content"
 			                android:layout_weight="1"
 			                android:textStyle="bold"
-			                android:textColor="#009933"
-			                android:text="$150" />
+			                android:textColor="#009933" />
 	                </TableRow>
 	                <TableRow>
 	                    <TextView
@@ -199,8 +197,7 @@
 			                android:gravity="center"
 			                android:textStyle="bold"
 			                android:textColor="#66ccff"
-			                android:textSize="20sp"
-			                android:text="10" />
+			                android:textSize="20sp" />
 
 		                <TextView
 		                    android:id="@+id/txtVotes"
@@ -209,8 +206,7 @@
 			                android:gravity="center"
 			                android:textStyle="bold"
 			                android:textColor="#66ccff"
-			                android:textSize="20sp"
-			                android:text="432" />
+			                android:textSize="20sp" />
 	                </TableRow>
 	            </TableLayout>
 	            <!-- END RANK/VOTES SECTION -->
