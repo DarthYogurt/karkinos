@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.karkinos.croupon"
+    package="com.karkinos.pile"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -17,7 +17,7 @@
         android:theme="@style/AppTheme" >
         
         <activity
-            android:name="com.karkinos.croupon.MainActivity"
+            android:name="com.karkinos.pile.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
             <intent-filter>
@@ -28,8 +28,9 @@
         </activity>
         
         <activity
-            android:name="com.karkinos.croupon.DealPage"
-            android:parentActivityName="com.karkinos.croupon.MainActivity"
+            android:name="com.karkinos.pile.DealPage"
+            android:label="@string/app_name"
+            android:parentActivityName="com.karkinos.pile.MainActivity"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -37,9 +38,9 @@
         </activity>
         
         <activity
-            android:name="com.karkinos.croupon.NominatePage"
-            android:label="@string/title_activity_nominate_page"
-            android:parentActivityName="com.karkinos.croupon.MainActivity"
+            android:name="com.karkinos.pile.NominatePage"
+            android:label="@string/app_name"
+            android:parentActivityName="com.karkinos.pile.MainActivity"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
