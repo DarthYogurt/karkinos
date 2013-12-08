@@ -27,7 +27,7 @@
     <string name="joinCause">Join Cause</string>
     <string name="dummyText">This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. </string>
     <string name="nominatePageHeading">Nominate Page</string>
-    <string name="title_activity_champion_page">ChampionPage</string>
     <string name="champion">Champion</string>
+    <string name="championedDeals">Championed Deals:</string>
 
 </resources>

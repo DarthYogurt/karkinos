@@ -2,7 +2,7 @@ package com.karkinos.pile;
 
 import java.util.Date;
 
-// Object class for each individual deal
+// Object class for a deal
 public class Deal {
 	private int id = 0;
 	private int image = 0;

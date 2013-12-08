@@ -45,7 +45,7 @@
         </activity>
         <activity
             android:name="com.karkinos.pile.ChampionPage"
-            android:label="@string/title_activity_champion_page"
+            android:label="@string/app_name"
             android:parentActivityName="com.karkinos.pile.MainActivity"
             android:screenOrientation="portrait" >
             <meta-data

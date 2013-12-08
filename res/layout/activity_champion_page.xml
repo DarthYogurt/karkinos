@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical" >
     
+        <!-- CHAMPION NAME SECTION -->
         <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -44,8 +45,50 @@
 		        android:textSize="28sp"
 		  		android:textColor="#fff"
 		   		android:text="DeeRock" />
-		
+			
 		</RelativeLayout>
+		<!-- END CHAMPION NAME SECTION -->
+		
+		<!-- CHAMPION INFO SECTION -->
+		<LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:padding="14dp" >
+		
+			<TableLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:stretchColumns="*"
+				android:gravity="center"
+				android:paddingBottom="20dp" >
+				<TableRow>
+				    <TextView
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:text="@string/rankHeading" />
+				    
+				    <TextView
+	                    android:id="@+id/txtRank"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:text="21" />
+			    </TableRow>
+			    <TableRow>
+				    <TextView
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:text="@string/championedDeals" />
+				    
+				    <TextView
+	                    android:id="@+id/txtChampionedDeals"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:text="7" />
+			    </TableRow>
+			</TableLayout>
+		<!-- END CHAMPION INFO SECTION -->
+        
+        </LinearLayout>
      
     </LinearLayout>
         

@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.view.Menu;
-import com.karkinos.pile.R;
 
 // TODO: FragmentActivity to Fragment
 public class MainActivity extends FragmentActivity {

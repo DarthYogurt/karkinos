@@ -10,8 +10,6 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.karkinos.pile.R;
-
 
 // Adapter to populate ListView with ArrayList<Deal>
 public class DealAdapter extends ArrayAdapter<Deal> {

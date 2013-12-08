@@ -19,7 +19,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.support.v4.app.NavUtils;
-import com.karkinos.pile.R;
 
 public class DealPage extends Activity {
 	int image;

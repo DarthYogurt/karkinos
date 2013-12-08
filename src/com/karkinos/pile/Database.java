@@ -15,8 +15,6 @@ import android.content.Context;
 import android.os.Environment;
 import android.util.JsonWriter;
 import android.util.Log;
-import com.karkinos.pile.R;
-
 
 public class Database{
 	private Context parentContext;
