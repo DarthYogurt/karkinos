@@ -120,15 +120,11 @@ public class DealPage extends Activity {
 		btnToChampionPage.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View view) {
-//				Intent intent = new Intent(this, ChampionPage.class);
-//				Bundle bundle = new Bundle();
-//				bundle.putInt("championId", championId);
-//				intent.putExtras(bundle);
-//				startActivity(intent);
-				
-				Toast test;
-				test = Toast.makeText(getApplicationContext(), "Champion Page Button Works!", Toast.LENGTH_SHORT);
-				test.show();
+				Intent intent = new Intent(DealPage.this, ChampionPage.class);
+				Bundle bundle = new Bundle();
+				bundle.putInt("championId", championId);
+				intent.putExtras(bundle);
+				startActivity(intent);
 			}
 		});
 		
