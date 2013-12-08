@@ -28,6 +28,8 @@
     <string name="dummyText">This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. </string>
     <string name="nominatePageHeading">Nominate Page</string>
     <string name="champion">Champion</string>
+    <string name="rank">Rank:</string>
     <string name="championedDeals">Championed Deals:</string>
+    <string name="location">Location:</string>
 
 </resources>

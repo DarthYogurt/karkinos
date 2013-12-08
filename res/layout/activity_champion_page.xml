@@ -65,7 +65,7 @@
 				    <TextView
 		                android:layout_width="wrap_content"
 		                android:layout_height="wrap_content"
-		                android:text="@string/rankHeading" />
+		                android:text="@string/rank" />
 				    
 				    <TextView
 	                    android:id="@+id/txtRank"
@@ -84,6 +84,18 @@
 		                android:layout_width="wrap_content"
 		                android:layout_height="wrap_content"
 		                android:text="7" />
+			    </TableRow>
+			    <TableRow>
+				    <TextView
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:text="@string/location" />
+				    
+				    <TextView
+	                    android:id="@+id/txtChampionLocation"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:text="San Francisco, CA" />
 			    </TableRow>
 			</TableLayout>
 		<!-- END CHAMPION INFO SECTION -->
