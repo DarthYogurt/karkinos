@@ -30,4 +30,11 @@
     
     <string name="nominatePageHeading">Nominate Page</string>
 
+    <string-array name="category">
+        <item> Electronics </item>
+        <item> Car Parts </item>
+        <item> Automobile </item>
+        <item> Furniture </item>
+    </string-array>
+    
 </resources>
