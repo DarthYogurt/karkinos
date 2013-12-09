@@ -16,15 +16,18 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
+            android:name="com.karkinos.pile.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="com.karkinos.pile.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
- 			<intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
         </activity>
         <activity
             android:name="com.karkinos.pile.DealPage"
@@ -40,9 +43,6 @@
             android:label="@string/app_name"
             android:parentActivityName="com.karkinos.pile.MainActivity"
             android:screenOrientation="portrait" >
-			
-            
-            
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.karkinos.croupon.MainActivity" />
@@ -56,6 +56,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.karkinos.pile.MainActivity" />
         </activity>
+        
     </application>
 
 </manifest>
