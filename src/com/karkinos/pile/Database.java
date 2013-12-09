@@ -199,7 +199,7 @@ public class Database{
 			writer.name("deals");
 			writer.beginArray();
 			
-			// samsung TV 2130837508
+			// Sample deals
 			String [][] deals = new String[][] {
 					{"1", "Samsung 4K TV", Integer.toString(R.drawable.samsung_tv), "100", "999", "400.15","300.50","Samsung 4K TV", "1000.0", "999"},
 					{"2", "LG 60 inch TV", Integer.toString(R.drawable.lg_tv) , "32", "55", "800", "42.5","LG 60 inch TV","1200", "1150"},
@@ -208,6 +208,11 @@ public class Database{
 					{"5", "GoPro Hero3+ Black Edition", Integer.toString(R.drawable.gopro), "60", "125", "500", "350", "GoPro Hero3+ Black Edition", "550", "399"},
 					{"6", "Canon Camera", Integer.toString(R.drawable.canon_camera), "39", "100", "500", "400", "Canon Camera", "550", "450"},
 					{"7", "Google Chromecast", Integer.toString(R.drawable.chromecast), "690", "1000", "50", "25", "Chromecast", "55", "40"},
+					{"8", "Chromebook", Integer.toString(R.drawable.chromebook), "690", "1000", "50", "25", "Chromebook", "55", "40"},
+					{"9", "iPad", Integer.toString(R.drawable.ipad), "690", "1000", "50", "25", "Apple iPad", "55", "40"},
+					{"10", "Roku 3", Integer.toString(R.drawable.roku), "690", "1000", "50", "25", "Roku 3", "55", "40"},
+					{"11", "Sony Blu Ray Player", Integer.toString(R.drawable.sony_bluray), "690", "1000", "50", "25", "Sony Blu Ray Player", "55", "40"},
+					
 			};
 			        
 			for (int i=0; i<deals.length;i++){
@@ -231,7 +236,6 @@ public class Database{
 			writer.close();
 			System.out.println();
 		} catch (IOException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 			System.out.println();
 		}

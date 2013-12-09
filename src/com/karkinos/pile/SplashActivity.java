@@ -10,14 +10,17 @@ import android.view.WindowManager;
 public class SplashActivity extends Activity {
 
 	private static String TAG = SplashActivity.class.getName();
-	private static long SLEEP_TIME = 3; // Sleep for some time
+	private static long SLEEP_TIME = 3; // Sleep for this number of seconds
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		this.requestWindowFeature(Window.FEATURE_NO_TITLE); // Removes title bar
-		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN); // Removes notification bar
+		// Removes title bar
+		this.requestWindowFeature(Window.FEATURE_NO_TITLE); 
+		
+		// Removes notification bar
+		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN); 
 
 		setContentView(R.layout.activity_splash);
 
@@ -32,7 +35,7 @@ public class SplashActivity extends Activity {
 		public void run() {
 			try {
 				// Sleeping
-				Thread.sleep(SLEEP_TIME*1000);
+				Thread.sleep(SLEEP_TIME * 1000);
 			} catch (Exception e) {
 				Log.e(TAG, e.getMessage());
 			}
