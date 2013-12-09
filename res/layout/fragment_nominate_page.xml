@@ -26,6 +26,39 @@
                 android:ems="10"
                 android:hint="I want this item" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/dollarSign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nominated Price $:"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/editText1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="numberDecimal" >
+
+                    <requestFocus />
+                </EditText>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/beAChampion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                
+                android:text="Become A Champion" />
+
         </LinearLayout>
 
     </FrameLayout>
