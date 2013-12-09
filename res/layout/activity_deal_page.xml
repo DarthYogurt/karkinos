@@ -179,7 +179,33 @@
 	                android:layout_width="fill_parent"
 	                android:layout_height="wrap_content"
 	                android:paddingBottom="20dp" />
-	            <!-- END WEBSITES SECTION -->	            
+	            <!-- END WEBSITES SECTION -->	           
+	            
+	            <!-- SOCIAL MEDIA SECTION -->
+	            <TableLayout
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:stretchColumns="*"
+	                android:paddingBottom="20dp" >
+	                <TableRow>
+	                    <ImageView
+	                        android:id="@+id/btnFbShare"
+		                    android:src="@drawable/fb_share_icon"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:clickable="true"
+		                    android:contentDescription="@string/fbShareIcon" />
+	                
+	                	<ImageView
+	                	    android:id="@+id/btnTwitterShare"
+		                    android:src="@drawable/twitter_share_icon"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:clickable="true"
+		                    android:contentDescription="@string/twitterShareIcon" />
+	                </TableRow>
+	            </TableLayout>
+	            <!-- END SOCIAL MEDIA SECTION --> 
 	            
 	            <!-- CATEGORY/RANK/VOTES SECTION -->
 	            <TableLayout
@@ -253,6 +279,7 @@
 	                android:layout_height="wrap_content"
 	                android:background="@drawable/btn_white_glossy"
 	                android:padding="10dp"
+	                android:layout_marginBottom="20dp"
 	                android:clickable="true" >
 	                
 	                <TextView 
@@ -270,6 +297,8 @@
 		                android:text="(insert champion name)" />
 	            </RelativeLayout>
 	            <!-- END CHAMPION SECTION -->
+	            
+	            
 	            
 	        </LinearLayout>
 

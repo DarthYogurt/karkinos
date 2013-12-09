@@ -98,6 +98,8 @@ public class DealPage extends Activity {
 		TextView txtComments = (TextView)findViewById(R.id.txtComments);
 		TextView txtWebUrls = (TextView)findViewById(R.id.txtWebUrls);
 		TextView txtEndingTime = (TextView)findViewById(R.id.txtEndingTime);
+		ImageView btnFbShare = (ImageView)findViewById(R.id.btnFbShare);
+		ImageView btnTwitterShare = (ImageView)findViewById(R.id.btnTwitterShare);
 		RelativeLayout btnToChampionPage = (RelativeLayout)findViewById(R.id.btnToChampionPage);
 		Button btnJoinCause = (Button)findViewById(R.id.btnJoinCause);
 		
@@ -116,6 +118,24 @@ public class DealPage extends Activity {
 		txtWebUrls.setText(webUrls);
 		
 
+		btnFbShare.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				Toast test;
+				test = Toast.makeText(getApplicationContext(), "Facebook Share Button works!", Toast.LENGTH_SHORT);
+				test.show();
+			}
+		});
+		
+		btnTwitterShare.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				Toast test;
+				test = Toast.makeText(getApplicationContext(), "Twitter Share Button works!", Toast.LENGTH_SHORT);
+				test.show();
+			}
+		});
+		
 		btnToChampionPage.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View view) {
@@ -131,7 +151,7 @@ public class DealPage extends Activity {
 			@Override
 			public void onClick(View view) {
 				Toast test;
-				test = Toast.makeText(getApplicationContext(), "Join Cause Button Works!", Toast.LENGTH_SHORT);
+				test = Toast.makeText(getApplicationContext(), "Join Cause Button works!", Toast.LENGTH_SHORT);
 				test.show();
 			}
 		});
