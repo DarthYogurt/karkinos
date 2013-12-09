@@ -20,7 +20,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         Fragment fragment = new Fragment();
         switch (position) {
         case 0:
-        	return fragment = new DealsFragment();
+        	return fragment = new NominateFragment();
         case 1:
         	return fragment = new DealsFragment();
         case 2:
@@ -38,11 +38,11 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 	    Locale l = Locale.getDefault();  
 	    switch (position) {  
 	    case 0:  
-	        return mContext.getString(R.string.myFriends).toUpperCase(l);  
+	        return mContext.getString(R.string.nominateDeal).toUpperCase(l);  
 	    case 1:
-	        return mContext.getString(R.string.myDeals).toUpperCase(l);  
+	        return mContext.getString(R.string.featuredDeals).toUpperCase(l);  
 	    case 2:
-	    	return mContext.getString(R.string.featuredDeals).toUpperCase(l);
+	    	return mContext.getString(R.string.myDeals).toUpperCase(l);
 	    case 3:
 	    	return mContext.getString(R.string.browseCategories).toUpperCase(l);  
 	    case 4:

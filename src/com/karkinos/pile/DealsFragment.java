@@ -17,7 +17,7 @@ public class DealsFragment extends Fragment {
 	@Override  
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {  
 	    
-	    View view = inflater.inflate(R.layout.fragment_show_deals, container, false);
+	    View view = inflater.inflate(R.layout.fragment_deals_page, container, false);
 	    ListView listView = (ListView)view.findViewById(R.id.dealsListView);
 
 	    final Database d = new Database(this.getActivity());

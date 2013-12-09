@@ -14,19 +14,6 @@
             android:layout_height="match_parent"
             android:orientation="vertical" >
 
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:background="#66ccff"
-                android:gravity="center"
-                android:shadowColor="#ccc"
-                android:shadowDx="1"
-                android:shadowDy="1"
-                android:shadowRadius="1"
-                android:text="@string/nominatePageHeading"
-                android:textColor="#fff"
-                android:textSize="20sp" />
-
             <Spinner
                 android:id="@+id/category"
                 android:layout_width="match_parent"

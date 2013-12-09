@@ -13,7 +13,7 @@ public class NominatePage extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_nominate_page);
+		setContentView(R.layout.fragment_nominate_page);
 		// Show the Up button in the action bar.
 		
 		

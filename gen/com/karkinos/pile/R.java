@@ -33,16 +33,15 @@ public final class R {
         public static final int ps4=0x7f020006;
         public static final int rounded_corners=0x7f020007;
         public static final int samsung_tv=0x7f020008;
-        public static final int test_image=0x7f020009;
-        public static final int xbox_one=0x7f02000a;
+        public static final int xbox_one=0x7f020009;
     }
     public static final class id {
         public static final int action_settings=0x7f09001e;
         public static final int bottomContainer=0x7f090011;
         public static final int btnJoinCause=0x7f090017;
         public static final int btnToChampionPage=0x7f090010;
-        public static final int category=0x7f09001a;
-        public static final int dealsListView=0x7f09001b;
+        public static final int category=0x7f09001b;
+        public static final int dealsListView=0x7f09001a;
         public static final int imgDealImage=0x7f090006;
         public static final int pager=0x7f090018;
         public static final int pager_tab_strip=0x7f090019;
@@ -74,8 +73,8 @@ public final class R {
         public static final int activity_champion_page=0x7f030000;
         public static final int activity_deal_page=0x7f030001;
         public static final int activity_main=0x7f030002;
-        public static final int activity_nominate_page=0x7f030003;
-        public static final int fragment_show_deals=0x7f030004;
+        public static final int fragment_deals_page=0x7f030003;
+        public static final int fragment_nominate_page=0x7f030004;
         public static final int listview_header_row=0x7f030005;
         public static final int listview_item_row=0x7f030006;
     }
@@ -103,7 +102,7 @@ public final class R {
         public static final int lowestMarketPrice=0x7f050014;
         public static final int msrp=0x7f050013;
         public static final int myDeals=0x7f050004;
-        public static final int myFriends=0x7f050003;
+        public static final int nominateDeal=0x7f050003;
         public static final int nominatePageHeading=0x7f050019;
         public static final int ourPrice=0x7f050012;
         public static final int pricesHeading=0x7f050008;
