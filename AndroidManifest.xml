@@ -19,7 +19,7 @@
             android:name="com.karkinos.pile.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
-			<intent-filter>
+ 			<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -40,7 +40,9 @@
             android:label="@string/app_name"
             android:parentActivityName="com.karkinos.pile.MainActivity"
             android:screenOrientation="portrait" >
-
+			
+            
+            
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.karkinos.croupon.MainActivity" />
