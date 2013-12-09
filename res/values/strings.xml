@@ -38,16 +38,14 @@
         <item> Automobile </item>
         <item> Furniture </item>
     </string-array>
-    
-    
     <string-array name="suggested_items_array">
         <item> Playstation 4</item>
         <item> XBox One</item>
         <item> 55 inch LG TV</item>
-       	<item> Jawbone Up</item>
-       	<item> Sony Tv</item>
-       	<item> Samsung UN85S9 85-Inch 4K Ultra HD 120Hz 3D Smart LED TV</item>
-       	<item> VIZIO E-Series E241i-A1 24-Inch 1080p 60Hz LED Smart HD TV (tilted base) </item>
+        <item> Jawbone Up</item>
+        <item> Sony Tv</item>
+        <item> Samsung UN85S9 85-Inch 4K Ultra HD 120Hz 3D Smart LED TV</item>
+        <item> VIZIO E-Series E241i-A1 24-Inch 1080p 60Hz LED Smart HD TV (tilted base) </item>
     </string-array>
-    
+
 </resources>

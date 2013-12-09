@@ -201,26 +201,13 @@ public class Database{
 			
 			// samsung TV 2130837508
 			String [][] deals = new String[][] {
-					{"412", "Samsung TV 1100Hz 10902p", Integer.toString(R.drawable.samsung_tv), "100", "999", "400.15","300.50","Samsung TV 1000Hz 10920p", "1000.0", "999"},
-					{"12", "LGS TV, Larger than life 1231312", Integer.toString(R.drawable.lg_tv) , "32", "55", "800", "42.5","LGS TV, Larger than life 1231312","1200", "1150"},
-					{"2", "PS8", Integer.toString(R.drawable.ps4), "1", "5", "600","123", "PS8", "400", "390"},
-					{"3", "DESCRIPTION OF XBOX8", Integer.toString(R.drawable.xbox_one), "10000", "12131", "600","123",  "PS8", "700", "660"},
-					{"10", "PS8", Integer.toString(R.drawable.samsung_tv), "10000", "124123","600","123",  "PS8", "800", "777"},
-					{"412", "Samsung TV 1100Hz 10902p", Integer.toString(R.drawable.samsung_tv), "100", "999", "400.15","300.50","Samsung TV 1000Hz 10920p", "1000.0", "999"},
-					{"12", "LGS TV, Larger than life 1231312", Integer.toString(R.drawable.lg_tv) , "32", "55", "800", "42.5","LGS TV, Larger than life 1231312","1200", "1150"},
-					{"2", "PS8", Integer.toString(R.drawable.ps4), "1", "5", "600","123", "PS8", "400", "390"},
-					{"3", "DESCRIPTION OF XBOX8", Integer.toString(R.drawable.xbox_one), "10000", "12131", "600","123",  "PS8", "700", "660"},
-					{"10", "PS8", Integer.toString(R.drawable.samsung_tv), "10000", "124123","600","123",  "PS8", "800", "777"},
-					{"412", "Samsung TV 1100Hz 10902p", Integer.toString(R.drawable.samsung_tv), "100", "999", "400.15","300.50","Samsung TV 1000Hz 10920p", "1000.0", "999"},
-					{"12", "LGS TV, Larger than life 1231312", Integer.toString(R.drawable.lg_tv) , "32", "55", "800", "42.5","LGS TV, Larger than life 1231312","1200", "1150"},
-					{"2", "PS8", Integer.toString(R.drawable.ps4), "1", "5", "600","123", "PS8", "400", "390"},
-					{"3", "DESCRIPTION OF XBOX8", Integer.toString(R.drawable.xbox_one), "10000", "12131", "600","123",  "PS8", "700", "660"},
-					{"10", "PS8", Integer.toString(R.drawable.samsung_tv), "10000", "124123","600","123",  "PS8", "800", "777"},
-					{"412", "Samsung TV 1100Hz 10902p", Integer.toString(R.drawable.samsung_tv), "100", "999", "400.15","300.50","Samsung TV 1000Hz 10920p", "1000.0", "999"},
-					{"12", "LGS TV, Larger than life 1231312", Integer.toString(R.drawable.lg_tv) , "32", "55", "800", "42.5","LGS TV, Larger than life 1231312","1200", "1150"},
-					{"2", "PS8", Integer.toString(R.drawable.ps4), "1", "5", "600","123", "PS8", "400", "390"},
-					{"3", "DESCRIPTION OF XBOX8", Integer.toString(R.drawable.xbox_one), "10000", "12131", "600","123",  "PS8", "700", "660"},
-					{"10", "PS8", Integer.toString(R.drawable.samsung_tv), "10000", "124123","600","123",  "PS8", "800", "777"},
+					{"1", "Samsung 4K TV", Integer.toString(R.drawable.samsung_tv), "100", "999", "400.15","300.50","Samsung 4K TV", "1000.0", "999"},
+					{"2", "LG 60 inch TV", Integer.toString(R.drawable.lg_tv) , "32", "55", "800", "42.5","LG 60 inch TV","1200", "1150"},
+					{"3", "PS4", Integer.toString(R.drawable.ps4), "1", "5", "600", "123", "PS4", "400", "390"},
+					{"4", "Xbox One", Integer.toString(R.drawable.xbox_one), "135", "300", "600","123",  "Xbox One", "700", "660"},
+					{"5", "GoPro Hero3+ Black Edition", Integer.toString(R.drawable.gopro), "60", "125", "500", "350", "GoPro Hero3+ Black Edition", "550", "399"},
+					{"6", "Canon Camera", Integer.toString(R.drawable.canon_camera), "39", "100", "500", "400", "Canon Camera", "550", "450"},
+					{"7", "Google Chromecast", Integer.toString(R.drawable.chromecast), "690", "1000", "50", "25", "Chromecast", "55", "40"},
 			};
 			        
 			for (int i=0; i<deals.length;i++){
@@ -230,7 +217,7 @@ public class Database{
 				writer.name("description").value(deals[i][1]);
 				writer.name("image").value(deals[i][2]);
 				writer.name("currentSupporters").value(deals[i][3]);
-				writer.name("maxSupporters").value(deals[i][3]);
+				writer.name("maxSupporters").value(deals[i][4]);
 				writer.name("regularPrice").value(deals[i][5]);
 				writer.name("discountPrice").value(deals[i][6]);
 				writer.name("title").value(deals[i][7]);
