@@ -116,7 +116,6 @@ public class DealPage extends Activity {
 		txtQA.setText(qa);
 		txtComments.setText(comments);
 		txtWebUrls.setText(webUrls);
-		
 
 		btnFbShare.setOnClickListener(new OnClickListener() {
 			@Override

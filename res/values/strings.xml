@@ -9,6 +9,7 @@
     <string name="logoName">Logo</string>
     <string name="fbShareIcon">Share on Facebook</string>
  	<string name="twitterShareIcon">Share on Twitter</string>
+ 	<string name="championPicture">Champion Picture</string>
     
     <string name="nominateDeal">Nominate Deal</string>
     <string name="myDeals">My Deals</string>
