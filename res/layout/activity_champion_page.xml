@@ -61,7 +61,7 @@
 		        android:layout_height="wrap_content"
 		        android:layout_gravity="center"
 		        android:paddingBottom="14dp"
-		        android:contentDescription="@string/championPicture" />
+		        android:contentDescription="@string/championPage_picture" />
 		
 		    <!-- CHAMPION INFO SECTION -->
 			<TableLayout
