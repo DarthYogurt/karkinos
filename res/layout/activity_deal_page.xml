@@ -1,7 +1,7 @@
 <LinearLayout 
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".DealPage"
+    tools:context=".DealPageActivity"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
@@ -297,13 +297,9 @@
 		                android:text="(insert champion name)" />
 	            </RelativeLayout>
 	            <!-- END CHAMPION SECTION -->
-	            
-	            
-	            
-	        </LinearLayout>
 
+	        </LinearLayout>
 	    </LinearLayout>
-	    
 	</ScrollView>
 	<!-- END TOP CONTAINER -->
 	

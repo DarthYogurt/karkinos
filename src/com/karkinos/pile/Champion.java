@@ -1,11 +1,14 @@
 package com.karkinos.pile;
 
+import java.util.Date;
+
 // Object class for a champion
 public class Champion {
 	private int id = 0;
 	private int rank = 0;
 	private String name = "";
 	private String location = "";
+	private Date memberSince = new Date();
 	private int championedDeals = 0;
 	
 	public Champion() {

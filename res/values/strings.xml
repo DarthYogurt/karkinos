@@ -4,13 +4,12 @@
     <string name="app_name">Pile</string>
     <string name="action_settings">Settings</string>
     <string name="search_title">Search</string>
-    
+
     <!-- IMAGE CONTENT DESCRIPTIONS -->
     <string name="logoName">Logo</string>
     <string name="fbShareIcon">Share on Facebook</string>
- 	<string name="twitterShareIcon">Share on Twitter</string>
- 	<string name="championPicture">Champion Picture</string>
-    
+    <string name="twitterShareIcon">Share on Twitter</string>
+    <string name="championPicture">Champion Picture</string>
     <string name="nominateDeal">Nominate Deal</string>
     <string name="myDeals">My Deals</string>
     <string name="featuredDeals">Featured Deals</string>
@@ -54,5 +53,9 @@
         <item> Samsung UN85S9 85-Inch 4K Ultra HD 120Hz 3D Smart LED TV</item>
         <item> VIZIO E-Series E241i-A1 24-Inch 1080p 60Hz LED Smart HD TV (tilted base) </item>
     </string-array>
+
+    <string name="title_activity_storyboard">StoryboardActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_storyboard_page">StoryboardPage</string>
 
 </resources>

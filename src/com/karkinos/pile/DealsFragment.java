@@ -44,7 +44,7 @@ public class DealsFragment extends Fragment {
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 				
 				Deal deal = all_deals.get(position);
-				Intent intent = new Intent(getActivity(), DealPage.class);
+				Intent intent = new Intent(getActivity(), DealPageActivity.class);
 				Bundle bundle = new Bundle();
 				bundle.putInt("id", deal.getId());
 				intent.putExtras(bundle);

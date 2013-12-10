@@ -21,6 +21,7 @@
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -30,7 +31,7 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="com.karkinos.pile.DealPage"
+            android:name="com.karkinos.pile.DealPageActivity"
             android:label="@string/app_name"
             android:parentActivityName="com.karkinos.pile.MainActivity"
             android:screenOrientation="portrait" >
@@ -48,7 +49,7 @@
                 android:value="com.karkinos.croupon.MainActivity" />
         </activity>
         <activity
-            android:name="com.karkinos.pile.ChampionPage"
+            android:name="com.karkinos.pile.ChampionPageActivity"
             android:label="@string/app_name"
             android:parentActivityName="com.karkinos.pile.MainActivity"
             android:screenOrientation="portrait" >
@@ -56,7 +57,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.karkinos.pile.MainActivity" />
         </activity>
-        
+        <activity
+            android:name="com.karkinos.pile.StoryboardPageActivity"
+            android:label="@string/title_activity_storyboard" >
+        </activity>
     </application>
 
 </manifest>

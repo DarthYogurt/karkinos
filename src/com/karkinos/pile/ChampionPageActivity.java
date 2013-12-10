@@ -6,7 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v4.app.NavUtils;
 
-public class ChampionPage extends Activity {
+public class ChampionPageActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

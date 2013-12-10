@@ -20,7 +20,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.support.v4.app.NavUtils;
 
-public class DealPage extends Activity {
+public class DealPageActivity extends Activity {
 	int image;
 	String title;
 	String description;
@@ -138,7 +138,7 @@ public class DealPage extends Activity {
 		btnToChampionPage.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				Intent intent = new Intent(DealPage.this, ChampionPage.class);
+				Intent intent = new Intent(DealPageActivity.this, ChampionPageActivity.class);
 				Bundle bundle = new Bundle();
 				bundle.putInt("championId", championId);
 				intent.putExtras(bundle);
