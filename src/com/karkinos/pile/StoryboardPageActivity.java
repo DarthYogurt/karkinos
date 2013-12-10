@@ -24,7 +24,7 @@ public class StoryboardPageActivity extends FragmentActivity {
         setContentView(R.layout.activity_storyboard_page);
 
         // Instantiate a ViewPager and a PagerAdapter.
-        mPager = (ViewPager) findViewById(R.id.pager);
+        mPager = (ViewPager) findViewById(R.id.storyboardPager);
         mPagerAdapter = new StoryboardPagerAdapter(getSupportFragmentManager());
         mPager.setAdapter(mPagerAdapter);
     }
@@ -49,7 +49,7 @@ public class StoryboardPageActivity extends FragmentActivity {
 
         @Override
         public Fragment getItem(int position) {
-            return new StoryboardFragment();
+            return StoryboardFragment.newInstance(position);
         }
 
         @Override

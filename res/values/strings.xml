@@ -10,6 +10,9 @@
     <string name="fbShareIcon">Share on Facebook</string>
     <string name="twitterShareIcon">Share on Twitter</string>
     <string name="championPicture">Champion Picture</string>
+    <string name="storyboardSlide">Storyboard Slide</string>
+    <!-- END IMAGE CONTENT DESCRIPTIONS -->
+    
     <string name="nominateDeal">Nominate Deal</string>
     <string name="myDeals">My Deals</string>
     <string name="featuredDeals">Featured Deals</string>
@@ -45,17 +48,16 @@
         <item> Furniture </item>
     </string-array>
     <string-array name="suggested_items_array">
-        <item> Playstation 4</item>
-        <item> XBox One</item>
-        <item> 55 inch LG TV</item>
-        <item> Jawbone Up</item>
-        <item> Sony Tv</item>
-        <item> Samsung UN85S9 85-Inch 4K Ultra HD 120Hz 3D Smart LED TV</item>
+        <item> Playstation 4 </item>
+        <item> XBox One </item>
+        <item> 55 inch LG TV </item>
+        <item> Jawbone Up </item>
+        <item> Sony Tv </item>
+        <item> Samsung UN85S9 85-Inch 4K Ultra HD 120Hz 3D Smart LED TV </item>
         <item> VIZIO E-Series E241i-A1 24-Inch 1080p 60Hz LED Smart HD TV (tilted base) </item>
     </string-array>
 
     <string name="title_activity_storyboard">StoryboardActivity</string>
-    <string name="hello_world">Hello world!</string>
     <string name="title_activity_storyboard_page">StoryboardPage</string>
 
 </resources>
