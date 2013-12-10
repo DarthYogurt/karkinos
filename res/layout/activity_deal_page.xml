@@ -194,7 +194,7 @@
 		                    android:layout_width="wrap_content"
 		                    android:layout_height="wrap_content"
 		                    android:clickable="true"
-		                    android:contentDescription="@string/fbShareIcon" />
+		                    android:contentDescription="@string/dealPage_fbShareIcon" />
 	                
 	                	<ImageView
 	                	    android:id="@+id/btnTwitterShare"
@@ -202,7 +202,7 @@
 		                    android:layout_width="wrap_content"
 		                    android:layout_height="wrap_content"
 		                    android:clickable="true"
-		                    android:contentDescription="@string/twitterShareIcon" />
+		                    android:contentDescription="@string/dealPage_twitterShareIcon" />
 	                </TableRow>
 	            </TableLayout>
 	            <!-- END SOCIAL MEDIA SECTION --> 
