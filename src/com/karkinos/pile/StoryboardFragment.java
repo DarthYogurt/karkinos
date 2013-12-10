@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 
 public class StoryboardFragment extends Fragment {
@@ -32,7 +33,12 @@ public class StoryboardFragment extends Fragment {
         				R.drawable.storyboard7, R.drawable.storyboard8, R.drawable.storyboard9};
         
         iv.setImageResource(images[position]);
-
+        
+        Button btnContinue = (Button)rootView.findViewById(R.id.btnContinue);
+        if (position == 8) {
+        	btnContinue.setVisibility(View.VISIBLE);
+        }
+        	
         return rootView;
     }
 

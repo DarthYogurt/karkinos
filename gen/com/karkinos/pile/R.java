@@ -57,10 +57,11 @@ public final class R {
         public static final int xbox_one=0x7f02001d;
     }
     public static final class id {
-        public static final int action_settings=0x7f090027;
+        public static final int action_settings=0x7f090028;
         public static final int autocomplete_nominate_item=0x7f09001f;
         public static final int beAChampion=0x7f090023;
         public static final int bottomContainer=0x7f090013;
+        public static final int btnContinue=0x7f090025;
         public static final int btnFbShare=0x7f09000e;
         public static final int btnJoinCause=0x7f090019;
         public static final int btnToChampionPage=0x7f090012;
@@ -75,7 +76,7 @@ public final class R {
         public static final int pager=0x7f09001a;
         public static final int pager_tab_strip=0x7f09001b;
         public static final int progressBar=0x7f090018;
-        public static final int search=0x7f090028;
+        public static final int search=0x7f090029;
         public static final int storyboardPager=0x7f09001c;
         public static final int txtCategory=0x7f090010;
         public static final int txtChampion=0x7f090000;
@@ -86,13 +87,13 @@ public final class R {
         public static final int txtDescription=0x7f09000a;
         public static final int txtDiscountPrice=0x7f090007;
         public static final int txtEndingTime=0x7f090015;
-        public static final int txtHeader=0x7f090025;
+        public static final int txtHeader=0x7f090026;
         public static final int txtLowestMarketPrice=0x7f090009;
         public static final int txtMsrp=0x7f090008;
         public static final int txtProgress=0x7f090016;
         public static final int txtQA=0x7f09000b;
         public static final int txtRank=0x7f090002;
-        public static final int txtRegularPrice=0x7f090026;
+        public static final int txtRegularPrice=0x7f090027;
         public static final int txtSupporters=0x7f090017;
         public static final int txtTimeLeft=0x7f090014;
         public static final int txtTitle=0x7f090005;
@@ -124,6 +125,7 @@ public final class R {
         public static final int action_settings=0x7f050001;
         public static final int app_name=0x7f050000;
         public static final int browseCategories=0x7f05000b;
+        public static final int btnContinue=0x7f050023;
         public static final int categoryHeading=0x7f050013;
         public static final int champion=0x7f05001f;
         public static final int championPicture=0x7f050006;
@@ -157,8 +159,8 @@ public final class R {
         public static final int specificsHeading=0x7f05000f;
         public static final int storyboardSlide=0x7f050007;
         public static final int timeLeft=0x7f05001b;
-        public static final int title_activity_storyboard=0x7f050023;
-        public static final int title_activity_storyboard_page=0x7f050024;
+        public static final int title_activity_storyboard=0x7f050024;
+        public static final int title_activity_storyboard_page=0x7f050025;
         public static final int twitterShareIcon=0x7f050005;
         public static final int votesHeading=0x7f050015;
         public static final int websitesHeading=0x7f050011;

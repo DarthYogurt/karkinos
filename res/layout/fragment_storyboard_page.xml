@@ -10,5 +10,14 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:contentDescription="@string/storyboardSlide" />
+    
+    <Button
+        android:id="@+id/btnContinue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:text="@string/btnContinue" />
             
 </RelativeLayout>
