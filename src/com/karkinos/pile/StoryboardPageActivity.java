@@ -41,7 +41,6 @@ public class StoryboardPageActivity extends FragmentActivity {
         }
     }
 
-    // A simple pager adapter that represents 5 fragment objects, in sequence.
     private class StoryboardPagerAdapter extends FragmentStatePagerAdapter {
         public StoryboardPagerAdapter(FragmentManager fm) {
             super(fm);

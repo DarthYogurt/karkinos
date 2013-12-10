@@ -13,7 +13,8 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
 public class DealsFragment extends Fragment {
-		
+	public static final String KEY_ID = "id";
+	
 	@Override  
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {  
 	    
@@ -46,7 +47,7 @@ public class DealsFragment extends Fragment {
 				Deal deal = all_deals.get(position);
 				Intent intent = new Intent(getActivity(), DealPageActivity.class);
 				Bundle bundle = new Bundle();
-				bundle.putInt("id", deal.getId());
+				bundle.putInt(KEY_ID, deal.getId());
 				intent.putExtras(bundle);
 				startActivity(intent);
 			}
