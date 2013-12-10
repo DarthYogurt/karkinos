@@ -58,7 +58,5 @@
         <item> VIZIO E-Series E241i-A1 24-Inch 1080p 60Hz LED Smart HD TV (tilted base) </item>
     </string-array>
 
-    <string name="title_activity_storyboard">StoryboardActivity</string>
-    <string name="title_activity_storyboard_page">StoryboardPage</string>
 
 </resources>
