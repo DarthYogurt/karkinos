@@ -159,8 +159,6 @@ public final class R {
         public static final int specificsHeading=0x7f05000f;
         public static final int storyboardSlide=0x7f050007;
         public static final int timeLeft=0x7f05001b;
-        public static final int title_activity_storyboard=0x7f050024;
-        public static final int title_activity_storyboard_page=0x7f050025;
         public static final int twitterShareIcon=0x7f050005;
         public static final int votesHeading=0x7f050015;
         public static final int websitesHeading=0x7f050011;
