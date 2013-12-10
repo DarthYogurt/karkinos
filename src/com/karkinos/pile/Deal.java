@@ -2,6 +2,8 @@ package com.karkinos.pile;
 
 import java.util.Date;
 
+import org.joda.time.DateTime;
+
 // Object class for a deal
 public class Deal {
 	private int id = 0;
@@ -21,7 +23,7 @@ public class Deal {
 	private String qa = "";
 	private String comments = "";
 	private String webUrls = "";
-    private Date endingTime = new Date();
+    private DateTime endingTime = new DateTime();
     
     public Deal() {
     }
@@ -145,10 +147,10 @@ public class Deal {
     	this.webUrls = s;
     }
     
-    public Date getEndingTime() {
+    public DateTime getEndingTime() {
     	return this.endingTime;
     }
-    public void setEndingTime(Date d) {
+    public void setEndingTime(DateTime d) {
     	this.endingTime = d;
     }
 }

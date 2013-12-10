@@ -38,7 +38,7 @@ public class DealPageActivity extends Activity {
 	String qa;
 	String comments;
 	String webUrls;
-	Date endingTime;
+	DateTime endingTime;
 	Button btnJoinCause;
 	
 	//long mMilliseconds;
@@ -119,17 +119,17 @@ public class DealPageActivity extends Activity {
 		txtComments.setText(comments);
 		txtWebUrls.setText(webUrls);
 
-		DateTime start = new DateTime();
-		DateTime end = new DateTime(2013, 12, 12, 17, 0, 0, 0);
+//		DateTime start = new DateTime();
+//		DateTime end = new DateTime(2013, 12, 12, 17, 0, 0, 0);
 		
-		Duration dur = new Duration(start, end);
+		Duration dur = new Duration(new DateTime(), endingTime);
 
 		
 	
 		new CountDownTimer(dur.getMillis(), 1000) {//CountDownTimer(edittext1.getText()+edittext2.getText()) also parse it to long
 			 public void onTick(long millisUntilFinished) {
 				 long durationSeconds = millisUntilFinished / 1000;
-				 txtCountDown.setText( " "+ String.format("Days: %02d %02d:%02d:%02d", (durationSeconds /86400),  (durationSeconds / 3600)%24,
+				 txtCountDown.setText( " "+ String.format("Days: %01d %02d:%02d:%02d", (durationSeconds /86400),  (durationSeconds / 3600)%24,
 			                (durationSeconds % 3600) / 60, (durationSeconds % 60)));
 			 }
 

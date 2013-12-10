@@ -7,14 +7,15 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
+
+import org.joda.time.DateTime;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import android.content.Context;
 import android.os.Environment;
 import android.util.JsonWriter;
-import android.util.Log;
 
 public class Database{
 	private Context parentContext;
@@ -79,7 +80,7 @@ public class Database{
 				    cal.set(Calendar.MINUTE,30);
 				    cal.set(Calendar.SECOND,0);
 				   
-					d.setEndingTime(cal.getTime());
+				    d.setEndingTime(new DateTime().plusDays(1));
 					
 					//d.setRank(sd.getInt("rank"));
 					//d.setVotes(sd.getInt("votes"));
@@ -144,16 +145,10 @@ public class Database{
 				d.setComments("Sed interdum felis et nisl sollicitudin aliquet. Nullam et ligula ullamcorper, adipiscing nulla ut, luctus dui. Nam iaculis vitae sem id pellentesque. Aliquam fringilla aliquam dignissim. Sed rhoncus quam lorem, accumsan varius nibh posuere non. Etiam ligula nisi, tincidunt eget fermentum nec, tincidunt quis nisl. Duis id justo et augue adipiscing laoreet in a nunc. Donec placerat ut dolor vel sollicitudin. Nullam sodales felis ut nulla interdum, quis posuere justo laoreet. Sed scelerisque felis ut libero malesuada suscipit. Sed sit amet egestas turpis, sit amet adipiscing sapien. Quisque viverra odio id accumsan tincidunt. Sed nibh justo, porta eget mi tristique, consectetur scelerisque dolor. Nullam dapibus, diam at sagittis ornare, mi tellus tristique odio, a venenatis purus nunc at urna.");
 				d.setWebUrls("www.google.com");
 				
-			    Calendar cal = Calendar.getInstance();
-			    cal.set(Calendar.YEAR, 2013);
-			    cal.set(Calendar.MONTH,12);
-			    cal.set(Calendar.DAY_OF_MONTH, 10);
-			    cal.set(Calendar.HOUR_OF_DAY, 15);
-			    cal.set(Calendar.MINUTE,0);
-			    cal.set(Calendar.SECOND,0);
-			   
-				d.setEndingTime(cal.getTime());
-				
+
+			    
+			    //This is a static faked dateTime
+				d.setEndingTime(new DateTime().plusDays(1).plusHours(1));
 				//d.setRank(sd.getInt("rank"));
 				//d.setVotes(sd.getInt("votes"));
 				//d.setCategoryId(sd.getInt("categoryId"));
