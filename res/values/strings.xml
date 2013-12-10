@@ -40,7 +40,7 @@
     <string name="rank">Rank:</string>
     <string name="championedDeals">Championed Deals:</string>
     <string name="location">Location:</string>
-    <string name="btnContinue">Continue</string>
+    <string name="btnToMain">Start Piling!</string>
 
     <string-array name="category_array">
         <item> Electronics </item>

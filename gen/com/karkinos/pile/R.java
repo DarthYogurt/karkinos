@@ -61,10 +61,10 @@ public final class R {
         public static final int autocomplete_nominate_item=0x7f09001f;
         public static final int beAChampion=0x7f090023;
         public static final int bottomContainer=0x7f090013;
-        public static final int btnContinue=0x7f090025;
         public static final int btnFbShare=0x7f09000e;
         public static final int btnJoinCause=0x7f090019;
         public static final int btnToChampionPage=0x7f090012;
+        public static final int btnToMain=0x7f090025;
         public static final int btnTwitterShare=0x7f09000f;
         public static final int category=0x7f09001e;
         public static final int dealsListView=0x7f09001d;
@@ -125,7 +125,7 @@ public final class R {
         public static final int action_settings=0x7f050001;
         public static final int app_name=0x7f050000;
         public static final int browseCategories=0x7f05000b;
-        public static final int btnContinue=0x7f050023;
+        public static final int btnToMain=0x7f050023;
         public static final int categoryHeading=0x7f050013;
         public static final int champion=0x7f05001f;
         public static final int championPicture=0x7f050006;

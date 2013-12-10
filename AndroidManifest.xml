@@ -26,6 +26,11 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.karkinos.pile.StoryboardPageActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
             android:name="com.karkinos.pile.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
@@ -57,10 +62,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.karkinos.pile.MainActivity" />
         </activity>
-        <activity
-            android:name="com.karkinos.pile.StoryboardPageActivity"
-            android:label="@string/title_activity_storyboard" >
-        </activity>
+        
     </application>
 
 </manifest>

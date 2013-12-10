@@ -1,10 +1,12 @@
 package com.karkinos.pile;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -34,9 +36,16 @@ public class StoryboardFragment extends Fragment {
         
         iv.setImageResource(images[position]);
         
-        Button btnContinue = (Button)rootView.findViewById(R.id.btnContinue);
+        Button btnToMain = (Button)rootView.findViewById(R.id.btnToMain);
         if (position == 8) {
-        	btnContinue.setVisibility(View.VISIBLE);
+        	btnToMain.setVisibility(View.VISIBLE);
+        	btnToMain.setOnClickListener(new OnClickListener() {
+    			@Override
+    			public void onClick(View view) {
+    				Intent intent = new Intent(getActivity(), MainActivity.class);
+    				startActivity(intent);
+    			}
+    		});
         }
         	
         return rootView;
