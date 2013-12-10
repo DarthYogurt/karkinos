@@ -13,11 +13,18 @@
     <string name="storyboardSlide">Storyboard Slide</string>
     <!-- END IMAGE CONTENT DESCRIPTIONS -->
     
-    <string name="nominateDeal">Nominate Deal</string>
-    <string name="myDeals">My Deals</string>
-    <string name="featuredDeals">Featured Deals</string>
-    <string name="browseCategories">Browse Categories</string>
-    <string name="localDeals">Local Deals</string>
+    <!-- BUTTON TEXTS -->
+    <string name="btnToStoryboard">See Storyboard</string>
+    <string name="btnToMain">Start Piling!</string>
+    <!-- END BUTTON TEXTS -->
+    
+    <!-- LABELS -->
+    <string name="lblInfo">Info</string>
+    <string name="lblNominateDeal">Nominate Deal</string>
+    <string name="lblFeaturedDeals">Featured Deals</string>
+    <string name="lblMyDeals">My Deals</string>
+    <!-- END LABELS -->
+    
     <string name="pricesHeading">Prices</string>
     <string name="descriptionHeading">Description</string>
     <string name="specificsHeading">Specifics</string>
@@ -40,7 +47,7 @@
     <string name="rank">Rank:</string>
     <string name="championedDeals">Championed Deals:</string>
     <string name="location">Location:</string>
-    <string name="btnToMain">Start Piling!</string>
+    
 
     <string-array name="category_array">
         <item> Electronics </item>

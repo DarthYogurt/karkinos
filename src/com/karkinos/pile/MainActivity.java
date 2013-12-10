@@ -12,7 +12,7 @@ import android.support.v4.view.ViewPager;
 import android.view.Menu;
 
 public class MainActivity extends FragmentActivity {
-	private static final int NUM_PAGES = 5; 
+	private static final int NUM_PAGES = 3; 
 	// Fragment PagerAdapter keeps every loaded fragment in memory. 
 	// If too memory intensive, switch to FragmentStatePagerAdapter.
 	SectionsPagerAdapter mSectionsPagerAdapter;
@@ -52,14 +52,10 @@ public class MainActivity extends FragmentActivity {
 	        Fragment fragment = new Fragment();
 	        switch (position) {
 	        case 0:
-	        	return fragment = new NominateFragment();
+	        	return fragment = new InfoFragment();
 	        case 1:
-	        	return fragment = new DealsFragment();
+	        	return fragment = new NominateFragment();
 	        case 2:
-	        	return fragment = new DealsFragment();
-	        case 3:
-	        	return fragment = new DealsFragment();
-	        case 4:
 	        	return fragment = new DealsFragment();
 	        }
 	        return fragment;
@@ -70,22 +66,18 @@ public class MainActivity extends FragmentActivity {
 		    Locale l = Locale.getDefault();  
 		    switch (position) {  
 		    case 0:  
-		        return mContext.getString(R.string.nominateDeal).toUpperCase(l);  
+		        return mContext.getString(R.string.lblInfo).toUpperCase(l);  
 		    case 1:
-		        return mContext.getString(R.string.featuredDeals).toUpperCase(l);  
+		        return mContext.getString(R.string.lblNominateDeal).toUpperCase(l);  
 		    case 2:
-		    	return mContext.getString(R.string.myDeals).toUpperCase(l);
-		    case 3:
-		    	return mContext.getString(R.string.browseCategories).toUpperCase(l);  
-		    case 4:
-		    	return mContext.getString(R.string.localDeals).toUpperCase(l);  
+		    	return mContext.getString(R.string.lblFeaturedDeals).toUpperCase(l);
+
 		    }  
 		    return null;  
 		}
 		
 		@Override  
-		public int getCount() {  
-		     // Show 5 total pages.  
+		public int getCount() {
 		     return NUM_PAGES;  
 		}
 	}

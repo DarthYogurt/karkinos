@@ -34,10 +34,6 @@ public class DealsFragment extends Fragment {
         // Sets up adapter to pass data into XML
         DealAdapter adapter = new DealAdapter(getActivity(), R.layout.listview_item_row, all_deals);
         
-        // TO ADD HEADER ROW BACK IN
-        // View header = (View)inflater.inflate(R.layout.listview_header_row, null);
-        // LV.addHeaderView(header);
-        
         listView.setAdapter(adapter);
         
         listView.setOnItemClickListener(new OnItemClickListener() {
