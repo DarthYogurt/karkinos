@@ -35,7 +35,7 @@
 		        android:layout_width="fill_parent"
 		        android:layout_height="wrap_content"
 		        android:adjustViewBounds="true"
-		        android:contentDescription="@string/imageInfo" />
+		        android:contentDescription="@string/dealPage_imageInfo" />
 	        
 	        <LinearLayout
 	            android:layout_width="fill_parent"
@@ -47,7 +47,7 @@
 				<TextView 
 				    android:layout_width="fill_parent"
 	                android:layout_height="wrap_content"
-	                android:text="@string/pricesHeading"
+	                android:text="@string/dealPage_prices"
 	                style="@style/DealPageHeading" />
 	            
 	            <View 
@@ -66,7 +66,7 @@
 			                android:layout_weight="2"
 			                android:textStyle="bold"
 			                android:textColor="#009933"
-			                android:text="@string/ourPrice" />
+			                android:text="@string/dealPage_ourPrice" />
 	                
 		                <TextView
 		                    android:id="@+id/txtDiscountPrice"
@@ -81,7 +81,7 @@
 			                android:layout_width="0dp"
 			                android:layout_height="wrap_content"
 			                android:layout_weight="2"
-			                android:text="@string/msrp" />
+			                android:text="@string/dealPage_msrp" />
 	                
 		                <TextView
 		                    android:id="@+id/txtMsrp"
@@ -94,7 +94,7 @@
 			                android:layout_width="0dp"
 			                android:layout_height="wrap_content"
 			                android:layout_weight="2"
-			                android:text="@string/lowestMarketPrice" />
+			                android:text="@string/dealPage_lowestMarketPrice" />
 	                
 		                <TextView
 		                    android:id="@+id/txtLowestMarketPrice"
@@ -109,7 +109,7 @@
 	            <TextView 
 	                android:layout_width="fill_parent"
 	                android:layout_height="wrap_content"
-	                android:text="@string/descriptionHeading"
+	                android:text="@string/dealPage_description"
 	                style="@style/DealPageHeading" />
 	            
 	            <View 
@@ -128,7 +128,7 @@
 	            <TextView 
 	                android:layout_width="fill_parent"
 	                android:layout_height="wrap_content"
-	                android:text="@string/qaHeading"
+	                android:text="@string/dealPage_qa"
 	                style="@style/DealPageHeading" />
 	            
 	            <View 
@@ -147,7 +147,7 @@
 	            <TextView 
 	                android:layout_width="fill_parent"
 	                android:layout_height="wrap_content"
-	                android:text="@string/commentsHeading"
+	                android:text="@string/dealPage_comments"
 	                style="@style/DealPageHeading" />
 	            
 	            <View 
@@ -166,7 +166,7 @@
 	            <TextView 
 	                android:layout_width="fill_parent"
 	                android:layout_height="wrap_content"
-	                android:text="@string/websitesHeading"
+	                android:text="@string/dealPage_websites"
 	                style="@style/DealPageHeading" />
 	            
 	            <View 
@@ -220,7 +220,7 @@
 			                android:gravity="center"
 			                android:textStyle="bold"
 			                android:textColor="#000"
-			                android:text="@string/rankHeading"
+			                android:text="@string/dealPage_rank"
 			                style="@style/DealPageHeading" />
 
 	                    <TextView
@@ -229,7 +229,7 @@
 			                android:gravity="center"
 			                android:textStyle="bold"
 			                android:textColor="#000"
-			                android:text="@string/categoryHeading"
+			                android:text="@string/dealPage_category"
 			                style="@style/DealPageHeading" />
 	                    
 		                <TextView
@@ -238,7 +238,7 @@
 			                android:gravity="center"
 			                android:textStyle="bold"
 			                android:textColor="#000"
-			                android:text="@string/votesHeading"
+			                android:text="@string/dealPage_votes"
 			                style="@style/DealPageHeading" />
 	                </TableRow>
 	                <TableRow>
@@ -315,7 +315,7 @@
             android:id="@+id/txtTimeLeft"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/timeLeft"
+            android:text="@string/dealPage_timeLeft"
             android:textColor="#fff"
             android:textStyle="bold" />
       	
@@ -334,7 +334,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/txtTimeLeft"
-            android:text="@string/progress"
+            android:text="@string/dealPage_progress"
             android:textColor="#fff"
             android:textStyle="bold" />
       	
@@ -362,7 +362,7 @@
        		android:layout_height="wrap_content"
        		android:layout_above="@id/progressBar"
        		android:layout_alignParentRight="true"
-            android:text="@string/joinCause"
+            android:text="@string/dealPage_joinCause"
             android:background="@drawable/btn_green_matte"
             style="@style/ButtonText" />
 

@@ -12,7 +12,8 @@ import android.support.v4.view.ViewPager;
 import android.view.Menu;
 
 public class MainActivity extends FragmentActivity {
-	private static final int NUM_PAGES = 3; 
+	private static final int NUM_PAGES = 4; 
+	
 	// Fragment PagerAdapter keeps every loaded fragment in memory. 
 	// If too memory intensive, switch to FragmentStatePagerAdapter.
 	SectionsPagerAdapter mSectionsPagerAdapter;
@@ -57,6 +58,8 @@ public class MainActivity extends FragmentActivity {
 	        	return fragment = new NominateFragment();
 	        case 2:
 	        	return fragment = new DealsFragment();
+	        case 3:
+	        	return fragment = new DealsFragment();
 	        }
 	        return fragment;
 		}
@@ -66,12 +69,13 @@ public class MainActivity extends FragmentActivity {
 		    Locale l = Locale.getDefault();  
 		    switch (position) {  
 		    case 0:  
-		        return mContext.getString(R.string.lblInfo).toUpperCase(l);  
+		        return mContext.getString(R.string.info).toUpperCase(l);  
 		    case 1:
-		        return mContext.getString(R.string.lblNominateDeal).toUpperCase(l);  
+		        return mContext.getString(R.string.nominateDeal).toUpperCase(l);  
 		    case 2:
-		    	return mContext.getString(R.string.lblFeaturedDeals).toUpperCase(l);
-
+		    	return mContext.getString(R.string.featuredDeals).toUpperCase(l);
+		    case 3:
+		    	return mContext.getString(R.string.myDeals).toUpperCase(l);
 		    }  
 		    return null;  
 		}

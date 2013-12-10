@@ -9,6 +9,8 @@ package com.karkinos.pile;
 
 public final class R {
     public static final class array {
+        /**  END CHAMPION PAGE 
+         */
         public static final int category_array=0x7f060000;
         public static final int suggested_items_array=0x7f060001;
     }
@@ -129,45 +131,46 @@ public final class R {
  BUTTON TEXTS 
          */
         public static final int btnToStoryboard=0x7f050008;
-        public static final int categoryHeading=0x7f050014;
-        public static final int champion=0x7f050020;
-        public static final int championPicture=0x7f050006;
-        public static final int championedDeals=0x7f050022;
-        public static final int commentsHeading=0x7f050013;
-        public static final int descriptionHeading=0x7f05000f;
-        public static final int dummyText=0x7f05001e;
-        public static final int fbShareIcon=0x7f050004;
-        public static final int imageInfo=0x7f050017;
-        public static final int joinCause=0x7f05001d;
-        public static final int lblFeaturedDeals=0x7f05000c;
-        /**  END BUTTON TEXTS 
- LABELS 
+        /**  END DEAL PAGE 
+ CHAMPION PAGE 
          */
-        public static final int lblInfo=0x7f05000a;
-        public static final int lblMyDeals=0x7f05000d;
-        public static final int lblNominateDeal=0x7f05000b;
-        public static final int location=0x7f050023;
+        public static final int championPage_champion=0x7f05001d;
+        public static final int championPage_championedDeals=0x7f05001f;
+        public static final int championPage_location=0x7f050020;
+        public static final int championPage_rank=0x7f05001e;
+        public static final int championPicture=0x7f050006;
+        public static final int dealPage_category=0x7f050018;
+        public static final int dealPage_comments=0x7f050015;
+        public static final int dealPage_description=0x7f050013;
+        /**  END FRAGMENT SECTIONS 
+ DEAL PAGE 
+         */
+        public static final int dealPage_imageInfo=0x7f05000e;
+        public static final int dealPage_joinCause=0x7f05001c;
+        public static final int dealPage_lowestMarketPrice=0x7f050012;
+        public static final int dealPage_msrp=0x7f050011;
+        public static final int dealPage_ourPrice=0x7f050010;
+        public static final int dealPage_prices=0x7f05000f;
+        public static final int dealPage_progress=0x7f05001b;
+        public static final int dealPage_qa=0x7f050014;
+        public static final int dealPage_rank=0x7f050017;
+        public static final int dealPage_timeLeft=0x7f05001a;
+        public static final int dealPage_votes=0x7f050019;
+        public static final int dealPage_websites=0x7f050016;
+        public static final int fbShareIcon=0x7f050004;
+        public static final int featuredDeals=0x7f05000c;
+        /**  END BUTTON TEXTS 
+ FRAGMENT SECTIONS 
+         */
+        public static final int info=0x7f05000a;
         /**  IMAGE CONTENT DESCRIPTIONS 
          */
         public static final int logoName=0x7f050003;
-        public static final int lowestMarketPrice=0x7f05001a;
-        public static final int msrp=0x7f050019;
-        public static final int nominatePageHeading=0x7f05001f;
-        public static final int ourPrice=0x7f050018;
-        /**  END LABELS 
-         */
-        public static final int pricesHeading=0x7f05000e;
-        public static final int progress=0x7f05001b;
-        public static final int qaHeading=0x7f050011;
-        public static final int rank=0x7f050021;
-        public static final int rankHeading=0x7f050015;
+        public static final int myDeals=0x7f05000d;
+        public static final int nominateDeal=0x7f05000b;
         public static final int search_title=0x7f050002;
-        public static final int specificsHeading=0x7f050010;
         public static final int storyboardSlide=0x7f050007;
-        public static final int timeLeft=0x7f05001c;
         public static final int twitterShareIcon=0x7f050005;
-        public static final int votesHeading=0x7f050016;
-        public static final int websitesHeading=0x7f050012;
     }
     public static final class style {
         /** 

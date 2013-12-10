@@ -29,7 +29,7 @@
 				android:shadowRadius="5"
 				android:textSize="28sp"
 				android:textColor="#fff"
-				android:text="@string/champion" />
+				android:text="@string/championPage_champion" />
 	        
 			<TextView
 		    	android:id="@+id/txtChampionName"
@@ -74,7 +74,7 @@
 				    <TextView
 		                android:layout_width="wrap_content"
 		                android:layout_height="wrap_content"
-		                android:text="@string/rank" />
+		                android:text="@string/championPage_rank" />
 				    
 				    <TextView
 	                    android:id="@+id/txtRank"
@@ -86,7 +86,7 @@
 				    <TextView
 		                android:layout_width="wrap_content"
 		                android:layout_height="wrap_content"
-		                android:text="@string/championedDeals" />
+		                android:text="@string/championPage_championedDeals" />
 				    
 				    <TextView
 	                    android:id="@+id/txtChampionedDeals"
@@ -98,7 +98,7 @@
 				    <TextView
 		                android:layout_width="wrap_content"
 		                android:layout_height="wrap_content"
-		                android:text="@string/location" />
+		                android:text="@string/championPage_location" />
 				    
 				    <TextView
 	                    android:id="@+id/txtChampionLocation"

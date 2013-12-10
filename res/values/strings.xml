@@ -18,36 +18,37 @@
     <string name="btnToMain">Start Piling!</string>
     <!-- END BUTTON TEXTS -->
     
-    <!-- LABELS -->
-    <string name="lblInfo">Info</string>
-    <string name="lblNominateDeal">Nominate Deal</string>
-    <string name="lblFeaturedDeals">Featured Deals</string>
-    <string name="lblMyDeals">My Deals</string>
-    <!-- END LABELS -->
+    <!-- FRAGMENT SECTIONS -->
+    <string name="info">Info</string>
+    <string name="nominateDeal">Nominate Deal</string>
+    <string name="featuredDeals">Featured Deals</string>
+    <string name="myDeals">My Deals</string>
+    <!-- END FRAGMENT SECTIONS -->
     
-    <string name="pricesHeading">Prices</string>
-    <string name="descriptionHeading">Description</string>
-    <string name="specificsHeading">Specifics</string>
-    <string name="qaHeading">Q &amp; A</string>
-    <string name="websitesHeading">Websites</string>
-    <string name="commentsHeading">Comments</string>
-    <string name="categoryHeading">Category</string>
-    <string name="rankHeading">Rank</string>
-    <string name="votesHeading">Votes</string>
-    <string name="imageInfo">Deal Image</string>
-    <string name="ourPrice">Our Price:</string>
-    <string name="msrp">MSRP:</string>
-    <string name="lowestMarketPrice">Lowest Market Price:</string>
-    <string name="progress">Progress:</string>
-    <string name="timeLeft">Time Left:</string>
-    <string name="joinCause">Join Cause</string>
-    <string name="dummyText">This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. This is dummy text. </string>
-    <string name="nominatePageHeading">Nominate Page</string>
-    <string name="champion">Champion</string>
-    <string name="rank">Rank:</string>
-    <string name="championedDeals">Championed Deals:</string>
-    <string name="location">Location:</string>
+    <!-- DEAL PAGE -->
+    <string name="dealPage_imageInfo">Deal Image</string>
+    <string name="dealPage_prices">Prices</string>
+    <string name="dealPage_ourPrice">Our Price:</string>
+    <string name="dealPage_msrp">MSRP:</string>
+    <string name="dealPage_lowestMarketPrice">Lowest Market Price:</string>
+    <string name="dealPage_description">Description</string>
+    <string name="dealPage_qa">Q &amp; A</string>
+    <string name="dealPage_comments">Comments</string>
+    <string name="dealPage_websites">Websites</string>
+    <string name="dealPage_rank">Rank</string>
+    <string name="dealPage_category">Category</string>
+    <string name="dealPage_votes">Votes</string>
+    <string name="dealPage_timeLeft">Time Left:</string>
+    <string name="dealPage_progress">Progress:</string>
+    <string name="dealPage_joinCause">Join Cause</string>
+    <!-- END DEAL PAGE -->
     
+	<!-- CHAMPION PAGE -->
+    <string name="championPage_champion">Champion</string>
+    <string name="championPage_rank">Rank:</string>
+    <string name="championPage_championedDeals">Championed Deals:</string>
+    <string name="championPage_location">Location:</string>
+    <!-- END CHAMPION PAGE -->
 
     <string-array name="category_array">
         <item> Electronics </item>
@@ -64,6 +65,5 @@
         <item> Samsung UN85S9 85-Inch 4K Ultra HD 120Hz 3D Smart LED TV </item>
         <item> VIZIO E-Series E241i-A1 24-Inch 1080p 60Hz LED Smart HD TV (tilted base) </item>
     </string-array>
-
 
 </resources>
