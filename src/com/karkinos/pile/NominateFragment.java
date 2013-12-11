@@ -1,20 +1,17 @@
 package com.karkinos.pile;
 
-import java.util.ArrayList;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
+import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.Spinner;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ListView;
+import android.widget.Toast;
 
 public class NominateFragment extends Fragment {
 		
@@ -34,6 +31,16 @@ public class NominateFragment extends Fragment {
   		String[] suggestedItems = getResources().getStringArray(R.array.suggested_items_array); // Get the string array
   		ArrayAdapter<String> adapterItem = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, suggestedItems);		// Create the adapter and set it to the AutoCompleteTextView 
   		nominateItem.setAdapter(adapterItem);
+  		
+  		Button btnBecomeAChampion = (Button)view.findViewById(R.id.btnBeAChampion);
+  		btnBecomeAChampion.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				Toast test;
+				test = Toast.makeText(getActivity(), "Become a Champion Button works!", Toast.LENGTH_SHORT);
+				test.show();
+			}
+		});
         
         return view;
 	}

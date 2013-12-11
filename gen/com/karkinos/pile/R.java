@@ -64,28 +64,27 @@ public final class R {
         public static final int xbox_one=0x7f020022;
     }
     public static final class id {
-        public static final int action_settings=0x7f090027;
+        public static final int action_settings=0x7f090026;
         public static final int autocomplete_nominate_item=0x7f09001f;
-        public static final int beAChampion=0x7f090023;
         public static final int bottomContainer=0x7f090012;
+        public static final int btnBeAChampion=0x7f090022;
         public static final int btnFbShare=0x7f09000d;
         public static final int btnJoinCause=0x7f090018;
         public static final int btnToChampionPage=0x7f090011;
-        public static final int btnToMain=0x7f090025;
+        public static final int btnToMain=0x7f090024;
         public static final int btnToStoryBoard=0x7f09001d;
         public static final int btnTwitterShare=0x7f09000e;
         public static final int category=0x7f09001e;
         public static final int championPicture=0x7f090002;
         public static final int dealsListView=0x7f09001c;
-        public static final int dollarSign=0x7f090021;
-        public static final int editText1=0x7f090022;
-        public static final int imageView1=0x7f090020;
         public static final int imgDealImage=0x7f090005;
-        public static final int imgStoryboard=0x7f090024;
+        public static final int imgStoryboard=0x7f090023;
+        public static final int nominatedPrice=0x7f090021;
         public static final int pager=0x7f090019;
         public static final int pager_tab_strip=0x7f09001a;
+        public static final int productImage=0x7f090020;
         public static final int progressBar=0x7f090017;
-        public static final int search=0x7f090028;
+        public static final int search=0x7f090027;
         public static final int storyboardPager=0x7f09001b;
         public static final int txtCategory=0x7f09000f;
         public static final int txtChampion=0x7f090000;
@@ -99,7 +98,7 @@ public final class R {
         public static final int txtProgress=0x7f090015;
         public static final int txtQA=0x7f09000a;
         public static final int txtRank=0x7f090003;
-        public static final int txtRegularPrice=0x7f090026;
+        public static final int txtRegularPrice=0x7f090025;
         public static final int txtSupporters=0x7f090016;
         public static final int txtTimeLeft=0x7f090013;
         public static final int txtTitle=0x7f090004;
@@ -130,51 +129,58 @@ public final class R {
     public static final class string {
         public static final int action_settings=0x7f050001;
         public static final int app_name=0x7f050000;
-        public static final int btnToMain=0x7f05000a;
-        public static final int championPage_champion=0x7f05001d;
-        public static final int championPage_championedDeals=0x7f05001f;
-        public static final int championPage_location=0x7f050020;
+        public static final int btnToMain=0x7f05000e;
+        public static final int championPage_champion=0x7f050021;
+        public static final int championPage_championedDeals=0x7f050023;
+        public static final int championPage_location=0x7f050024;
         /**  END DEAL PAGE 
  CHAMPION PAGE 
          */
-        public static final int championPage_picture=0x7f05001c;
-        public static final int championPage_rank=0x7f05001e;
-        public static final int dealPage_category=0x7f050015;
-        public static final int dealPage_comments=0x7f050012;
-        public static final int dealPage_description=0x7f050010;
-        public static final int dealPage_fbShareIcon=0x7f05001a;
+        public static final int championPage_picture=0x7f050020;
+        public static final int championPage_rank=0x7f050022;
+        public static final int dealPage_category=0x7f050019;
+        public static final int dealPage_comments=0x7f050016;
+        public static final int dealPage_description=0x7f050014;
+        public static final int dealPage_fbShareIcon=0x7f05001e;
         /**  END STORYBOARD PAGE 
  DEAL PAGE 
          */
-        public static final int dealPage_imageInfo=0x7f05000b;
-        public static final int dealPage_joinCause=0x7f050019;
-        public static final int dealPage_lowestMarketPrice=0x7f05000f;
-        public static final int dealPage_msrp=0x7f05000e;
-        public static final int dealPage_ourPrice=0x7f05000d;
-        public static final int dealPage_prices=0x7f05000c;
-        public static final int dealPage_progress=0x7f050018;
-        public static final int dealPage_qa=0x7f050011;
-        public static final int dealPage_rank=0x7f050014;
-        public static final int dealPage_timeLeft=0x7f050017;
-        public static final int dealPage_twitterShareIcon=0x7f05001b;
-        public static final int dealPage_votes=0x7f050016;
-        public static final int dealPage_websites=0x7f050013;
+        public static final int dealPage_imageInfo=0x7f05000f;
+        public static final int dealPage_joinCause=0x7f05001d;
+        public static final int dealPage_lowestMarketPrice=0x7f050013;
+        public static final int dealPage_msrp=0x7f050012;
+        public static final int dealPage_ourPrice=0x7f050011;
+        public static final int dealPage_prices=0x7f050010;
+        public static final int dealPage_progress=0x7f05001c;
+        public static final int dealPage_qa=0x7f050015;
+        public static final int dealPage_rank=0x7f050018;
+        public static final int dealPage_timeLeft=0x7f05001b;
+        public static final int dealPage_twitterShareIcon=0x7f05001f;
+        public static final int dealPage_votes=0x7f05001a;
+        public static final int dealPage_websites=0x7f050017;
         public static final int featuredDeals=0x7f050005;
         /**  FRAGMENT SECTIONS 
          */
         public static final int info=0x7f050003;
-        /**  END FRAGMENT SECTIONS 
+        /**  END NOMINATE FRAGMENT 
  MAIN PAGE 
          */
-        public static final int logoName=0x7f050007;
+        public static final int logoName=0x7f05000b;
         public static final int myDeals=0x7f050006;
+        public static final int nomfrag_becomeAChampion=0x7f05000a;
+        public static final int nomfrag_nominatedPrice=0x7f050009;
+        public static final int nomfrag_productImage=0x7f050008;
+        /**  END FRAGMENT SECTIONS 
+ NOMINATE FRAGMENT 
+         */
+        public static final int nomfrag_wantItem=0x7f050007;
         public static final int nominateDeal=0x7f050004;
         public static final int search_title=0x7f050002;
-        public static final int storyboardButton=0x7f050008;
+        public static final int storyboardButton=0x7f05000c;
         /**  END MAIN PAGE 
  STORYBOARD PAGE 
          */
-        public static final int storyboardSlide=0x7f050009;
+        public static final int storyboardSlide=0x7f05000d;
     }
     public static final class style {
         /** 

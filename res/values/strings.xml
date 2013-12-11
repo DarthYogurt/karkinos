@@ -12,6 +12,13 @@
     <string name="myDeals">My Deals</string>
     <!-- END FRAGMENT SECTIONS -->
     
+    <!-- NOMINATE FRAGMENT -->
+    <string name="nomfrag_wantItem">I want this item</string>
+    <string name="nomfrag_productImage">Product Image</string>
+    <string name="nomfrag_nominatedPrice">Nominated Price: $</string>
+    <string name="nomfrag_becomeAChampion">Become a Champion!</string>
+    <!-- END NOMINATE FRAGMENT -->
+    
     <!-- MAIN PAGE -->
     <string name="logoName">Logo</string>
     <string name="storyboardButton">Storyboard Button</string>
