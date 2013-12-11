@@ -14,7 +14,7 @@
     
     <!-- MAIN PAGE -->
     <string name="logoName">Logo</string>
-    <string name="btnToStoryboard">See Storyboard</string>
+    <string name="storyboardButton">Storyboard Button</string>
     <string name="storyboardSlide">Storyboard Slide</string>
     <string name="btnToMain">Start Piling!</string>
     <!-- END MAIN PAGE -->

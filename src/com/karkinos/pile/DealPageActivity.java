@@ -101,11 +101,7 @@ public class DealPageActivity extends Activity {
 		txtQA.setText(qa);
 		txtComments.setText(comments);
 		txtWebUrls.setText(webUrls);
-<<<<<<< HEAD
 
-=======
-		
->>>>>>> edd95a8e7846f4fd2b351183c61e2bb2d940622a
 		Duration dur = new Duration(new DateTime(), endingTime);
 
 		//CountDownTimer(edittext1.getText()+edittext2.getText()) also parse it to long
@@ -116,18 +112,10 @@ public class DealPageActivity extends Activity {
 						 (durationSeconds / 3600) % 24, (durationSeconds % 3600) / 60, (durationSeconds % 60)));
 			}
 
-<<<<<<< HEAD
-			 public void onFinish() {
-				 txtCountDown.setText("done!");
-			 }
-		}.start();
-			
-=======
 			public void onFinish() {
 				txtCountDown.setText("Done!");
 			}
 		}.start();
->>>>>>> edd95a8e7846f4fd2b351183c61e2bb2d940622a
 			
 		btnFbShare.setOnClickListener(new OnClickListener() {
 			@Override

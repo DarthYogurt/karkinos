@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
-import android.widget.Button;
+import android.widget.ImageView;
 
 public class InfoFragment extends Fragment {
 	@Override  
@@ -15,7 +15,7 @@ public class InfoFragment extends Fragment {
 	    
 	    View view = inflater.inflate(R.layout.fragment_info_page, container, false);
 	    
-	    Button btnToStoryboard = (Button)view.findViewById(R.id.btnToStoryBoard);
+	    ImageView btnToStoryboard = (ImageView)view.findViewById(R.id.btnToStoryBoard);
 	    btnToStoryboard.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View view) {
