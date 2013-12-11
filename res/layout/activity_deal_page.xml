@@ -320,18 +320,7 @@
             android:textStyle="bold" />
       	
       	<TextView
-            android:id="@+id/countDown"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@id/txtTimeLeft"
-            android:layout_toRightOf="@id/txtTimeLeft"
-            android:paddingLeft="5dp"
-            android:text="HERE"
-            android:textColor="#fff"
-            android:textStyle="bold" />
-      	
-        <TextView
-            android:id="@+id/txtEndingTime"
+            android:id="@+id/txtCountDown"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@id/txtTimeLeft"

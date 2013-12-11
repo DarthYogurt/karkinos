@@ -1,7 +1,5 @@
 package com.karkinos.pile;
 
-import java.util.Date;
-
 import org.joda.time.DateTime;
 import org.joda.time.Duration;
 
@@ -40,20 +38,6 @@ public class DealPageActivity extends Activity {
 	String webUrls;
 	DateTime endingTime;
 	Button btnJoinCause;
-	
-	//long mMilliseconds;
-	CountDownTimer mCountDownTimer;
-//	SimpleDateFormat mSimpleDateFormat = new SimpleDateFormat("D:HH:mm:ss");
-//	CountDownTimer mCountDownTimer = new CountDownTimer(mMilliseconds, 1000) {
-//		@Override
-//		public void onFinish() {
-//			mTimerTextView.setText(mSimpleDateFormat.format(0));
-//		}
-//		
-//		public void onTick(long millisUntilFinished) {
-//			mTimerTextView.setText(mSimpleDateFormat.format(millisUntilFinished));
-//		}
-//	};
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -98,8 +82,7 @@ public class DealPageActivity extends Activity {
 		TextView txtQA = (TextView)findViewById(R.id.txtQA);
 		TextView txtComments = (TextView)findViewById(R.id.txtComments);
 		TextView txtWebUrls = (TextView)findViewById(R.id.txtWebUrls);
-		TextView txtEndingTime = (TextView)findViewById(R.id.txtEndingTime);
-		final TextView txtCountDown = (TextView)findViewById(R.id.countDown);
+		final TextView txtCountDown = (TextView)findViewById(R.id.txtCountDown);
 		ImageView btnFbShare = (ImageView)findViewById(R.id.btnFbShare);
 		ImageView btnTwitterShare = (ImageView)findViewById(R.id.btnTwitterShare);
 		RelativeLayout btnToChampionPage = (RelativeLayout)findViewById(R.id.btnToChampionPage);
@@ -118,27 +101,21 @@ public class DealPageActivity extends Activity {
 		txtQA.setText(qa);
 		txtComments.setText(comments);
 		txtWebUrls.setText(webUrls);
-
-//		DateTime start = new DateTime();
-//		DateTime end = new DateTime(2013, 12, 12, 17, 0, 0, 0);
 		
 		Duration dur = new Duration(new DateTime(), endingTime);
 
-		
-	
-		new CountDownTimer(dur.getMillis(), 1000) {//CountDownTimer(edittext1.getText()+edittext2.getText()) also parse it to long
-			 public void onTick(long millisUntilFinished) {
-				 long durationSeconds = millisUntilFinished / 1000;
-				 txtCountDown.setText( " "+ String.format("Days: %01d %02d:%02d:%02d", (durationSeconds /86400),  (durationSeconds / 3600)%24,
-			                (durationSeconds % 3600) / 60, (durationSeconds % 60)));
-			 }
-
-			 public void onFinish() {
-				 txtCountDown.setText("done!");
-			 }
+		//CountDownTimer(edittext1.getText()+edittext2.getText()) also parse it to long
+		new CountDownTimer(dur.getMillis(), 1000) { 
+			public void onTick(long millisUntilFinished) {
+				long durationSeconds = millisUntilFinished / 1000;
+				txtCountDown.setText(String.format("%01d Days %02d:%02d:%02d", (durationSeconds / 86400),  
+						 (durationSeconds / 3600) % 24, (durationSeconds % 3600) / 60, (durationSeconds % 60)));
 			}
-			.start();
-			
+
+			public void onFinish() {
+				txtCountDown.setText("Done!");
+			}
+		}.start();
 			
 		btnFbShare.setOnClickListener(new OnClickListener() {
 			@Override
@@ -178,30 +155,6 @@ public class DealPageActivity extends Activity {
 			}
 		});
 	}
-	
-	
-	
-	
-//	public class MyCountDownTimer extends CountDownTimer {
-//		public MyCountDownTimer(long millisInFuture, long countDownInterval) {
-//			super(millisInFuture, countDownInterval);
-//		}
-//		@Override
-//		public void onFinish() {
-//			
-//		}
-//		@Override
-//		public void onTick(long millisUntilFinished) {
-//			long seconds = (long) (millisUntilFinished / 1000 % 60);
-//			long minutes = (long) (millisUntilFinished / (1000*60) % 60);
-//			long hours = (long) (millisUntilFinished / (1000*60*60) % 24);
-//			int days = (int) (millisUntilFinished / (1000*60*60*24) % 365);	
-//			
-//			//txtCountDown.setText("TIME REMAINING:"  millisUntilFinished / 1000);
-//			
-//		}
-//	}
-	
 
 	/**
 	 * Set up the {@link android.app.ActionBar}.
