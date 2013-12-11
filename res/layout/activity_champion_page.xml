@@ -3,7 +3,8 @@
  	xmlns:tools="http://schemas.android.com/tools"
 	tools:context=".ChampionPageActivity"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_height="fill_parent"
+    android:background="#fff" >
         
     <LinearLayout
     	android:layout_width="fill_parent"
@@ -64,13 +65,80 @@
 		        android:paddingBottom="14dp"
 		        android:contentDescription="@string/championPage_picture" />
 		    
-		    <TextView
-		        android:id="@+id/txtRank"
-		        android:layout_width="wrap_content"
+		    <LinearLayout
+		        android:layout_width="fill_parent"
 		        android:layout_height="wrap_content"
-		        android:text="@string/championPage_rank" />
-
+		        android:orientation="horizontal"
+		        android:padding="5dp"
+		        android:layout_marginBottom="4dp"
+		        android:background="@drawable/gray_border" >
+		        
+			    <TextView
+			        android:layout_width="0dp"
+			        android:layout_height="wrap_content"
+			        android:layout_weight="1"
+			        android:textSize="14sp"
+			        android:text="@string/championPage_rank" />
+			    
+			    <TextView
+			        android:id="@+id/txtRank"
+			        android:layout_width="0dp"
+			        android:layout_height="wrap_content"
+			        android:layout_weight="1"
+			        android:textSize="14sp"
+			        android:text="7" />
+			    
+		    </LinearLayout>
+		    
+		    <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal"
+		        android:padding="5dp"
+		        android:layout_marginBottom="4dp"
+		        android:background="@drawable/gray_border" >
+		        
+			    <TextView
+			        android:layout_width="0dp"
+			        android:layout_height="wrap_content"
+			        android:layout_weight="1"
+			        android:textSize="14sp"
+			        android:text="@string/championPage_championedDeals" />
+			    
+			    <TextView
+			        android:id="@+id/txtRank"
+			        android:layout_width="0dp"
+			        android:layout_height="wrap_content"
+			        android:layout_weight="1"
+			        android:textSize="14sp"
+			        android:text="10" />
+			    
+		    </LinearLayout>
 		
+		    <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal"
+		        android:padding="5dp"
+		        android:layout_marginBottom="4dp"
+		        android:background="@drawable/gray_border" >
+		        
+			    <TextView
+			        android:layout_width="0dp"
+			        android:layout_height="wrap_content"
+			        android:layout_weight="1"
+			        android:textSize="14sp"
+			        android:text="@string/championPage_location" />
+			    
+			    <TextView
+			        android:id="@+id/txtRank"
+			        android:layout_width="0dp"
+			        android:layout_height="wrap_content"
+			        android:layout_weight="1"
+			        android:textSize="14sp"
+			        android:text="San Francisco, CA" />
+			    
+		    </LinearLayout>
 		    <!-- CHAMPION INFO SECTION -->
 
 			<!-- END CHAMPION INFO SECTION -->

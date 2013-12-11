@@ -45,9 +45,9 @@
 	<!-- CHAMPION PAGE -->
 	<string name="championPage_picture">Champion Picture</string>
     <string name="championPage_champion">Champion</string>
-    <string name="championPage_rank">Rank</string>
-    <string name="championPage_championedDeals">Championed Deals</string>
-    <string name="championPage_location">Location</string>
+    <string name="championPage_rank">Rank:</string>
+    <string name="championPage_championedDeals">Championed Deals:</string>
+    <string name="championPage_location">Location:</string>
     <!-- END CHAMPION PAGE -->
 
     <string-array name="category_array">
