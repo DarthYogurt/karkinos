@@ -54,59 +54,25 @@
 		    android:layout_height="wrap_content"
 		    android:orientation="vertical"
 		    android:padding="14dp" >
-		
+		        
 		    <ImageView
+		        android:id="@+id/championPicture"
 		        android:src="@drawable/no_user_pic"
 		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content"
 		        android:layout_gravity="center"
 		        android:paddingBottom="14dp"
 		        android:contentDescription="@string/championPage_picture" />
+		    
+		    <TextView
+		        android:id="@+id/txtRank"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/championPage_rank" />
+
 		
 		    <!-- CHAMPION INFO SECTION -->
-			<TableLayout
-				android:layout_width="fill_parent"
-				android:layout_height="wrap_content"
-				android:stretchColumns="*"
-				android:gravity="center"
-				android:paddingBottom="20dp" >
-				<TableRow>
-				    <TextView
-		                android:layout_width="wrap_content"
-		                android:layout_height="wrap_content"
-		                android:text="@string/championPage_rank" />
-				    
-				    <TextView
-	                    android:id="@+id/txtRank"
-		                android:layout_width="wrap_content"
-		                android:layout_height="wrap_content"
-		                android:text="21" />
-			    </TableRow>
-			    <TableRow>
-				    <TextView
-		                android:layout_width="wrap_content"
-		                android:layout_height="wrap_content"
-		                android:text="@string/championPage_championedDeals" />
-				    
-				    <TextView
-	                    android:id="@+id/txtChampionedDeals"
-		                android:layout_width="wrap_content"
-		                android:layout_height="wrap_content"
-		                android:text="7" />
-			    </TableRow>
-			    <TableRow>
-				    <TextView
-		                android:layout_width="wrap_content"
-		                android:layout_height="wrap_content"
-		                android:text="@string/championPage_location" />
-				    
-				    <TextView
-	                    android:id="@+id/txtChampionLocation"
-		                android:layout_width="wrap_content"
-		                android:layout_height="wrap_content"
-		                android:text="San Francisco, CA" />
-			    </TableRow>
-			</TableLayout>
+
 			<!-- END CHAMPION INFO SECTION -->
         
         </LinearLayout>
