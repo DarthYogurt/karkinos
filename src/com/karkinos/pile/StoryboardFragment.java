@@ -37,16 +37,17 @@ public class StoryboardFragment extends Fragment {
         iv.setImageResource(images[position]);
         
         Button btnToMain = (Button)rootView.findViewById(R.id.btnToMain);
-        if (position == 8) {
-        	btnToMain.setVisibility(View.VISIBLE);
-        	btnToMain.setOnClickListener(new OnClickListener() {
-    			@Override
-    			public void onClick(View view) {
-    				Intent intent = new Intent(getActivity(), MainActivity.class);
-    				startActivity(intent);
-    			}
-    		});
-        }
+//      if (position == 8) {
+//    		btnToMain.setVisibility(View.VISIBLE);
+//    	}        
+        
+        btnToMain.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				Intent intent = new Intent(getActivity(), MainActivity.class);
+				startActivity(intent);
+			}
+		});
         	
         return rootView;
     }
