@@ -30,16 +30,15 @@ public class StoryboardFragment extends Fragment {
         ImageView iv = (ImageView)rootView.findViewById(R.id.imgStoryboard);
         int position = getArguments().getInt(KEY_POSITION, -1);
         
-        int[] images = {R.drawable.storyboard1, R.drawable.storyboard2, R.drawable.storyboard3,
-        				R.drawable.storyboard4, R.drawable.storyboard5, R.drawable.storyboard6,
-        				R.drawable.storyboard7, R.drawable.storyboard8, R.drawable.storyboard9};
+        int[] images = {R.drawable.storyboard01, R.drawable.storyboard02, R.drawable.storyboard03, R.drawable.storyboard04};
         
         iv.setImageResource(images[position]);
         
         Button btnToMain = (Button)rootView.findViewById(R.id.btnToMain);
-//      if (position == 8) {
-//    		btnToMain.setVisibility(View.VISIBLE);
-//    	}        
+        
+        if (position == 3) {
+        	btnToMain.setVisibility(View.VISIBLE);
+	    }
         
         btnToMain.setOnClickListener(new OnClickListener() {
 			@Override

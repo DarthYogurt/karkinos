@@ -20,6 +20,7 @@
         android:background="@drawable/btn_green_matte"
         android:layout_marginBottom="10dp"
         android:layout_marginRight="10dp"
+        android:visibility="gone"
         style="@style/ButtonText"
         android:text="@string/btnToMain" />
             

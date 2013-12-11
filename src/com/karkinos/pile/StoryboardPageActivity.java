@@ -10,7 +10,7 @@ import android.support.v4.view.ViewPager;
 
 public class StoryboardPageActivity extends FragmentActivity {
 	// The number of pages (wizard steps) to show in this demo.
-    private static final int NUM_PAGES = 9;
+    private static final int NUM_PAGES = 4;
 
     // The pager widget, which handles animation and allows swiping horizontally to access previous and next wizard steps.
     private ViewPager mPager;
