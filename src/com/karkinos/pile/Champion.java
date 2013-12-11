@@ -1,6 +1,6 @@
 package com.karkinos.pile;
 
-import java.util.Date;
+import org.joda.time.DateTime;
 
 // Object class for a champion
 public class Champion {
@@ -8,7 +8,7 @@ public class Champion {
 	private int rank = 0;
 	private String name = "";
 	private String location = "";
-	private Date memberSince = new Date();
+	private DateTime memberSince = new DateTime();
 	private int championedDeals = 0;
 	
 	public Champion() {

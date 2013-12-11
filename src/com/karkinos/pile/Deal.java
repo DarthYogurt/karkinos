@@ -1,7 +1,5 @@
 package com.karkinos.pile;
 
-import java.util.Date;
-
 import org.joda.time.DateTime;
 
 // Object class for a deal
