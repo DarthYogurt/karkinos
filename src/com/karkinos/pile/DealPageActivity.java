@@ -119,9 +119,6 @@ public class DealPageActivity extends Activity {
 		txtComments.setText(comments);
 		txtWebUrls.setText(webUrls);
 
-//		DateTime start = new DateTime();
-//		DateTime end = new DateTime(2013, 12, 12, 17, 0, 0, 0);
-		
 		Duration dur = new Duration(new DateTime(), endingTime);
 
 		
@@ -136,8 +133,7 @@ public class DealPageActivity extends Activity {
 			 public void onFinish() {
 				 txtCountDown.setText("done!");
 			 }
-			}
-			.start();
+		}.start();
 			
 			
 		btnFbShare.setOnClickListener(new OnClickListener() {
