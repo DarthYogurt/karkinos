@@ -46,16 +46,16 @@ public final class R {
         public static final int rounded_corners=0x7f020010;
         public static final int samsung_tv=0x7f020011;
         public static final int sony_bluray=0x7f020012;
-        public static final int storyboard1=0x7f020013;
-        public static final int storyboard2=0x7f020014;
-        public static final int storyboard3=0x7f020015;
-        public static final int storyboard4=0x7f020016;
-        public static final int storyboard5=0x7f020017;
-        public static final int storyboard6=0x7f020018;
-        public static final int storyboard7=0x7f020019;
-        public static final int storyboard8=0x7f02001a;
-        public static final int storyboard9=0x7f02001b;
-        public static final int storyboardcollage=0x7f02001c;
+        public static final int story_board_collage=0x7f020013;
+        public static final int storyboard1=0x7f020014;
+        public static final int storyboard2=0x7f020015;
+        public static final int storyboard3=0x7f020016;
+        public static final int storyboard4=0x7f020017;
+        public static final int storyboard5=0x7f020018;
+        public static final int storyboard6=0x7f020019;
+        public static final int storyboard7=0x7f02001a;
+        public static final int storyboard8=0x7f02001b;
+        public static final int storyboard9=0x7f02001c;
         public static final int twitter_share_icon=0x7f02001d;
         public static final int xbox_one=0x7f02001e;
     }

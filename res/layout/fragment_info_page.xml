@@ -8,7 +8,7 @@
     
     <ImageView
         android:id="@+id/btnToStoryBoard"
-        android:src="@drawable/storyboardcollage"
+        android:src="@drawable/story_board_collage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
