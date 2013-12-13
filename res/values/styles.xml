@@ -16,7 +16,7 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
-    
+ 
     <!-- Button Styling -->
     <style name="ButtonText">
         <item name="android:textColor">#fff</item>
