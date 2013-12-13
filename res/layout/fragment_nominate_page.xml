@@ -1,12 +1,12 @@
 <LinearLayout 
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".NominatePage"
+   	xmlns:tools="http://schemas.android.com/tools"
+   	tools:context=".NominatePage"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
     android:padding="14dp"
-    android:background="#fff" >
+    android:background="@drawable/nominate_fragment_bg" >
 
 	<Spinner
 		android:id="@+id/category"
