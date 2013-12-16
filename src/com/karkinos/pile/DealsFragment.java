@@ -1,6 +1,7 @@
 package com.karkinos.pile;
 
 import java.util.ArrayList;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,11 +9,13 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
+import android.widget.AbsListView.OnScrollListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
-public class DealsFragment extends Fragment {
+public class DealsFragment extends Fragment implements OnScrollListener {
 	public static final String KEY_ID = "id";
 	
 	@Override  
@@ -52,4 +55,19 @@ public class DealsFragment extends Fragment {
         return view;
 	}
 	
+	@Override
+	public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
+		
+	}
+	
+	@Override
+	public void onScrollStateChanged(AbsListView listView, int scrollState) {
+		if (scrollState == SCROLL_STATE_IDLE) {
+			if listView.getLastVisiblePosition() >= listView.getCount() - 1 - threshold) {
+				currentPage++;
+				// Load more list items
+				loadElements(currentPage);
+			}
+		}
+	}
 }
