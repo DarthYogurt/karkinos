@@ -17,6 +17,7 @@ import android.widget.ListView;
 
 public class DealsFragment extends Fragment implements OnScrollListener {
 	public static final String KEY_ID = "id";
+	DealAdapter adapter;
 	
 	@Override  
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {  
@@ -35,7 +36,7 @@ public class DealsFragment extends Fragment implements OnScrollListener {
         final ArrayList<Deal> all_deals =  d.getCurrentDeals();
         
         // Sets up adapter to pass data into XML
-        DealAdapter adapter = new DealAdapter(getActivity(), R.layout.listview_item_row, all_deals);
+        adapter = new DealAdapter(getActivity(), R.layout.listview_item_row, all_deals);
         
         listView.setAdapter(adapter);
         
@@ -57,17 +58,12 @@ public class DealsFragment extends Fragment implements OnScrollListener {
 	
 	@Override
 	public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
-		
+
 	}
 	
 	@Override
 	public void onScrollStateChanged(AbsListView listView, int scrollState) {
-		if (scrollState == SCROLL_STATE_IDLE) {
-			if listView.getLastVisiblePosition() >= listView.getCount() - 1 - threshold) {
-				currentPage++;
-				// Load more list items
-				loadElements(currentPage);
-			}
-		}
+
 	}
 }
+
